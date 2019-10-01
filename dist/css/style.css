@@ -3,13 +3,11 @@
   float: left;
   margin-right: 1.5em;
 }
-
 .alignright {
   display: block;
   margin-left: 1.5em;
   float: right;
 }
-
 .aligncenter {
   clear: both;
   display: block;

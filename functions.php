@@ -120,11 +120,7 @@ add_action( 'widgets_init', 'lustshop_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lustshop_scripts() {
-	wp_enqueue_style( 'lustshop-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'lustshop-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'lustshop-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_style( 'lustshop-main', get_template_directory_uri() . '/dist/css/style.css' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
