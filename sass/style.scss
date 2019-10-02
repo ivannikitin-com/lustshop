@@ -3,3 +3,39 @@
 @import './modules/**/*.scss';
 
 @import './navigation/**/*.scss';
+
+@import 'fonts.scss';
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: $default-font;
+	font-size: $default-size;
+	position: relative;
+	color: $brownish-grey;
+	background: $white-two;
+	line-height: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+	background-color: transparent;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+a[href^="tel:"], a[href^="mailto:"] {
+	white-space: nowrap;
+}
+
+a[href^="tel:"] {
+	text-decoration: none;
+}
+
+
