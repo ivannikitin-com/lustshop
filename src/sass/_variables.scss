@@ -1,4 +1,4 @@
-$default-font: "MontserratAlternates", sans-serif;
+$default-font: 'MontserratAlternates', sans-serif;
 $second-font: PlayfairDisplay, sans-serif;
 $default-size: 14px;
 $strong-pink: #ff026d;
@@ -29,6 +29,14 @@ $dark-60: rgba(29, 31, 38, 0.6);
 $pinkish-grey: #cccccc;
 $yellowish-orange: #fa9f1d;
 $dark-three: #181b1f;
+
+// TODO: Переименовать, непонятное название
 $border-radius-1: 6px;
 
+// ===================
+// Gutenberg variables
+// ===================
 
+// Content
+$content-width: 1236px;
+$block-margin: 20px;

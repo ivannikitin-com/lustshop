@@ -161,3 +161,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Gutenberg customizing
+ */
+require get_template_directory() . '/inc/gutenberg/index.php';

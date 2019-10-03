@@ -18,7 +18,7 @@ gulp.task('browser-sync', function() {
 // Sass
 gulp.task('sass', function() {
   return gulp
-    .src('sass/**/*.scss')
+    .src('src/sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass({ outputStyle: 'compressed' }))
@@ -36,16 +36,21 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
   return gulp
-    .src('js/**/*.js')
+    .src('src/js/**/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
 });
 
-// Task Watch
-gulp.task('watch', function() {
-  gulp.watch('sass/**/*.scss', gulp.parallel('sass'));
-  gulp.watch('js/**/*.js', gulp.parallel('js'));
+gulp.task('fonts', function() {
+  return gulp.src('src/fonts/**/*.woff2').pipe(gulp.dest('./dist/fonts'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'sass', 'js', 'browser-sync'));
+// Task Watch
+gulp.task('watch', function() {
+  gulp.watch('src/sass/**/*.scss', gulp.parallel('sass'));
+  gulp.watch('src/js/**/*.js', gulp.parallel('js'));
+  gulp.watch('src/fotns/**/*.woff2', gulp.parallel('fonts'));
+});
+
+gulp.task('default', gulp.parallel('watch', 'sass', 'js', 'fonts', 'browser-sync'));

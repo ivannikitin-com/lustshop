@@ -1,0 +1,42 @@
+@import './variables';
+
+@import './mixins';
+
+@import './fonts.scss';
+
+/* Post title width */
+.editor-post-title__block.wp-block {
+  max-width: $content-width;
+
+  .editor-post-title__input {
+    font-family: $default-font;
+  }
+}
+
+.wrapper {
+  @include base-style;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wp-block {
+  max-width: $content-width;
+  font-family: $default-font;
+
+  /* Wide column width */
+  &[data-align='wide'] {
+    max-width: none;
+
+    // @include media('>=medium') {
+    //   max-width: none;
+    //   margin-left: calc(25vw - 25%);
+    //   margin-right: calc(25vw - 25%);
+    // }
+  }
+
+  /* Full column width */
+  &[data-align='full'] {
+    max-width: none;
+  }
+}
