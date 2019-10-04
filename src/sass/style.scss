@@ -1,12 +1,17 @@
 @import './variables.scss';
 
+@import './fonts.scss';
+
 @import './mixins';
+
+@import './elements/**/*.scss';
 
 @import './modules/**/*.scss';
 
 @import './navigation/**/*.scss';
 
-@import './fonts.scss';
+@import './layout/**/*.scss';
+
 
 *,
 ::after,

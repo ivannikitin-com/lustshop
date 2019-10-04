@@ -1,0 +1,90 @@
+.footer {
+	background-color: $dark;
+	padding: 28px 0 0;
+
+	&__column {
+		margin-top: 20px;
+	}
+
+	&__title {
+		font-size: 16px;
+  		font-weight: 600;
+  		text-align: left;
+		color: $white;
+		margin-bottom: 20px;
+	}
+
+	a {
+		font-size: 13px;
+		color: $warm-grey;
+
+		&:hover {
+			color: $warm-grey;
+		}
+	}
+
+	&__list {
+		padding-left: 0;
+		list-style: none;
+		  
+		&-item {
+			margin-bottom: 10px;
+		}
+	}
+	
+	&__phone a {
+		font-size: 18px;
+		font-weight: 600;
+		color: $white;
+
+		&:hover {		
+			color: $white;
+		}
+	}	
+
+	&__email {
+		margin-top: 6px;
+
+		a {
+			font-size: 13px;
+			color: $warm-grey;
+		}
+	}
+
+	&__bottom {
+		justify-content: center;
+		padding-bottom: 11px;
+		border-top: 1px solid rgba($white, 0.08);
+	}
+
+	&__share {
+		margin-top: 32px;
+	}
+
+	&__main {
+		padding: 0 0 36px;
+	}
+
+	&__socials a {
+		display: inline-block;
+		margin: 0 8px 10px 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__payment {
+		justify-content: center;
+
+		img {
+			margin: 11px 0 0 11px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+	
+}
