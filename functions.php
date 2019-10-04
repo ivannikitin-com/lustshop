@@ -113,6 +113,51 @@ function lustshop_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 1', 'lustshop' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here.', 'lustshop' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="footer__title">',
+		'after_title'   => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 2', 'lustshop' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Add widgets here.', 'lustshop' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="footer__title">',
+		'after_title'   => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 3', 'lustshop' ),
+		'id'            => 'footer-3',
+		'description'   => esc_html__( 'Add widgets here.', 'lustshop' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="footer__title">',
+		'after_title'   => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Social', 'lustshop' ),
+		'id'            => 'footer-social',
+		'description'   => esc_html__( 'Add widgets here.', 'lustshop' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="footer__title">',
+		'after_title'   => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Bottom', 'lustshop' ),
+		'id'            => 'footer-bottom',
+		'description'   => esc_html__( 'Add widgets here.', 'lustshop' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="footer__title">',
+		'after_title'   => '</div>',
+	) );
 }
 add_action( 'widgets_init', 'lustshop_widgets_init' );
 
@@ -166,3 +211,12 @@ if ( class_exists( 'WooCommerce' ) ) {
  * Gutenberg customizing
  */
 require get_template_directory() . '/inc/gutenberg/index.php';
+
+/**
+ * Optimize
+ */
+require get_template_directory() . '/inc/optimize.php';
+/**
+ * Optimize
+ */
+require get_template_directory() . '/inc/custom-function.php';

@@ -53,3 +53,38 @@ function lustshop_customize_preview_js() {
 	wp_enqueue_script( 'lustshop-customizer', get_template_directory_uri() . 'dist/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'lustshop_customize_preview_js' );
+
+// Add settings for theme
+add_action('customize_register', function($customizer) {
+	$customizer->add_section(
+		'settings-site', array(
+			'title'         => __( 'Settings theme', 'lustshop' ),
+			'description'   => __( 'Contact information on the site', 'lustshop'),
+			'priority'      => 11,
+		)
+	);
+
+	$customizer->add_setting( 'lustshop_phone_number', array(
+		'default' => ''
+	) );
+	$customizer->add_control(
+		'lustshop_phone_number',
+		array(
+			'label'     => __('Phone number', 'lustshop'),
+			'section'   => 'settings-site',
+			'type'      => 'text',
+		)
+	);
+
+	$customizer->add_setting( 'lustshop_email', array(
+		'default' => ''
+	) );
+	$customizer->add_control(
+		'lustshop_email',
+		array(
+			'label'     => __('E-mail', 'lustshop'),
+			'section'   => 'settings-site',
+			'type'      => 'email',
+		)
+	);
+});

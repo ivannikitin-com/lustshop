@@ -1,7 +1,7 @@
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: #{$grid-gutter-width / 2};
+  padding-left: #{$grid-gutter-width / 2};
   margin-right: auto;
   margin-left: auto;
 }
@@ -26,7 +26,7 @@
 
 @media (min-width: $content-width) {
   .container {
-    max-width: 1206px;
+    max-width: #{$content-width - $grid-gutter-width};
   }
 }
 
