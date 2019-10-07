@@ -20,6 +20,7 @@ wp plugin install yith-woocommerce-zoom-magnifier --activate --allow-root
 wp plugin install wordpress-seo --activate --allow-root
 wp plugin install yandex-mail --activate --allow-root
 wp plugin install yandexkassa --activate --allow-root
-wp plugin install imagify --activate --allow-root
+wp plugin install autoptimize --activate --allow-root
+wp plugin install webp-express --activate --allow-root
 wp plugin install https://github.com/wp-sync-db/wp-sync-db/archive/master.zip --activate --allow-root
 wp plugin install https://github.com/wp-sync-db/wp-sync-db-media-files/archive/master.zip --activate --allow-root
