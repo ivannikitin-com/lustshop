@@ -220,3 +220,5 @@ require get_template_directory() . '/inc/optimize.php';
  * Optimize
  */
 require get_template_directory() . '/inc/custom-function.php';
+
+wp_dequeue_style('yith-wcwl-font-awesome');
