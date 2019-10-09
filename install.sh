@@ -24,3 +24,4 @@ wp plugin install autoptimize --activate --allow-root
 wp plugin install webp-express --activate --allow-root
 wp plugin install https://github.com/wp-sync-db/wp-sync-db/archive/master.zip --activate --allow-root
 wp plugin install https://github.com/wp-sync-db/wp-sync-db-media-files/archive/master.zip --activate --allow-root
+wp plugin install https://github.com/ivannikitin-com/lustshop-blocks/archive/master.zip --activate --allow-root
