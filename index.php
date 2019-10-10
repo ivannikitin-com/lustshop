@@ -51,6 +51,8 @@ get_header();
 		endif;
 		?>
 
+		<?php get_template_part( 'blog', '' ); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
