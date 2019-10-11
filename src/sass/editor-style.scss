@@ -2,7 +2,9 @@
 
 @import './mixins';
 
-@import './fonts.scss';
+@import './fonts';
+
+@import './blocks/**/_backend.scss';
 
 /* Post title width */
 .editor-post-title__block.wp-block {

@@ -216,13 +216,18 @@ require get_template_directory() . '/inc/gutenberg/index.php';
  * Optimize
  */
 require get_template_directory() . '/inc/optimize.php';
+
 /**
- * Optimize
+ * Custom functions
  */
 require get_template_directory() . '/inc/custom-function.php';
 
-add_action( 'wp_print_styles', 'deregister_my_styles', 100 );
- 
-function deregister_my_styles() {
-	wp_deregister_style( 'yith-wcwl-font-awesome' );
-}
+/**
+ * Remove assets plugins
+ */
+require get_template_directory() . '/inc/remove-plugin-assets.php';
+
+/**
+ * Incluse assets gutenberg blocks
+ */
+require get_template_directory() . '/inc/gutenberg-blocks.php';
