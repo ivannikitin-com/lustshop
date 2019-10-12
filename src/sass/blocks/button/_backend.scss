@@ -1,0 +1,11 @@
+@import './frontend';
+
+.wp-block-lustshop-button {
+  .block-editor-rich-text__editable[data-is-placeholder-visible="true"] {
+    min-width: 118px;
+  }
+  .block-editor-rich-text__editable[data-is-placeholder-visible="false"] {
+    display: inline-block;
+    min-width: 1px;
+  }
+}
