@@ -17,31 +17,31 @@
 		<div class="container">
 			<div class="footer__main">
 				<div class="row">
-					<div class="footer__column col-sm-6 col-md-3">
+					<div class="footer__column col-md-6 col-lg-3">
 						<?php
 						if ( is_active_sidebar( 'footer-1' ) ) {
 							dynamic_sidebar( 'footer-1' );
 						}
 						?>				
 					</div>
-					<div class="footer__column col-sm-6 col-md-3">
+					<div class="footer__column col-md-6 col-lg-3">
 						<?php
 						if ( is_active_sidebar( 'footer-2' ) ) {
 							dynamic_sidebar( 'footer-2' );
 						}
 						?>
 					</div>
-					<div class="footer__column col-sm-6 col-md-3">
+					<div class="footer__column col-md-6 col-lg-3">
 						<?php
 						if ( is_active_sidebar( 'footer-3' ) ) {
 							dynamic_sidebar( 'footer-3' );
 						}
 						?>
 					</div>	
-					<div class="footer__column footer__column-last col-sm-6 col-md-3">
+					<div class="footer__column footer__column-last col-md-6 col-lg-3">
 						<?php if ( get_theme_mod('lustshop_phone_number') || get_theme_mod('lustshop_email') ) : ?>
 							<div class="footer__info">
-								<div class="footer__title"><?php esc_html_e( 'Call, write', 'lustshop' ); ?></div>
+								<a href="#" class="footer__title"><?php esc_html_e( 'Call, write', 'lustshop' ); ?></a>
 								<?php if ( get_theme_mod('lustshop_phone_number') ) : ?>
 									<div class="footer__phone"><a href="tel:<?php echo filter_phone(get_theme_mod('lustshop_phone_number')); ?>"><?php echo get_theme_mod('lustshop_phone_number'); ?></a></div>
 								<?php endif; ?>
