@@ -1,8 +1,6 @@
 @import '../../variables';
 
 .wp-block-lustshop-blog {
-	background: $white;	
-	
     &__header {
         display: flex;
         flex-wrap: wrap;
@@ -15,8 +13,8 @@
         font-size: 26px;
         font-weight: 600;
         line-height: normal;
-		color: $dark;
-		text-align: center;
+        color: $dark;
+        text-align: center;
         margin: 0 0 2rem;
     }
 
@@ -34,7 +32,7 @@
     }
 
     &__button {
-		text-align: center;
+        text-align: center;
         // margin-top: 0.5rem;
     }
 
@@ -110,15 +108,14 @@
 
 @media (min-width: 768px) {
     .wp-block-lustshop-blog {
+        > .container {
+            position: relative;
+        }
 
-		> .container {
-			position: relative;
-		}
-	
         &__posts-container {
-			flex-flow: row wrap;
-			margin-right: -15px;
-			margin-left: -15px;
+            flex-flow: row wrap;
+            margin-right: -15px;
+            margin-left: -15px;
         }
 
         &__post-grid {
@@ -130,8 +127,8 @@
         &__title {
             font-size: 40px;
             font-weight: 600;
-			color: $dark;
-			text-align: left;
+            color: $dark;
+            text-align: left;
             margin: 0 0 44px;
         }
     }
@@ -139,11 +136,10 @@
 
 @media (min-width: 992px) {
     .wp-block-lustshop-blog {
-        
         &__button {
-			position: absolute;
-			top: -15px;
-			right: 15px;
+            position: absolute;
+            top: -15px;
+            right: 15px;
         }
     }
 }
