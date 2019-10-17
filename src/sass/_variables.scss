@@ -30,6 +30,34 @@ $pinkish-grey: #cccccc;
 $yellowish-orange: #fa9f1d;
 $dark-three: #181b1f;
 
+$colors: () !default;
+
+$colors: map-merge(
+    (
+        'strong-pink': $strong-pink,
+        'vivid-pink': $vivid-pink,
+        'darkish-purple': $darkish-purple,
+        'white': $white,
+        'dark': $dark,
+        'white-two': $white-two,
+        'warm-grey': $warm-grey,
+        'cloudy-blue': $cloudy-blue,
+        'dark-two': $dark-two,
+        'french-blue': $french-blue,
+        'lipstick': $lipstick,
+        'azure': $azure,
+        'pale-red': $pale-red,
+        'off-yellow': $off-yellow,
+        'cerise': $cerise,
+        'purplish-blue': $purplish-blue,
+        'dull-blue': $dull-blue,
+        'pinkish-grey': $pinkish-grey,
+        'yellowish-orange': $yellowish-orange,
+        'dark-threedull-blue': $dark-three,
+    ),
+    $colors
+);
+
 // TODO: Переименовать, непонятное название
 $border-radius-1: 6px;
 
