@@ -22,7 +22,8 @@
 						if ( is_active_sidebar( 'footer-1' ) ) {
 							dynamic_sidebar( 'footer-1' );
 						}
-						?>				
+						?>
+										
 					</div>
 					<div class="footer__column col-md-6 col-lg-3">
 						<?php
@@ -39,14 +40,14 @@
 						?>
 					</div>	
 					<div class="footer__column footer__column-last col-md-6 col-lg-3">
-						<?php if ( get_theme_mod('lustshop_phone_number') || get_theme_mod('lustshop_email') ) : ?>
+						<?php if ( get_theme_mod( 'lustshop_phone_number' ) || get_theme_mod( 'lustshop_email' ) ) : ?>
 							<div class="footer__info">
 								<a href="#" class="footer__title"><?php esc_html_e( 'Call, write', 'lustshop' ); ?></a>
-								<?php if ( get_theme_mod('lustshop_phone_number') ) : ?>
-									<div class="footer__phone"><a href="tel:<?php echo filter_phone(get_theme_mod('lustshop_phone_number')); ?>"><?php echo get_theme_mod('lustshop_phone_number'); ?></a></div>
+								<?php if ( get_theme_mod( 'lustshop_phone_number' ) ) : ?>
+									<div class="footer__phone"><a href="tel:<?php echo filter_phone( get_theme_mod( 'lustshop_phone_number' ) ); ?>"><?php echo get_theme_mod( 'lustshop_phone_number' ); ?></a></div>
 								<?php endif; ?>
-								<?php if ( get_theme_mod('lustshop_email') ) : ?>
-									<div class="footer__email"><a href="mailto:<?php echo get_theme_mod('lustshop_email'); ?>"><?php echo get_theme_mod('lustshop_email'); ?></a></div>
+								<?php if ( get_theme_mod( 'lustshop_email' ) ) : ?>
+									<div class="footer__email"><a href="mailto:<?php echo get_theme_mod( 'lustshop_email' ); ?>"><?php echo get_theme_mod( 'lustshop_email' ); ?></a></div>
 								<?php endif; ?>
 							</div>
 						<?php endif; ?>

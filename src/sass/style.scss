@@ -1,56 +1,56 @@
-@import "./elements/**/*.scss";
-@import "./modules/**/*.scss";
-@import "./navigation/**/*.scss";
-@import "./layout/**/*.scss";
-@import "./blocks/**/frontend.scss";
+@import './fonts';
+@import './elements/**/*.scss';
+@import './modules/**/*.scss';
+@import './navigation/**/*.scss';
+@import './layout/**/*.scss';
+@import './blocks/**/frontend.scss';
 
 *,
 ::after,
 ::before {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body,
 html,
 #page {
-	height: 100%;
+    height: 100%;
 }
 
 #page {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 header,
 .footer {
-	flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 #content {
-	flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 body {
-
-	@include base-style;
+    @include base-style;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
-	background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
 
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-	}
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
 }
 
-a[href^="tel:"],
-a[href^="mailto:"] {
-	white-space: nowrap;
+a[href^='tel:'],
+a[href^='mailto:'] {
+    white-space: nowrap;
 }
 
-a[href^="tel:"] {
-	text-decoration: none;
+a[href^='tel:'] {
+    text-decoration: none;
 }

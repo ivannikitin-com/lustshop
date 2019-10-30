@@ -161,7 +161,7 @@ if ( ! function_exists( 'lustshop_woocommerce_wrapper_after' ) ) {
 	 * @return void
 	 */
 	function lustshop_woocommerce_wrapper_after() {
-			?>
+		?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 		<?php

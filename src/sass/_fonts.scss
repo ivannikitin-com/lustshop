@@ -1,2 +1,5 @@
-@import "../fonts/MontserratAlternates/stylesheet.css";
-@import "../fonts/PlayfairDisplay/stylesheet.css";
+@include font-face(
+    'MontserratAlternates',
+    '../fonts/MontserratAlternates/MontserratAlternates-Regular'
+);
+@include font-face('PlayfairDisplay', '../fonts/PlayfairDisplay/PlayfairDisplay-Regular');
