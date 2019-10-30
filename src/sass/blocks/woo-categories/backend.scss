@@ -1,0 +1,60 @@
+@import "../../variables";
+
+$self: ".wp-block-lustshop-woo-category";
+
+.wp-block-lustshop-woo-categories {
+
+	&__products > .editor-inner-blocks.block-editor-inner-blocks > .editor-block-list__layout.block-editor-block-list__layout {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin: 0 -15px;
+	}
+
+	.block-list-appender {
+		width: 100%;
+	}
+
+	@media (min-width: 768px) {
+
+		[data-type="lustshop/woo-category"] {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		&__title {
+			font-size: 20px;
+			max-height: 49px;
+			overflow: hidden;
+			margin: 20px 29px 24px 29px;
+			text-align: left;
+			align-self: flex-start;
+		}
+
+		&--exclusive &__title {
+			max-height: 60px;
+			overflow: hidden;
+		}
+	}
+
+	@media (min-width: 1236px) {
+
+		[data-type="lustshop/woo-category"] {
+			flex: 0 0 25%;
+			max-width: 25%;
+
+			&:nth-of-type(1),
+			&:nth-of-type(6) {
+				flex: 0 0 41.666667%;
+				max-width: 41.666667%;
+			}
+
+			&:nth-of-type(3),
+			&:nth-of-type(4) {
+				flex: 0 0 33.333333%;
+				max-width: 33.333333%;
+			}
+		}
+	}
+}

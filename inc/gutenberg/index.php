@@ -4,7 +4,7 @@ add_theme_support( 'align-wide' );
 
 // Editor Styles
 add_theme_support( 'editor-styles' );
-add_editor_style( 'dist/css/editor-style.css' );
+add_editor_style( 'build/editor-style.css' );
 
 // Change color scheme
 require __DIR__ . '/gutenberg-colors.php';

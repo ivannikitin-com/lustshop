@@ -1,145 +1,151 @@
-@import '../../variables';
+@import "../../variables";
 
 .wp-block-lustshop-blog {
-    &__header {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-        justify-content: space-between;
-    }
 
-    &__title {
-        font-size: 26px;
-        font-weight: 600;
-        line-height: normal;
-        color: $dark;
-        text-align: center;
-        margin: 0 0 2rem;
-    }
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+		justify-content: space-between;
+	}
 
-    &__post-title {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.47;
-        color: $dark;
-        display: inline-block;
-        margin: 7px 0 0.6rem;
-    }
+	&__title {
+		font-size: 26px;
+		font-weight: 600;
+		line-height: normal;
+		color: $dark;
+		text-align: center;
+		margin: 0 0 2rem;
+	}
 
-    &__card-text {
-        line-height: 1.5;
-    }
+	&__post-title {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.47;
+		color: $dark;
+		display: inline-block;
+		margin: 7px 0 0.6rem;
+	}
 
-    &__button {
-        text-align: center;
-        // margin-top: 0.5rem;
-    }
+	&__card-text {
+		line-height: 1.5;
+	}
 
-    &__posts-container {
-        display: flex;
-        flex-direction: column;
-    }
+	&__button {
+		text-align: center;
+		// margin-top: 0.5rem;
+	}
 
-    &__post-grid {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-        margin-bottom: 15px;
-    }
+	&__posts-container {
+		display: flex;
+		flex-direction: column;
+	}
 
-    &__post-body {
-        flex: 1 1 auto;
-        padding: 0 20px 20px 20px;
-    }
+	&__post-grid {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		margin-bottom: 15px;
+	}
 
-    &__post-image img {
-        width: 100%;
-        object-fit: cover;
-        max-width: 100%;
-        object-position: top;
-        height: 252px;
-        vertical-align: middle;
-        border-radius: 6px;
-        margin-bottom: 20px;
-    }
+	&__post-body {
+		flex: 1 1 auto;
+		padding: 0 20px 20px 20px;
+	}
 
-    &__post-meta {
-        margin-top: 0.9rem;
-    }
+	&__post-image img {
+		width: 100%;
+		object-fit: cover;
+		max-width: 100%;
+		object-position: top;
+		height: 252px;
+		vertical-align: middle;
+		border-radius: 6px;
+		margin-bottom: 20px;
+	}
 
-    &__meta-date {
-        font-size: 11px;
-        letter-spacing: 0.6px;
-        color: $warm-grey;
-    }
+	&__post-meta {
+		margin-top: 0.9rem;
+	}
 
-    &__post-cat {
-        display: flex;
-        flex-wrap: wrap;
+	&__meta-date {
+		font-size: 11px;
+		letter-spacing: 0.6px;
+		color: $warm-grey;
+	}
 
-        a {
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-            color: $white-two;
-            background-color: $strong-pink;
-            padding: 3px 6px;
-            margin: 0 5px 5px 0;
+	&__post-cat {
+		display: flex;
+		flex-wrap: wrap;
 
-            &:last-child {
-                margin-right: 0;
-            }
+		a {
+			font-size: 11px;
+			font-weight: 600;
+			letter-spacing: 0.6px;
+			text-transform: uppercase;
+			color: $white-two;
+			background-color: $strong-pink;
+			padding: 3px 6px;
+			margin: 0 5px 5px 0;
 
-            &:hover {
-                background-color: $dark-two;
-                text-decoration: none;
-            }
-        }
-    }
+			&:last-child {
+				margin-right: 0;
+			}
 
-    .article.post-grid .post-image.single {
-        margin-bottom: 20px;
-        border-radius: 3px;
-    }
+			&:hover,
+			&:focus {
+				background-color: $dark-two;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.article.post-grid .post-image.single {
+		margin-bottom: 20px;
+		border-radius: 3px;
+	}
 }
 
 @media (min-width: 768px) {
-    .wp-block-lustshop-blog {
-        > .container {
-            position: relative;
-        }
 
-        &__posts-container {
-            flex-flow: row wrap;
-            margin-right: -15px;
-            margin-left: -15px;
-        }
+	.wp-block-lustshop-blog {
 
-        &__post-grid {
-            flex: 1 0 0%;
-            margin-right: 15px;
-            margin-left: 15px;
-        }
+		> .container {
+			position: relative;
+		}
 
-        &__title {
-            font-size: 40px;
-            font-weight: 600;
-            color: $dark;
-            text-align: left;
-            margin: 0 0 44px;
-        }
-    }
+		&__posts-container {
+			flex-flow: row wrap;
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+
+		&__post-grid {
+			flex: 1 0 0%;
+			margin-right: 15px;
+			margin-left: 15px;
+		}
+
+		&__title {
+			font-size: 40px;
+			font-weight: 600;
+			color: $dark;
+			text-align: left;
+			margin: 0 0 44px;
+		}
+	}
 }
 
 @media (min-width: 992px) {
-    .wp-block-lustshop-blog {
-        &__button {
-            position: absolute;
-            top: -15px;
-            right: 15px;
-        }
-    }
+
+	.wp-block-lustshop-blog {
+
+		&__button {
+			position: absolute;
+			top: -15px;
+			right: 15px;
+		}
+	}
 }

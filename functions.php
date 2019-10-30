@@ -165,7 +165,7 @@ add_action( 'widgets_init', 'lustshop_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lustshop_scripts() {
-	wp_enqueue_style( 'lustshop-main', get_template_directory_uri() . '/dist/css/style.css' );
+	wp_enqueue_style( 'lustshop-main', get_template_directory_uri() . '/build/style.css' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -226,8 +226,3 @@ require get_template_directory() . '/inc/custom-function.php';
  * Remove assets plugins
  */
 require get_template_directory() . '/inc/remove-plugin-assets.php';
-
-/**
- * Incluse assets gutenberg blocks
- */
-require get_template_directory() . '/inc/gutenberg-blocks.php';

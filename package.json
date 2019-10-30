@@ -1,39 +1,47 @@
 {
-  "name": "lustshop",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ivannikitin-com/lustshop.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ivannikitin-com/lustshop/issues"
-  },
-  "homepage": "https://github.com/ivannikitin-com/lustshop#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify-es": "^1.0.4",
-    "prettier": "1.18.2",
-    "wp-prettier": "git+https://github.com/Automattic/wp-prettier.git#wp-prettier-1.18.2"
-  },
-  "dependencies": {
-    "sass-rem": "^2.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  }
+    "name": "lustshop",
+    "version": "1.0.0",
+    "description": "Default config IN",
+    "author": "",
+    "license": "GPL-2.0-or-later",
+    "keywords": [],
+    "homepage": "https://github.com/ivannikitin-com/lustshop#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ivannikitin-com/lustshop.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ivannikitin-com/lustshop/issues"
+    },
+    "main": "index.js",
+    "devDependencies": {
+        "@wordpress/browserslist-config": "^2.6.0",
+        "@wordpress/scripts": "^5.1.0",
+        "autoprefixer": "^9.7.0",
+        "css-loader": "^3.2.0",
+        "ignore-emit-webpack-plugin": "^2.0.2",
+        "import-glob-loader": "^1.1.0",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-sass": "^4.13.0",
+        "postcss-loader": "^3.0.0",
+        "postcss-preset-env": "^6.7.0",
+        "sass-loader": "^8.0.0",
+        "sass-resources-loader": "^2.0.1"
+    },
+    "scripts": {
+        "build": "wp-scripts build",
+        "check-engines": "wp-scripts check-engines",
+        "check-licenses": "wp-scripts check-licenses",
+        "lint:js": "wp-scripts lint-js src/**/*.js --no-ignore",
+        "lint:pkg-json": "wp-scripts lint-pkg-json",
+        "start": "wp-scripts start",
+        "test:e2e": "wp-scripts test-e2e",
+        "test:unit": "wp-scripts test-unit-js"
+    },
+    "browserslist": [
+        "extends @wordpress/browserslist-config",
+        "last 1 version",
+        "> 1%",
+        "ie >= 10"
+    ]
 }

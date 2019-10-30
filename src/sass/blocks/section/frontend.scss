@@ -1,47 +1,50 @@
-@import '../../variables';
+@import "../../variables";
 
 .wp-block-lustshop-section {
-    position: relative;
-    background-position: center center;
-    width: 100%;
-    max-width: 100%;
+	position: relative;
+	background-position: center center;
+	width: 100%;
+	max-width: 100%;
 
-    &.has-parallax {
-        background-attachment: fixed;
-        @supports (-webkit-overflow-scrolling: touch) {
-            background-attachment: scroll;
-        }
-    }
+	&.has-parallax {
+		background-attachment: fixed;
 
-    &.cover {
-        background-size: cover;
-    }
+		@supports (-webkit-overflow-scrolling: touch) {
+			background-attachment: scroll;
+		}
+	}
 
-    &.no-repeat {
-        background-repeat: no-repeat;
-    }
+	&.cover {
+		background-size: cover;
+	}
 
-    &.has-background-opacity::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: inherit;
-        opacity: 0.5;
-        z-index: z-index('.wp-block-lustshop-section.has-background-opacity::before');
-    }
+	&.no-repeat {
+		background-repeat: no-repeat;
+	}
 
-    @each $name, $color in $colors {
-        &.has-#{$name}-background-color {
-            background-color: $color;
-        }
-    }
+	&.has-background-opacity::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: inherit;
+		opacity: 0.5;
+		z-index: z-index(".wp-block-lustshop-section.has-background-opacity::before");
+	}
 
-    @for $i from 1 through 10 {
-        &.has-background-opacity.has-background-opacity-#{ $i * 10 }::before {
-            opacity: $i * 0.1;
-        }
-    }
+	@each $name, $color in $colors {
+
+		&.has-#{$name}-background-color {
+			background-color: $color;
+		}
+	}
+
+	@for $i from 1 through 10 {
+
+		&.has-background-opacity.has-background-opacity-#{ $i * 10 }::before {
+			opacity: $i * 0.1;
+		}
+	}
 }

@@ -1,0 +1,8 @@
+@import "./frontend.scss";
+
+.wp-block-lustshop-section {
+
+	& > .editor-inner-blocks > .editor-block-list__layout {
+		margin: 0;
+	}
+}
