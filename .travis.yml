@@ -65,14 +65,23 @@ jobs:
         - stage:
           name: build
           if: branch = develop
-          before_install:
-              - npm install
+          # install:
+          #     - rm -rf .git
+          #     - git clone -b develop https://github.com/mindbox-moscow/ui-kit.git
+          #     - npm install
 
           script:
               - npm run build
 
+          # deploy:
+          #     provider: npm
+          #     skip_cleanup: true
+          #     email: $NPM_EMAIL_ADDRESS
+          #     api_key: $NPM_AUTH_TOKEN
+          #     on:
+          #         branch: develop
+
           after_script:
-              - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then exit; fi;
               - git config --global user.email "travis@travis-ci.org"
               - git config --global user.name "Travis CI"
               - git add --all
