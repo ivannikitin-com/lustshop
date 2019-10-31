@@ -1,14 +1,19 @@
 {
-    "name": "ivannikitin-company",
+    "name": "wordpress/twentytwenty",
     "type": "package",
-    "description": "Default config IN",
+    "description": "Twenty Twenty is designed with flexibility at its core.",
     "keywords": [
         "WordPress",
         "Themes"
     ],
-    "homepage": "https://github.com/ivannikitin-com",
+    "homepage": "https://github.com/WordPress/twentytwenty",
     "license": "GPL-2.0-or-later",
-    "authors": [],
+    "authors": [
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/WordPress/twentytwenty/graphs/contributors"
+        }
+    ],
     "require": {
         "php": ">=5.6"
     },
@@ -22,5 +27,8 @@
         "fixcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --runtime-set testVersion 5.6-",
         "lint": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."
     },
-    "support": {}
+    "support": {
+        "issues": "https://github.com/WordPress/twentytwenty/issues",
+        "source": "https://github.com/WordPress/twentytwenty"
+    }
 }

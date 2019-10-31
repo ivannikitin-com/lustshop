@@ -16,19 +16,10 @@ html {
     height: 100%;
 }
 
-// #page {
-//     display: flex;
-//     flex-direction: column;
-// }
-
 header,
 .footer {
     flex: 0 0 auto;
 }
-
-// #content {
-//     flex: 1 0 auto;
-// }
 
 body {
     @include base-style;
@@ -49,6 +40,8 @@ a[href^='tel:'],
 a[href^='mailto:'] {
     white-space: nowrap;
 }
+
+// Comments
 
 a[href^='tel:'] {
     text-decoration: none;
