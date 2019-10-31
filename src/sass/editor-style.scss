@@ -3,6 +3,7 @@
 @import './elements/grid';
 
 /* Post title width */
+
 .editor-post-title__block.wp-block {
     max-width: $content-width;
 
@@ -17,9 +18,9 @@
 
 .wrapper {
     @include base-style;
-    max-width: $content-width;
     margin: 0 auto;
     padding: 0 15px;
+    max-width: $content-width;
 }
 
 .wp-block {
@@ -27,11 +28,13 @@
     font-family: $default-font;
 
     /* Wide column width */
+
     &[data-align='wide'] {
         max-width: none;
     }
 
     /* Full column width */
+
     &[data-align='full'] {
         max-width: none;
     }

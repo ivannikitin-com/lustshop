@@ -1,55 +1,55 @@
 .wp-block-lustshop-button {
-	display: inline-flex;
-	align-items: center;
-	width: auto;
-	border: 0;
-	line-height: 1;
-	font-weight: 400;
-	min-height: 42px;
-	border-radius: 100px;
-	border: 1px solid $white-two;
-	background-color: $white-two;
-	font-family: $default-font;
-	font-size: 14px;
-	font-weight: 600;
-	color: $strong-pink;
-	padding-left: 22px;
-	padding-right: 22px;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    padding-right: 22px;
+    padding-left: 22px;
+    display: inline-flex;
+    width: auto;
+    min-height: 42px;
+    font-family: $default-font;
+    font-size: 14px;
+    font-weight: 400;
+    font-weight: 600;
+    line-height: 1;
+    color: $strong-pink;
+    background-color: $white-two;
+    border: 0;
+    border: 1px solid $white-two;
+    border-radius: 100px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    align-items: center;
 
-	&:not(:disabled):not(.disabled) {
-		cursor: pointer;
-	}
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
 
-	&.disabled,
-	fieldset:disabled & {
-		pointer-events: none;
-	}
+    &.disabled,
+    fieldset:disabled & {
+        pointer-events: none;
+    }
 
-	@media screen and (prefers-reduced-motion: reduce) {
+    @media screen and (prefers-reduced-motion: reduce) {
 
-		& {
-			transition: none;
-		}
-	}
+        & {
+            transition: none;
+        }
+    }
 
-	&:hover,
-	&:focus {
-		text-decoration: none;
-	}
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
 
-	&--primary {
-		background-color: $strong-pink;
-		border-color: $strong-pink;
-		color: $white;
-	}
+    &--primary {
+        color: $white;
+        background-color: $strong-pink;
+        border-color: $strong-pink;
+    }
 
-	&--secondary {
-		border-color: $strong-pink;
-		background-color: transparent;
-	}
+    &--secondary {
+        background-color: transparent;
+        border-color: $strong-pink;
+    }
 
-	svg {
-		margin-left: 9px;
-	}
+    svg {
+        margin-left: 9px;
+    }
 }

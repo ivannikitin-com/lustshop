@@ -1,13 +1,9 @@
 {
-    "extends": ["plugin:@wordpress/eslint-plugin/es5"],
-    "parserOptions": {
-        "ecmaVersion": 2017
-    },
-    "env": {
-        "es6": true,
-        "browser": true
-    },
-    "rules": {
-        "comma-dangle": [2, "never"]
-    }
+  "extends": ["plugin:@wordpress/eslint-plugin/es5"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "comma-dangle": [2, "never"]
+  }
 }

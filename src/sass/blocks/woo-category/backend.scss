@@ -1,93 +1,93 @@
-@import "../../variables";
+@import '../../variables';
 
 .wp-block-lustshop-woo-category {
-	$self: &;
+    $self: &;
 
-	&,
-	&--exclusive {
-		margin-left: 0;
-		flex: 1 0 auto;
-		position: relative;
-		width: 100%;
-		height: 382px;
-	}
+    &,
+    &--exclusive {
+        position: relative;
+        margin-left: 0;
+        width: 100%;
+        height: 382px;
+        flex: 1 0 auto;
+    }
 
-	&__link {
-		display: flex;
-		flex-flow: column;
-		height: 100%;
-		background-color: $white-two;
-		justify-content: space-between;
-		padding: 10px;
+    &__link {
+        padding: 10px;
+        display: flex;
+        height: 100%;
+        background-color: $white-two;
+        flex-flow: column;
+        justify-content: space-between;
 
-		&:hover,
-		&:focus {
-			text-decoration: none;
-		}
-	}
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
 
-	&__wrap-img {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 292px;
-	}
+    &__wrap-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 292px;
+    }
 
-	&__img {
-		max-width: 100%;
-		height: auto;
-	}
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
 
-	&__title {
-		font-size: 18px;
-		color: $dark;
-		font-weight: 600;
-		text-align: center;
-		align-self: center;
-	}
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        color: $dark;
+        align-self: center;
+    }
 
-	&--exclusive {
+    &--exclusive {
 
-		#{ $self }__wrap-img {
-			margin-right: 0;
-			margin-left: 39px;
-			justify-content: flex-end;
-		}
+        #{ $self }__wrap-img {
+            margin-right: 0;
+            margin-left: 39px;
+            justify-content: flex-end;
+        }
 
-		#{ $self }__title {
-			color: $white;
-			max-width: 11em;
-			margin: 32px 0 0 39px;
-			text-align: left;
-			align-self: flex-start;
+        #{ $self }__title {
+            margin: 32px 0 0 39px;
+            max-width: 11em;
+            text-align: left;
+            color: $white;
+            align-self: flex-start;
 
-			&::first-line {
-				font-family: $second-font;
-				font-style: italic;
-				font-size: 26px;
-			}
-		}
+            &::first-line {
+                font-family: $second-font;
+                font-size: 26px;
+                font-style: italic;
+            }
+        }
 
-		#{ $self }__link {
-			flex-direction: column-reverse;
-			background-image: linear-gradient(to left, $darkish-purple, $strong-pink);
-			padding-left: 0;
-			padding-right: 0;
+        #{ $self }__link {
+            padding-right: 0;
+            padding-left: 0;
+            flex-direction: column-reverse;
+            background-image: linear-gradient(to left, $darkish-purple, $strong-pink);
 
-			&::before {
-				content: "";
-				position: absolute;
-				top: 25px;
-				bottom: 25px;
-				left: 25px;
-				right: 25px;
-				border: 1px solid $white-30;
-			}
-		}
+            &::before {
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                left: 25px;
+                bottom: 25px;
+                content: '';
+                border: 1px solid $white-30;
+            }
+        }
 
-		#{ $self }__img {
-			margin: auto 0 43px auto;
-		}
-	}
+        #{ $self }__img {
+            margin: auto 0 43px auto;
+        }
+    }
 }
