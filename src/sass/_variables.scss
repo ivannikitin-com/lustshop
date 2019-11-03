@@ -1,4 +1,4 @@
-$default-font: "MontserratAlternates", sans-serif;
+$default-font: 'MontserratAlternates', sans-serif;
 $second-font: playfairdisplay, sans-serif;
 $default-size: 14px;
 $strong-pink: #ff026d;
@@ -32,28 +32,31 @@ $dark-three: #181b1f;
 
 $colors: () !default;
 
-$colors: map-merge((
-	"strong-pink": $strong-pink,
-	"vivid-pink": $vivid-pink,
-	"darkish-purple": $darkish-purple,
-	"white": $white,
-	"dark": $dark,
-	"white-two": $white-two,
-	"warm-grey": $warm-grey,
-	"cloudy-blue": $cloudy-blue,
-	"dark-two": $dark-two,
-	"french-blue": $french-blue,
-	"lipstick": $lipstick,
-	"azure": $azure,
-	"pale-red": $pale-red,
-	"off-yellow": $off-yellow,
-	"cerise": $cerise,
-	"purplish-blue": $purplish-blue,
-	"dull-blue": $dull-blue,
-	"pinkish-grey": $pinkish-grey,
-	"yellowish-orange": $yellowish-orange,
-	"dark-threedull-blue": $dark-three,
-), $colors);
+$colors: map-merge(
+  (
+    'strong-pink': $strong-pink,
+    'vivid-pink': $vivid-pink,
+    'darkish-purple': $darkish-purple,
+    'white': $white,
+    'dark': $dark,
+    'white-two': $white-two,
+    'warm-grey': $warm-grey,
+    'cloudy-blue': $cloudy-blue,
+    'dark-two': $dark-two,
+    'french-blue': $french-blue,
+    'lipstick': $lipstick,
+    'azure': $azure,
+    'pale-red': $pale-red,
+    'off-yellow': $off-yellow,
+    'cerise': $cerise,
+    'purplish-blue': $purplish-blue,
+    'dull-blue': $dull-blue,
+    'pinkish-grey': $pinkish-grey,
+    'yellowish-orange': $yellowish-orange,
+    'dark-threedull-blue': $dark-three,
+  ),
+  $colors
+);
 
 // TODO: Переименовать, непонятное название
 $border-radius-1: 6px;
@@ -67,3 +70,24 @@ $content-width: 1236px;
 $block-margin: 20px;
 
 $grid-gutter-width: 30px;
+
+$xx-small: 14px;
+$x-small: 16px;
+$small: 18px;
+$medium: 20px;
+$large: 30px;
+$x-large: 40px;
+
+$sizes: () !default;
+
+$sizes: map-merge(
+  (
+    'xx-small': $xx-small,
+    'x-small': $x-small,
+    'small': $small,
+    'medium': $medium,
+    'large': $large,
+    'x-large': $x-large,
+  ),
+  $sizes
+);

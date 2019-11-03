@@ -59,7 +59,7 @@
     ],
     "prettier": {
         "trailingComma": "es5",
-        "tabWidth": 4,
+        "tabWidth": 2,
         "semi": false,
         "singleQuote": true,
         "endOfLine": "auto",
@@ -71,10 +71,6 @@
         }
     },
     "lint-staged": {
-        "*.{js}": [
-            "eslint --fix",
-            "git add"
-        ],
         "*.scss": [
             "prettier --write",
             "stylelint --fix --config ./.stylelintrc",

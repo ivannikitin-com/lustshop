@@ -2,11 +2,21 @@
 
 .wp-block-lustshop-woo-categories {
 
-    &__products {
-        margin: 0 -15px;
-        padding: 0;
-        display: flex;
-        list-style: none;
-        flex-wrap: wrap;
-    }
+  &__products {
+    margin: 0 -15px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    overflow: hidden;
+  }
+
+  & picture,
+  & img {
+    width: auto;
+    max-height: 100%;
+  }
 }
