@@ -169,6 +169,8 @@ function lustshop_scripts() {
 
   wp_enqueue_style( 'lustshop-main', get_template_directory_uri() . '/build/style.css',  $version);
 
+  wp_enqueue_script( 'lustshop-main', get_template_directory_uri() . '/build/index.js', null, $version, true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
