@@ -1,9 +1,6 @@
-import { tns } from 'tiny-slider';
+import slick from 'slick-carousel';
 
-// https://github.com/ganlanyuan/tiny-slider
-const slider = tns( {
-	container: '.my-slider',
-	items: 3,
-	slideBy: 'page',
-	autoplay: true
+// https://github.com/kenwheeler/slick
+window.jQuery( function( $ ) {
+	$( '.woocommerce-product-gallery__image' ).slick();
 } );
