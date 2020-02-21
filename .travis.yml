@@ -42,6 +42,8 @@ script:
 
 jobs:
   include:
+    - php: 7.3
+      env: PHPCS=1
     - stage: 'Tests fresh package versions'
       name: Tests
       script:
@@ -68,6 +70,3 @@ jobs:
           branch: develop
 
   fast_finish: true
-  include:
-    - php: 7.3
-      env: PHPCS=1
