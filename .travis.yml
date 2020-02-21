@@ -60,6 +60,9 @@ jobs:
       script:
         - node ./deploy/patch-version.js
         - npm run build
+        - cd gutenberg
+        - npm i
+        - npm run build
       deploy:
         provider: pages
         skip_cleanup: true
