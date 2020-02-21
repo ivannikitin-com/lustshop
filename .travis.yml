@@ -60,7 +60,7 @@ jobs:
       script:
         - node ./deploy/patch-version.js
         - npm run build
-        - cd gutenberg
+        - cd ./gutenberg
         - npm i
         - npm run build
       deploy:
