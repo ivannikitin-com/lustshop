@@ -1,14 +1,26 @@
 {
-  "name": "lustshop-blocks-cgb-guten-block",
+	"name": "lustshop-blocks-cgb-guten-block",
   "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "start": "cgb-scripts start",
-    "build": "cgb-scripts build",
-    "eject": "cgb-scripts eject"
+  "description": "Default config IN",
+  "author": "",
+  "license": "GPL-2.0-or-later",
+  "keywords": [],
+  "homepage": "https://github.com/ivannikitin-com/lustshop#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivannikitin-com/lustshop.git"
   },
+  "bugs": {
+    "url": "https://github.com/ivannikitin-com/lustshop/issues"
+  },
+  "private": true,
   "dependencies": {
     "cgb-scripts": "^1.23.0",
     "classnames": "^2.2.6"
+	},
+	"scripts": {
+    "start": "cgb-scripts start",
+    "build": "cgb-scripts build",
+    "eject": "cgb-scripts eject"
   }
 }

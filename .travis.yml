@@ -16,11 +16,7 @@ node_js:
   - '10'
 
 php:
-  - 5.6
-  - 7.0
-  - 7.1
   - 7.2
-  - '7.4snapshot'
 
 allow_failures:
   # Allow failures for unstable builds.
@@ -56,7 +52,7 @@ jobs:
       name: Release build
       if: branch = develop
       script:
-        - node ./deploy/patch-version.js
+        - node ./deploy/update-version.js
         - npm run build
         - cd ./gutenberg
         - npm i
