@@ -1,13 +1,12 @@
 const fs = require('fs')
 const path = require('path')
-const execSync = require('child_process').execFileSync
 const semver = require('semver')
 
 const pathToFile = path.resolve(__dirname, '../style.css')
+const pjsonOld = require('../old-version/package.json')
 const pjson = require('../package.json')
-const exec = command => execSync(command, { encoding: 'utf8' })
 
-const version = pjson.version
+const version = pjsonOld.version
 
 const patch = semver.patch(version)
 const patchedVersion = `${semver.major(version)}.${semver.minor(version)}.${patch + 1}`

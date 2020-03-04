@@ -52,7 +52,9 @@ jobs:
       name: Release build
       if: branch = develop
       script:
-        - node ./deploy/update-version.js
+        - git clone -b pre-master https://github.com/ivannikitin-com/lustshop.git old-version
+        - node deploy/update-version.js
+        - rm -rf old-version
         - npm run build
         - cd ./gutenberg
         - npm i

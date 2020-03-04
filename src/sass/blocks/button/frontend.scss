@@ -1,55 +1,64 @@
 .wp-block-lustshop-button {
-    padding-right: 22px;
-    padding-left: 22px;
-    display: inline-flex;
-    width: auto;
-    min-height: 42px;
-    font-family: $default-font;
-    font-size: 14px;
-    font-weight: 400;
-    font-weight: 600;
-    line-height: 1;
-    color: $strong-pink;
-    background-color: $white-two;
-    border: 0;
-    border: 1px solid $white-two;
-    border-radius: 100px;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-    align-items: center;
+  padding-right: 22px;
+  padding-left: 22px;
+  display: inline-flex;
+  width: auto;
+  min-height: 42px;
+  font-family: $default-font;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  color: $strong-pink;
+  background-color: $white-two;
+  border: 0;
+  border: 1px solid $white-two;
+  border-radius: 100px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  align-items: center;
 
-    &:not(:disabled):not(.disabled) {
-        cursor: pointer;
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+
+    & {
+      transition: none;
     }
+  }
 
-    &.disabled,
-    fieldset:disabled & {
-        pointer-events: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &--primary {
+    color: $white;
+    background-color: $strong-pink;
+    border-color: $strong-pink;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border-color: $strong-pink;
+  }
+
+  &--grey {
+    background-color: $white-12;
+    border-color: transparent;
+
+    &:hover {
+      color: $white-two;
+      background-color: $strong-pink;
     }
+  }
 
-    @media screen and (prefers-reduced-motion: reduce) {
-
-        & {
-            transition: none;
-        }
-    }
-
-    &:hover,
-    &:focus {
-        text-decoration: none;
-    }
-
-    &--primary {
-        color: $white;
-        background-color: $strong-pink;
-        border-color: $strong-pink;
-    }
-
-    &--secondary {
-        background-color: transparent;
-        border-color: $strong-pink;
-    }
-
-    svg {
-        margin-left: 9px;
-    }
+  svg {
+    margin-left: 9px;
+  }
 }

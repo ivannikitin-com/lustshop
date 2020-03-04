@@ -17,7 +17,8 @@ if ( ! function_exists( 'lustshop_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'lustshop' ),
+			'primary' => esc_html__( 'Primary', 'lustshop' ),
+			'main' => esc_html__('Main', 'lustshop')
 		) );
 
 		add_theme_support( 'html5', array(
@@ -124,21 +125,9 @@ function lustshop_scripts() {
 add_action( 'wp_enqueue_scripts', 'lustshop_scripts' );
 
 /**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
 /**
  * Load WooCommerce compatibility file.

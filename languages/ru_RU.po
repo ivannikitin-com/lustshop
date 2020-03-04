@@ -1,18 +1,21 @@
-# Copyright (C) 2020 Иван Никитин и его партнеры
+# Copyright (C) 2017 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: lustshop 0.0.8\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/lustshop\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2020-02-28T05:15:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-28T05:15:56+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
-"X-Domain: lustshop\n"
+"PO-Revision-Date: 2020-02-28 05:18+0000\n"
+"Last-Translator: vadim <mishogev@yandex.ru>\n"
+"Language-Team: Русский\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
 
 #. Theme Name of the theme
 msgid "lustshop"
@@ -40,7 +43,9 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:22
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
 
 #: 404.php:31
@@ -64,6 +69,7 @@ msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: comments.php:66
 msgid "Comments are closed."
@@ -73,76 +79,70 @@ msgstr ""
 msgid "Call, write"
 msgstr ""
 
-#: functions.php:20
-#: gutenberg/src/button/index.js:43
+#: functions.php:20 gutenberg/src/button/index.js:43
 msgid "Primary"
-msgstr ""
+msgstr "Главное мен/"
 
 #: functions.php:54
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:56
-#: functions.php:65
-#: functions.php:74
-#: functions.php:83
-#: functions.php:92
-#: functions.php:101
+#: functions.php:56 functions.php:65 functions.php:74 functions.php:83
+#: functions.php:92 functions.php:101
 msgid "Add widgets here."
 msgstr ""
 
 #: functions.php:63
 msgid "Footer 1"
-msgstr ""
+msgstr "Подвал 1"
 
 #: functions.php:72
 msgid "Footer 2"
-msgstr ""
+msgstr "Подвал 2"
 
 #: functions.php:81
 msgid "Footer 3"
-msgstr ""
+msgstr "Подвал 3"
 
 #: functions.php:90
 msgid "Footer Social"
-msgstr ""
+msgstr "Социальные кнопки в подвале"
 
 #: functions.php:99
 msgid "Footer Bottom"
-msgstr ""
+msgstr "Низ подвал"
 
-#: gutenberg/src/blog/index.php:176
-#: gutenberg/src/subscribe/edit.js:51
+#: gutenberg/src/blog/index.php:176 gutenberg/src/subscribe/edit.js:51
 msgid "Title"
-msgstr ""
+msgstr "Заголовок"
 
 #: header.php:49
 msgid "My account"
-msgstr ""
+msgstr "Аккаунт"
 
 #: header.php:54
 msgid "Login"
-msgstr ""
+msgstr "Вход"
 
 #: header.php:56
 msgid "Register"
-msgstr ""
+msgstr "Регистрация"
 
 #: inc/customizer.php:61
 msgid "Settings theme"
-msgstr ""
+msgstr "Настройки темы"
 
 #: inc/customizer.php:62
 msgid "Contact information on the site"
-msgstr ""
+msgstr "Контактная информация на сайте"
 
 #: inc/customizer.php:73
 msgid "Phone number"
-msgstr ""
+msgstr "Номер телефона"
 
 #: inc/customizer.php:85
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: inc/gutenberg/gutenberg-colors.php:9
 msgid "Strong Pink"
@@ -238,6 +238,7 @@ msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #. translators: %s: search query.
 #: search.php:22
@@ -250,19 +251,23 @@ msgstr ""
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:37
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #: template-parts/content-none.php:44
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:24
-#: template-parts/content.php:50
+#: template-parts/content-page.php:24 template-parts/content.php:50
 msgid "Pages:"
 msgstr ""
 
@@ -276,8 +281,7 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: gutenberg/src/block/block.js:5
-#: gutenberg/src/block/block.js:9
+#: gutenberg/src/block/block.js:5 gutenberg/src/block/block.js:9
 msgid "News"
 msgstr ""
 
@@ -289,13 +293,11 @@ msgstr ""
 msgid "Show button"
 msgstr ""
 
-#: gutenberg/src/blog/index.js:7
-#: gutenberg/src/blog/index.js:12
+#: gutenberg/src/blog/index.js:7 gutenberg/src/blog/index.js:12
 msgid "Blog"
 msgstr ""
 
-#: gutenberg/src/button/index.js:12
-#: gutenberg/src/button/index.js:14
+#: gutenberg/src/button/index.js:12 gutenberg/src/button/index.js:14
 msgid "Button"
 msgstr ""
 
@@ -311,8 +313,7 @@ msgstr ""
 msgid "Show arrow"
 msgstr ""
 
-#: gutenberg/src/section/index.js:29
-#: gutenberg/src/section/index.js:31
+#: gutenberg/src/section/index.js:29 gutenberg/src/section/index.js:31
 msgid "Section"
 msgstr ""
 
@@ -372,37 +373,29 @@ msgstr ""
 msgid "Main image"
 msgstr ""
 
-#: gutenberg/src/subscribe/edit.js:75
-#: gutenberg/src/subscribe/edit.js:90
-#: gutenberg/src/subscribe/edit.js:100
-#: gutenberg/src/subscribe/edit.js:127
-#: gutenberg/src/subscribe/edit.js:142
-#: gutenberg/src/subscribe/edit.js:152
+#: gutenberg/src/subscribe/edit.js:75 gutenberg/src/subscribe/edit.js:90
+#: gutenberg/src/subscribe/edit.js:100 gutenberg/src/subscribe/edit.js:127
+#: gutenberg/src/subscribe/edit.js:142 gutenberg/src/subscribe/edit.js:152
 msgid "Background image"
 msgstr ""
 
-#: gutenberg/src/subscribe/edit.js:83
-#: gutenberg/src/subscribe/edit.js:135
+#: gutenberg/src/subscribe/edit.js:83 gutenberg/src/subscribe/edit.js:135
 msgid "Set background image"
 msgstr ""
 
-#: gutenberg/src/subscribe/edit.js:106
-#: gutenberg/src/subscribe/edit.js:158
+#: gutenberg/src/subscribe/edit.js:106 gutenberg/src/subscribe/edit.js:158
 msgid "Replace background image"
 msgstr ""
 
-#: gutenberg/src/subscribe/edit.js:116
-#: gutenberg/src/subscribe/edit.js:168
+#: gutenberg/src/subscribe/edit.js:116 gutenberg/src/subscribe/edit.js:168
 msgid "Remove background image"
 msgstr ""
 
-#: gutenberg/src/subscribe/edit.js:123
-#: gutenberg/src/subscribe/edit.js:125
+#: gutenberg/src/subscribe/edit.js:123 gutenberg/src/subscribe/edit.js:125
 msgid "Small image"
 msgstr ""
 
-#: gutenberg/src/subscribe/index.js:6
-#: gutenberg/src/subscribe/index.js:8
+#: gutenberg/src/subscribe/index.js:6 gutenberg/src/subscribe/index.js:8
 msgid "Subscribe"
 msgstr ""
 
@@ -411,7 +404,6 @@ msgstr ""
 msgid "Woo Categories"
 msgstr ""
 
-#: gutenberg/src/woo-category/index.js:7
-#: gutenberg/src/woo-category/index.js:11
+#: gutenberg/src/woo-category/index.js:7 gutenberg/src/woo-category/index.js:11
 msgid "Woo Category"
 msgstr ""

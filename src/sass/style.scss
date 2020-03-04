@@ -1,5 +1,13 @@
 @import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
 @import '../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import '../../node_modules/bootstrap/scss/utilities/_sizing.scss';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/_transitions';
+@import '../../node_modules/bootstrap/scss/_forms.scss';
+@import '../../node_modules/bootstrap/scss/_custom-forms';
+@import '../../node_modules/bootstrap/scss/utilities';
 @import './fonts';
 @import './elements/**/*.scss';
 @import './modules/**/*.scss';
@@ -11,6 +19,7 @@
 ::after,
 ::before {
   box-sizing: border-box;
+  outline: none;
 }
 
 body,

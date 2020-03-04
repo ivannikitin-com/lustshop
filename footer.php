@@ -11,8 +11,6 @@
 
 ?>
 
-	</div><!-- #content -->
-
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__main">
@@ -73,7 +71,6 @@
 		</div><!--/.footer__bottom-->
 		<?php endif; ?>
 	</footer>
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

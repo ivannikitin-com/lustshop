@@ -66,8 +66,15 @@ $border-radius-1: 6px;
 // ===================
 
 // Content
-$content-width: 1236px;
+$content-width: 1266px;
 $block-margin: 20px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: $content-width,
+);
 
 $grid-gutter-width: 30px;
 

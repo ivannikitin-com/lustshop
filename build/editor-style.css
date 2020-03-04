@@ -65,7 +65,7 @@ html {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1266px; } }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   width: 100%;
@@ -88,7 +88,7 @@ html {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1140px; } }
+    max-width: 1266px; } }
 
 .row {
   display: flex;
@@ -2730,7 +2730,6 @@ html {
   min-height: 42px;
   font-family: "MontserratAlternates", sans-serif;
   font-size: 14px;
-  font-weight: 400;
   font-weight: 600;
   line-height: 1;
   color: #ff026d;
@@ -2757,6 +2756,12 @@ html {
   .wp-block-lustshop-button--secondary {
     background-color: transparent;
     border-color: #ff026d; }
+  .wp-block-lustshop-button--grey {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: transparent; }
+    .wp-block-lustshop-button--grey:hover {
+      color: #f5f5f5;
+      background-color: #ff026d; }
   .wp-block-lustshop-button svg {
     margin-left: 9px; }
 
@@ -3097,13 +3102,13 @@ h6 {
 
 /* Post title width */
 .editor-post-title__block.wp-block {
-  max-width: 1236px; }
+  max-width: 1266px; }
   .editor-post-title__block.wp-block .editor-post-title__input {
     font-family: "MontserratAlternates", sans-serif; }
 
 /* Main column width */
 .wp-block {
-  max-width: 1236px; }
+  max-width: 1266px; }
 
 /* Width of "wide" blocks */
 .wp-block[data-align='wide'] {

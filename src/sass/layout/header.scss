@@ -1,0 +1,271 @@
+.header {
+  $self: &;
+  position: relative;
+  z-index: 2;
+  background-color: #000000;
+
+  &__top {
+    border-bottom: 1px solid $white-80;
+  }
+
+  &__account {
+    padding: 6px 0;
+    display: flex;
+    font-size: 13px;
+    white-space: nowrap;
+
+    a {
+      border-bottom: 1px dotted $white-40;
+
+      &:hover {
+        text-decoration: none;
+        border-color: $strong-pink;
+      }
+
+      &:not(:first-child) {
+        margin-left: 2px;
+      }
+    }
+  }
+
+  &__login {
+    margin-right: 10px;
+    width: 21px;
+    min-height: 18px;
+    color: $white;
+  }
+
+  &__menu-top {
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+
+      li.menu-item:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    a {
+      font-size: 13px;
+      white-space: nowrap;
+      color: $white-40;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .navbar-collapse {
+      position: absolute;
+      z-index: 1;
+      top: 60px;
+      right: 0;
+      left: 0;
+
+      @include media-breakpoint-up(md) {
+        position: static;
+      }
+
+      .navbar-nav {
+        padding: 6px 15px;
+        background: $dark;
+
+        @include media-breakpoint-up(md) {
+          padding: 6px 0;
+          background: transparent;
+        }
+      }
+    }
+
+    .navbar-toggler:focus {
+      outline-color: #ffffff;
+    }
+  }
+
+  &__main {
+    padding: 0 0 8px;
+    border-bottom: 1px solid $white-80;
+  }
+
+  &__logo {
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: $white-30;
+
+    &:hover {
+      text-decoration: none;
+      color: $white-30;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+
+  &__name-shop {
+    margin-top: 3px;
+    display: block;
+  }
+
+  &__phone a {
+    font-size: 18px;
+    font-weight: 600;
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__block-item {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:first-child) {
+      margin-left: 18px;
+    }
+
+    > a {
+      display: block;
+    }
+
+    svg {
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &.mini-cart {
+
+      #{ $self }__block-item-count {
+        color: $white;
+        background-color: $strong-pink;
+
+        &:hover,
+        &:active {
+          color: $white;
+          background-color: $vivid-pink;
+        }
+      }
+    }
+  }
+
+  &__block-item-count {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    font-size: $default-size;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: $white-40;
+    background-color: $white-80;
+    border-radius: 50%;
+  }
+
+  &__main_menu {
+
+    ul.navbar-nav {
+      @include media-breakpoint-up(lg) {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      > li {
+        display: flex;
+        flex-direction: column;
+
+        &.last {
+
+          a {
+            @extend .wp-block-lustshop-button, .wp-block-lustshop-button--grey;
+            padding: 0 23px;
+            // stylelint-disable
+            color: $white !important;
+            // stylelint-enable
+          }
+        }
+
+        a {
+          padding-right: 20px;
+          padding-left: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          text-align: left;
+          color: $white;
+        }
+
+        &:not(.last) {
+
+          a:hover {
+            color: $strong-pink;
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+
+          a {
+            padding: 0 7px;
+            height: 42px;
+            line-height: 42px;
+            white-space: nowrap;
+          }
+
+          &:first-child a {
+            padding-left: 0;
+          }
+
+          &:not(.last) {
+
+            a::after {
+              position: relative;
+              top: 5px;
+              margin: 0 -7px;
+              display: block;
+              height: 3px;
+              content: '';
+              background: transparent;
+            }
+
+            a:hover::after {
+              background: $strong-pink;
+            }
+          }
+        }
+
+        @include media-breakpoint-up(xl) {
+
+          &:not(.last) {
+
+            a {
+              padding-right: 20px;
+              padding-left: 20px;
+            }
+
+            a::after {
+              margin: 0 -20px;
+            }
+          }
+        }
+      }
+    }
+
+    .current-menu-item a {
+      color: $strong-pink;
+    }
+
+    @include media-breakpoint-up(lg) {
+
+      li:first-child a {
+        padding-left: 0;
+      }
+    }
+  }
+}

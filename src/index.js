@@ -1,1 +1,4 @@
-import './js/carousel';
+import 'bootstrap'
+import 'popper.js'
+
+import './js/carousel'
