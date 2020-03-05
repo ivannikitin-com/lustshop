@@ -2772,6 +2772,66 @@ html {
   display: inline-block;
   min-width: 1px; }
 
+@media (min-width: 992px) {
+  .lutshop-home-banner {
+    padding-top: 200px; } }
+
+.lutshop-home-banner__info {
+  padding-top: 30px;
+  padding-bottom: 45px;
+  align-self: center; }
+
+.lutshop-home-banner__title {
+  margin-bottom: 2rem;
+  font-size: 40px;
+  font-weight: 600;
+  color: #1d1f26; }
+  @media (max-width: 767.98px) {
+    .lutshop-home-banner__title {
+      font-size: 34px;
+      line-height: 40px; } }
+  @media (min-width: 992px) {
+    .lutshop-home-banner__title {
+      font-size: 50px; } }
+
+.lutshop-home-banner__description {
+  display: flex;
+  font-size: 16px;
+  color: #b8c0cc;
+  align-items: flex-end; }
+
+.lutshop-home-banner__text {
+  margin-left: 19px;
+  line-height: 22px;
+  align-self: flex-end; }
+  .lutshop-home-banner__text p {
+    margin-bottom: 10px; }
+  .lutshop-home-banner__text span {
+    color: #ff026d; }
+
+.lutshop-home-banner__autor {
+  font-size: 12px;
+  color: #fff; }
+  .lutshop-home-banner__autor sup {
+    top: 0;
+    font-size: 100%;
+    color: #ff026d; }
+
+.lutshop-home-banner__picture {
+  align-self: flex-end; }
+
+.lutshop-home-banner__img {
+  position: relative;
+  z-index: 1;
+  margin-top: -72px; }
+
+.lutshop-home-banner__button {
+  font-size: 16px; }
+  @media (min-width: 992px) {
+    .lutshop-home-banner__button {
+      height: 60px;
+      line-height: 60px; } }
+
 .wp-block-lustshop-section {
   position: relative;
   width: 100%;

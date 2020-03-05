@@ -4,6 +4,16 @@
   z-index: 2;
   background-color: #000000;
 
+  &--absolute {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+
   &__top {
     border-bottom: 1px solid $white-80;
   }

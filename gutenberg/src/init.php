@@ -85,3 +85,4 @@ function lustshop_blocks_cgb_categories ( $categories ) {
 include __DIR__ . '/blog/index.php';
 include __DIR__ . '/woo-category/index.php';
 include __DIR__ . '/subscribe/index.php';
+include __DIR__ . '/home-banner/index.php';

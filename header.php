@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-	<header class="header">		
+	<header class="header <?php if ( is_front_page() ) echo 'header--absolute'; ?>">		
 		<div class="header__top">
 			<div class="container">
 				<nav class="navbar navbar-dark navbar-expand-md header__menu-top" id="menu_top">
