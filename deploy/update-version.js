@@ -9,7 +9,16 @@ const pjson = require('../package.json')
 const version = pjsonOld.version
 
 const patch = semver.patch(version)
-const patchedVersion = `${semver.major(version)}.${semver.minor(version)}.${patch + 1}`
+
+let patchedVersion = ''
+
+if (patch > 9) {
+  patchedVersion = `${semver.major(version)}.${semver.minor(version) + 1}.${0}`
+} else if (semver.minor(version) > 9) {
+  patchedVersion = `${semver.major(version) + 1}.${0}.${0}`
+} else {
+  patchedVersion = `${semver.major(version)}.${semver.minor(version)}.${patch + 1}`
+}
 
 pjson.version = patchedVersion
 
