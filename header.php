@@ -75,7 +75,7 @@
 					</div>
 					<div class="col-auto col-sm-auto col-xl-2 mb-lg-0 mb-2">
 						<?php if ( get_theme_mod( 'lustshop_phone_number' ) ) : ?>
-							<div class="header__phone"><a href="tel:<?php echo filter_phone( get_theme_mod( 'lustshop_phone_number' ) ); ?>"><?php echo get_theme_mod( 'lustshop_phone_number' ); ?></a></div>
+							<div class="header__phone"><a href="tel:<?php echo LustShop::filter_phone( get_theme_mod( 'lustshop_phone_number' ) ); ?>"><?php echo get_theme_mod( 'lustshop_phone_number' ); ?></a></div>
 						<?php endif; ?>
 					</div>
 					<div class="col-12 col-md-auto col-xl-5 mb-lg-0 mb-2">

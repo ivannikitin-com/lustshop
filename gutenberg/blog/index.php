@@ -47,7 +47,7 @@ function render_block_lustshop_blog( $attributes ) {
 					</div>
 					<a href="%3$s" class="'. $class .'__post-title">%4$s</a>
 			',
-			get_the_post_thumbnail( $post ),
+			get_the_post_thumbnail( $post, 'lustshop-blog-thumbnail' ),
 			$categoriesHtml,
 			esc_url( get_permalink( $post ) ),
 			$title

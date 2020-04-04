@@ -24,16 +24,6 @@ function lustshop_woocommerce_setup() {
 add_action( 'after_setup_theme', 'lustshop_woocommerce_setup' );
 
 /**
- * WooCommerce specific scripts & stylesheets.
- *
- * @return void
- */
-function lustshop_woocommerce_scripts() {
-	wp_enqueue_style( 'lustshop-woocommerce-style', get_template_directory_uri() . '/build/woocommerce.css' );
-}
-add_action( 'wp_enqueue_scripts', 'lustshop_woocommerce_scripts' );
-
-/**
  * Disable the default WooCommerce stylesheet.
  *
  * Removing the default WooCommerce stylesheet and enqueing your own will

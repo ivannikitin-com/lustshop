@@ -1,20 +1,20 @@
 .wp-block-lustshop-button {
-  padding-right: 22px;
-  padding-left: 22px;
   display: inline-flex;
+  align-items: center;
   width: auto;
   min-height: 42px;
-  font-family: $default-font;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  color: $strong-pink;
+  padding-right: 22px;
+  padding-left: 22px;
   background-color: $white-two;
   border: 0;
   border: 1px solid $white-two;
   border-radius: 100px;
+  font-family: $default-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: $strong-pink;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  align-items: center;
 
   &:not(:disabled):not(.disabled) {
     cursor: pointer;
@@ -26,7 +26,6 @@
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
-
     & {
       transition: none;
     }
@@ -38,9 +37,9 @@
   }
 
   &--primary {
-    color: $white;
     background-color: $strong-pink;
     border-color: $strong-pink;
+    color: $white;
   }
 
   &--secondary {
@@ -53,8 +52,8 @@
     border-color: transparent;
 
     &:hover {
-      color: $white-two;
       background-color: $strong-pink;
+      color: $white-two;
     }
   }
 

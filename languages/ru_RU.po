@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2020-02-28T05:15:56+00:00\n"
+"POT-Creation-Date: 2020-03-31 05:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-02-28 05:18+0000\n"
+"PO-Revision-Date: 2020-03-31 05:08+0000\n"
 "Last-Translator: vadim <mishogev@yandex.ru>\n"
 "Language-Team: Русский\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -17,26 +17,34 @@ msgstr ""
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
 "X-Loco-Version: 2.3.1; wp-5.3.2"
 
-#. Theme Name of the theme
-msgid "lustshop"
+#: functions.php:72
+msgid "Sidebar"
 msgstr ""
 
-#. Theme URI of the theme
-msgid "https://github.com/ivannikitin-com/lustshop"
+#: functions.php:74 functions.php:83 functions.php:92 functions.php:101
+#: functions.php:110 functions.php:119
+msgid "Add widgets here."
 msgstr ""
 
-#. Description of the theme
-#: gutenberg/src/subscribe/edit.js:56
-msgid "Description"
-msgstr ""
+#: functions.php:81
+msgid "Footer 1"
+msgstr "Подвал 1"
 
-#. Author of the theme
-msgid "Иван Никитин и его партнеры"
-msgstr ""
+#: functions.php:90
+msgid "Footer 2"
+msgstr "Подвал 2"
 
-#. Author URI of the theme
-msgid "https://ivannikitin.com"
-msgstr ""
+#: functions.php:99
+msgid "Footer 3"
+msgstr "Подвал 3"
+
+#: functions.php:108
+msgid "Footer Social"
+msgstr "Социальные кнопки в подвале"
+
+#: functions.php:117
+msgid "Footer Bottom"
+msgstr "Низ подвал"
 
 #: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
@@ -54,16 +62,19 @@ msgstr ""
 
 #. translators: %1$s: smiley
 #: 404.php:47
+#, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #. translators: 1: title.
 #: comments.php:35
+#, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
+#, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -75,46 +86,11 @@ msgstr[2] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:43
-msgid "Call, write"
+#. translators: %s: search query.
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
 msgstr ""
-
-#: functions.php:20 gutenberg/src/button/index.js:43
-msgid "Primary"
-msgstr "Главное мен/"
-
-#: functions.php:54
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:56 functions.php:65 functions.php:74 functions.php:83
-#: functions.php:92 functions.php:101
-msgid "Add widgets here."
-msgstr ""
-
-#: functions.php:63
-msgid "Footer 1"
-msgstr "Подвал 1"
-
-#: functions.php:72
-msgid "Footer 2"
-msgstr "Подвал 2"
-
-#: functions.php:81
-msgid "Footer 3"
-msgstr "Подвал 3"
-
-#: functions.php:90
-msgid "Footer Social"
-msgstr "Социальные кнопки в подвале"
-
-#: functions.php:99
-msgid "Footer Bottom"
-msgstr "Низ подвал"
-
-#: gutenberg/src/blog/index.php:176 gutenberg/src/subscribe/edit.js:51
-msgid "Title"
-msgstr "Заголовок"
 
 #: header.php:49
 msgid "My account"
@@ -127,6 +103,23 @@ msgstr "Вход"
 #: header.php:56
 msgid "Register"
 msgstr "Регистрация"
+
+#: footer.php:43
+msgid "Call, write"
+msgstr ""
+
+#: inc/woocommerce.php:203
+msgid "View your shopping cart"
+msgstr ""
+
+#. translators: number of items in the mini cart.
+#: inc/woocommerce.php:207
+#, php-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: inc/customizer.php:61
 msgid "Settings theme"
@@ -143,6 +136,45 @@ msgstr "Номер телефона"
 #: inc/customizer.php:85
 msgid "E-mail"
 msgstr "E-mail"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:24 template-parts/content.php:50
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-page.php:37
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:39
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
 
 #: inc/gutenberg/gutenberg-colors.php:9
 msgid "Strong Pink"
@@ -228,182 +260,43 @@ msgstr ""
 msgid "Dark Three"
 msgstr ""
 
-#: inc/woocommerce.php:213
-msgid "View your shopping cart"
+#: gutenberg/home-banner/index.php:14
+msgid "Naughty <sup>Rabbit</sup>"
 msgstr ""
 
-#. translators: number of items in the mini cart.
-#: inc/woocommerce.php:217
-msgid "%d item"
-msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+#: gutenberg/blog/index.php:176
+msgid "Title"
+msgstr "Заголовок"
 
-#. translators: %s: search query.
-#: search.php:22
-msgid "Search Results for: %s"
+#: inc/classes/woocommerce/class_woocomerce_theme.php:71
+msgid "not reviews"
+msgstr "отзывов нет"
+
+#: inc/classes/woocommerce/class_woocomerce_theme.php:75
+#, php-format
+msgctxt "reviews product"
+msgid "%s reviews"
+msgid_plural "%s reviews"
+msgstr[0] "отзыв"
+msgstr[1] "отзыва"
+msgstr[2] "отзывов"
+
+#. Theme Name of the theme
+msgid "lustshop"
 msgstr ""
 
-#: template-parts/content-none.php:14
-msgid "Nothing Found"
+#. Description of the theme
+msgid "Description"
 msgstr ""
 
-#. translators: 1: link to WP admin new post page.
-#: template-parts/content-none.php:24
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#. Theme URI of the theme
+msgid "https://github.com/ivannikitin-com/lustshop"
 msgstr ""
 
-#: template-parts/content-none.php:37
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+#. Author of the theme
+msgid "Иван Никитин и его партнеры"
 msgstr ""
 
-#: template-parts/content-none.php:44
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-
-#: template-parts/content-page.php:24 template-parts/content.php:50
-msgid "Pages:"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-page.php:37
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:39
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#: gutenberg/src/block/block.js:5 gutenberg/src/block/block.js:9
-msgid "News"
-msgstr ""
-
-#: gutenberg/src/blog/edit.js:64
-msgid "Text button"
-msgstr ""
-
-#: gutenberg/src/blog/edit.js:91
-msgid "Show button"
-msgstr ""
-
-#: gutenberg/src/blog/index.js:7 gutenberg/src/blog/index.js:12
-msgid "Blog"
-msgstr ""
-
-#: gutenberg/src/button/index.js:12 gutenberg/src/button/index.js:14
-msgid "Button"
-msgstr ""
-
-#: gutenberg/src/button/index.js:42
-msgid "Default"
-msgstr ""
-
-#: gutenberg/src/button/index.js:44
-msgid "Secondary"
-msgstr ""
-
-#: gutenberg/src/button/index.js:51
-msgid "Show arrow"
-msgstr ""
-
-#: gutenberg/src/section/index.js:29 gutenberg/src/section/index.js:31
-msgid "Section"
-msgstr ""
-
-#: gutenberg/src/section/index.js:152
-msgid "Edit background"
-msgstr ""
-
-#: gutenberg/src/section/index.js:160
-msgid "Reset background image"
-msgstr ""
-
-#: gutenberg/src/section/index.js:168
-msgid "Background Settings"
-msgstr ""
-
-#: gutenberg/src/section/index.js:172
-msgid "Fixed"
-msgstr ""
-
-#: gutenberg/src/section/index.js:177
-msgid "Cover"
-msgstr ""
-
-#: gutenberg/src/section/index.js:182
-msgid "No Repeat"
-msgstr ""
-
-#: gutenberg/src/section/index.js:187
-msgid "Background Opacity"
-msgstr ""
-
-#: gutenberg/src/section/index.js:197
-msgid "Overlay"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:16
-msgid "To edit the background image, you need permission to upload media."
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:46
-msgid "Subtitle"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:61
-msgid "PS"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:66
-msgid "Form shortcode"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:71
-msgid "Main image bg"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:73
-msgid "Main image"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:75 gutenberg/src/subscribe/edit.js:90
-#: gutenberg/src/subscribe/edit.js:100 gutenberg/src/subscribe/edit.js:127
-#: gutenberg/src/subscribe/edit.js:142 gutenberg/src/subscribe/edit.js:152
-msgid "Background image"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:83 gutenberg/src/subscribe/edit.js:135
-msgid "Set background image"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:106 gutenberg/src/subscribe/edit.js:158
-msgid "Replace background image"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:116 gutenberg/src/subscribe/edit.js:168
-msgid "Remove background image"
-msgstr ""
-
-#: gutenberg/src/subscribe/edit.js:123 gutenberg/src/subscribe/edit.js:125
-msgid "Small image"
-msgstr ""
-
-#: gutenberg/src/subscribe/index.js:6 gutenberg/src/subscribe/index.js:8
-msgid "Subscribe"
-msgstr ""
-
-#: gutenberg/src/woo-categories/index.js:8
-#: gutenberg/src/woo-categories/index.js:12
-msgid "Woo Categories"
-msgstr ""
-
-#: gutenberg/src/woo-category/index.js:7 gutenberg/src/woo-category/index.js:11
-msgid "Woo Category"
+#. Author URI of the theme
+msgid "https://ivannikitin.com"
 msgstr ""

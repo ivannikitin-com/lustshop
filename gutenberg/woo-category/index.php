@@ -17,7 +17,7 @@ function render_block_lustshop_woo_category( $attributes ) {
 		$categoryLink = get_term_link( $category->slug, 'product_cat' );
 	
 		$thumbnail_id = get_term_meta( $attributes['categoryId'], 'thumbnail_id', true );
-		$image = wp_get_attachment_image( $thumbnail_id, null, null, array( 'class' => "'$class'__img" ) );
+		$image = wp_get_attachment_image( $thumbnail_id, null, null, array( 'class' => $class . "__img" ) );
 	
 		return sprintf(
 			'

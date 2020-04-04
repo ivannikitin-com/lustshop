@@ -1,14 +1,14 @@
-$default-font: 'MontserratAlternates', sans-serif;
-$second-font: 'PlayfairDisplay', sans-serif;
+$default-font: "MontserratAlternates", sans-serif;
+$second-font: "PlayfairDisplay", sans-serif;
 $default-size: 14px;
 $strong-pink: #ff026d;
 $vivid-pink: #ff1979;
 $darkish-purple: #94217e;
-$white: #fff;
+$white: #ffffff;
 $dark: #1d1f26;
 $white-two: #f5f5f5;
-$warm-grey: #888;
-$brownish-grey: #666;
+$warm-grey: #888888;
+$brownish-grey: #666666;
 $cloudy-blue: #b8c0cc;
 $dark-two: #21232b;
 $french-blue: #4267b2;
@@ -26,7 +26,7 @@ $white-30: rgba(255, 255, 255, 0.3);
 $white-40: rgba(255, 255, 255, 0.4);
 $white-80: rgba(255, 255, 255, 0.08);
 $dark-60: rgba(29, 31, 38, 0.6);
-$pinkish-grey: #ccc;
+$pinkish-grey: #cccccc;
 $yellowish-orange: #fa9f1d;
 $dark-three: #181b1f;
 
@@ -34,26 +34,26 @@ $colors: () !default;
 
 $colors: map-merge(
   (
-    'strong-pink': $strong-pink,
-    'vivid-pink': $vivid-pink,
-    'darkish-purple': $darkish-purple,
-    'white': $white,
-    'dark': $dark,
-    'white-two': $white-two,
-    'warm-grey': $warm-grey,
-    'cloudy-blue': $cloudy-blue,
-    'dark-two': $dark-two,
-    'french-blue': $french-blue,
-    'lipstick': $lipstick,
-    'azure': $azure,
-    'pale-red': $pale-red,
-    'off-yellow': $off-yellow,
-    'cerise': $cerise,
-    'purplish-blue': $purplish-blue,
-    'dull-blue': $dull-blue,
-    'pinkish-grey': $pinkish-grey,
-    'yellowish-orange': $yellowish-orange,
-    'dark-threedull-blue': $dark-three,
+    "strong-pink": $strong-pink,
+    "vivid-pink": $vivid-pink,
+    "darkish-purple": $darkish-purple,
+    "white": $white,
+    "dark": $dark,
+    "white-two": $white-two,
+    "warm-grey": $warm-grey,
+    "cloudy-blue": $cloudy-blue,
+    "dark-two": $dark-two,
+    "french-blue": $french-blue,
+    "lipstick": $lipstick,
+    "azure": $azure,
+    "pale-red": $pale-red,
+    "off-yellow": $off-yellow,
+    "cerise": $cerise,
+    "purplish-blue": $purplish-blue,
+    "dull-blue": $dull-blue,
+    "pinkish-grey": $pinkish-grey,
+    "yellowish-orange": $yellowish-orange,
+    "dark-threedull-blue": $dark-three,
   ),
   $colors
 );
@@ -89,12 +89,12 @@ $sizes: () !default;
 
 $sizes: map-merge(
   (
-    'xx-small': $xx-small,
-    'x-small': $x-small,
-    'small': $small,
-    'medium': $medium,
-    'large': $large,
-    'x-large': $x-large,
+    "xx-small": $xx-small,
+    "x-small": $x-small,
+    "small": $small,
+    "medium": $medium,
+    "large": $large,
+    "x-large": $x-large,
   ),
   $sizes
 );
