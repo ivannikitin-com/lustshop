@@ -150,7 +150,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! popper.js */ \"./node_modules/popper.js/dist/esm/popper.js\");\n/* harmony import */ var _js_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/carousel */ \"./src/js/carousel.js\");\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! popper.js */ \"./node_modules/popper.js/dist/esm/popper.js\");\n/* harmony import */ var _js_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/carousel */ \"./src/js/carousel.js\");\n/* harmony import */ var _js_filter_post__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/filter-post */ \"./src/js/filter-post.js\");\n\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -163,6 +163,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var boot
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);\n\n\njquery__WEBPACK_IMPORTED_MODULE_0___default()(\".slider-products__carousel\").slick({\n  arrows: true,\n  dots: false,\n  slidesToShow: 4,\n  prevArrow: '<button type=\"button\" class=\"slick-prev\"><svg xmlns=\"http://www.w3.org/2000/svg\" transform=\"rotate(180)\" width=\"7\" height=\"12\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M6.992 5.999a.992.992 0 0 1-.292.706l-4.988 5a.999.999 0 1 1-1.415-1.412L4.58 5.999.297 1.705A1 1 0 1 1 1.712.293l4.988 5c.195.194.292.45.292.706z\"/></svg></button>',\n  nextArrow: '<button type=\"button\" class=\"slick-next\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"7\" height=\"12\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M6.992 5.999a.992.992 0 0 1-.292.706l-4.988 5a.999.999 0 1 1-1.415-1.412L4.58 5.999.297 1.705A1 1 0 1 1 1.712.293l4.988 5c.195.194.292.45.292.706z\"/></svg></button>',\n  responsive: [{\n    breakpoint: 0,\n    settings: {\n      slidesToShow: 1\n    }\n  }, {\n    breakpoint: 768,\n    settings: {\n      slidesToShow: 2\n    }\n  }, {\n    breakpoint: 992,\n    settings: {\n      slidesToShow: 3\n    }\n  }]\n});\n\n//# sourceURL=webpack:///./src/js/carousel.js?");
+
+/***/ }),
+
+/***/ "./src/js/filter-post.js":
+/*!*******************************!*\
+  !*** ./src/js/filter-post.js ***!
+  \*******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar formID = \"#filter_posts\";\nvar button = \"#post_submit\";\njquery__WEBPACK_IMPORTED_MODULE_0___default()(formID).on(\"change\", function () {\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()(button).click();\n});\n\n//# sourceURL=webpack:///./src/js/filter-post.js?");
 
 /***/ })
 

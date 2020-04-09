@@ -9,11 +9,9 @@
 @import "../../node_modules/bootstrap/scss/_custom-forms";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "./fonts";
-@import "./elements/**/*.scss";
-@import "./modules/**/*.scss";
-@import "./navigation/**/*.scss";
 @import "./layout/**/*.scss";
 @import "./blocks/**/frontend.scss";
+@import "./elements/**/*.scss";
 
 *,
 ::after,

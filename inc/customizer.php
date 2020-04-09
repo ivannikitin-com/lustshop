@@ -87,4 +87,16 @@ add_action('customize_register', function($customizer) {
 			'type'      => 'email',
 		)
 	);
+
+	$customizer->add_setting( 'lustshop_placeholder', array(
+		'default' => ''
+	) );
+	$customizer->add_control(
+		'lustshop_placeholder',
+		array(
+			'label'     => __('Image ID Placeholder', 'lustshop'),
+			'section'   => 'settings-site',
+			'type'      => 'text',
+		)
+	);
 });

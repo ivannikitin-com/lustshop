@@ -1,4 +1,5 @@
 .wp-block-lustshop-button {
+  $self: &;
   display: inline-flex;
   align-items: center;
   width: auto;
@@ -54,6 +55,16 @@
     &:hover {
       background-color: $strong-pink;
       color: $white-two;
+    }
+  }
+
+  &--link {
+    background-color: transparent;
+    color: $brownish-grey;
+
+    &:hover {
+      background-color: $dark;
+      color: #ffffff;
     }
   }
 

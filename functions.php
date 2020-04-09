@@ -30,6 +30,8 @@ class LustShop {
 		}
 
 		add_filter( 'wpcf7_autop_or_not', '__return_false' );
+		add_filter( 'navigation_markup_template', array( $this, 'navigation_template' ), 10, 2 );
+		add_filter( 'excerpt_more', array( $this, 'trim_excerpt' ) );
 
 		$this->includes();
 	}
@@ -66,20 +68,12 @@ class LustShop {
 	}
 
 	public function image_size() {
-		add_image_size( $this->theme_name . '-slider-product', 279, 279, false );
-		add_image_size( $this->theme_name . '-blog-thumbnail', 382, 252, false );
+		add_image_size( $this->theme_name . '-slider-product', 279, 279, true );
+		add_image_size( $this->theme_name . '-blog-thumbnail', 382, 252, true );
+		add_image_size( $this->theme_name . '-post-thumbnail', 485, 320, true );
 	}
 
 	public function widgets_init() {
-		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar', 'lustshop' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'lustshop' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer 1', 'lustshop' ),
 			'id'            => 'footer-1',
@@ -189,6 +183,26 @@ class LustShop {
 			'render_template'   => 'template-parts/blocks/' . $name . '.php',
 			'category'          => $this->theme_name,
 		));
+	}
+
+	public function navigation_template( $template, $class ) {
+		/*
+		Вид базового шаблона:
+		<nav class="navigation %1$s" role="navigation">
+			<h2 class="screen-reader-text">%2$s</h2>
+			<div class="nav-links">%3$s</div>
+		</nav>
+		*/
+	
+		return '
+		<nav class="navigation %1$s" role="navigation">
+			<div class="nav-links">%3$s</div>
+		</nav>    
+		';
+	}
+
+	public function trim_excerpt() {
+		return '...';
 	}
 }
 
