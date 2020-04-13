@@ -15,7 +15,7 @@ endif;
 <article id="post-<?php the_ID(); ?>" <?php post_class('single'); ?>>
   <header class="page-header single__header">
     <div class="single__image">
-      <?php the_post_thumbnail('lustshop-single-thumbnail') ?: 	get_template_part('template-parts/components/placeholder') ; ?>
+      <?php  get_the_post_thumbnail( $post->ID, 'lustshop-single-thumbnail') ?: 	get_template_part('template-parts/components/placeholder') ; ?>
     </div>
     <div class="single__info">
       <div class="single__container">
