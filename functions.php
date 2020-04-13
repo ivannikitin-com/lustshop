@@ -28,6 +28,7 @@ class LustShop {
 		if( function_exists('acf_register_block_type') ) {
 			add_action('acf/init', array( $this, 'register_acf_block_types' ));
 		}
+		add_filter( 'comment_form_fields', array( $this, 'reorder_comment_fields') );
 
 		add_filter( 'wpcf7_autop_or_not', '__return_false' );
 		add_filter( 'navigation_markup_template', array( $this, 'navigation_template' ), 10, 2 );
@@ -71,6 +72,7 @@ class LustShop {
 		add_image_size( $this->theme_name . '-slider-product', 279, 279, true );
 		add_image_size( $this->theme_name . '-blog-thumbnail', 382, 252, true );
 		add_image_size( $this->theme_name . '-post-thumbnail', 485, 320, true );
+		add_image_size( $this->theme_name . '-single-thumbnail', 1206, 600, true );
 	}
 
 	public function widgets_init() {
@@ -203,6 +205,81 @@ class LustShop {
 
 	public function trim_excerpt() {
 		return '...';
+	}
+
+	public function reorder_comment_fields( $fields ){
+		// die(print_r( $fields )); // посмотрим какие поля есть
+	
+		$new_fields = array(); // сюда соберем поля в новом порядке
+	
+		$myorder = array('author','email','comment'); // нужный порядок
+	
+		foreach( $myorder as $key ){
+			$new_fields[ $key ] = $fields[ $key ];
+			unset( $fields[ $key ] );
+		}
+	
+		// если остались еще какие-то поля добавим их в конец
+		if( $fields )
+			foreach( $fields as $key => $val )
+				$new_fields[ $key ] = $val;
+	
+		return $new_fields;
+	}
+
+	static function comment_template($comment, $args, $depth) {
+		?>
+		<li <?php comment_class() ?> id="comment-<?php comment_ID() ?>">
+			<article class="comments__item">
+				<div class="comments__header">
+					<div class="comments__avatar">
+						<?php echo get_avatar( $comment, 73, '', '', array() ); ?>
+					</div>		
+					<div>
+						<span class="comments__author"><?php comment_author() ?></span>
+						<span class="comments__date"><?php comment_date( 'j F Y' ) ?></span>
+						<div class="comments__body d-none d-lg-block">
+							<?php comment_text(); ?>
+
+							<div class="comments__reply">
+								<?php
+								comment_reply_link(
+									array_merge(
+										$args,
+										array(
+											'add_below' => $add_below,
+											'depth'     => $depth,
+											'max_depth' => $args['max_depth']
+										)
+									)
+								); ?>
+							
+								<?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="comments__body d-block d-lg-none">
+					<?php comment_text(); ?>
+
+					<div class="comments__reply">
+						<?php
+						comment_reply_link(
+							array_merge(
+								$args,
+								array(
+									'add_below' => $add_below,
+									'depth'     => $depth,
+									'max_depth' => $args['max_depth']
+								)
+							)
+						); ?>
+
+						<?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+					</div>
+				</div>				
+			</article>
+		<?php
 	}
 }
 

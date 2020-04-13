@@ -4,45 +4,41 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2020-03-31 05:07+0000\n"
+"POT-Creation-Date: 2020-04-13 05:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-03-31 05:08+0000\n"
-"Last-Translator: vadim <mishogev@yandex.ru>\n"
+"PO-Revision-Date: 2020-04-13 05:06+0000\n"
+"Last-Translator: \n"
 "Language-Team: Русский\n"
 "X-Generator: Loco https://localise.biz/\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
-"X-Loco-Version: 2.3.1; wp-5.3.2"
+"X-Loco-Version: 2.3.3; wp-5.4"
 
-#: functions.php:72
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:74 functions.php:83 functions.php:92 functions.php:101
-#: functions.php:110 functions.php:119
-msgid "Add widgets here."
-msgstr ""
-
-#: functions.php:81
+#: functions.php:80
 msgid "Footer 1"
 msgstr "Подвал 1"
 
-#: functions.php:90
+#: functions.php:82 functions.php:91 functions.php:100 functions.php:109
+#: functions.php:118
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:89
 msgid "Footer 2"
 msgstr "Подвал 2"
 
-#: functions.php:99
+#: functions.php:98
 msgid "Footer 3"
 msgstr "Подвал 3"
 
-#: functions.php:108
+#: functions.php:107
 msgid "Footer Social"
 msgstr "Социальные кнопки в подвале"
 
-#: functions.php:117
+#: functions.php:116
 msgid "Footer Bottom"
 msgstr "Низ подвал"
 
@@ -66,25 +62,31 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#. translators: 1: title.
-#: comments.php:35
-#, php-format
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
+#: comments.php:25
+msgid "Name"
+msgstr "Ваше имя"
 
-#. translators: 1: comment count number, 2: title.
-#: comments.php:41
-#, php-format
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+#: comments.php:28
+msgid "Email"
+msgstr "Ваш e-mail"
 
-#: comments.php:66
+#: comments.php:36
+msgid "Comment"
+msgstr "Комментарий"
+
+#: comments.php:61
+msgid "Post Comment"
+msgstr "Добавить комментарий"
+
+#. 1: title.
+#: comments.php:80
+#, php-format
+msgid "Comments %1$s"
+msgstr "Комментарии %1$s"
+
+#: comments.php:105
 msgid "Comments are closed."
-msgstr ""
+msgstr "Комментарии отключены"
 
 #. translators: %s: search query.
 #: search.php:22
@@ -106,7 +108,7 @@ msgstr "Регистрация"
 
 #: footer.php:43
 msgid "Call, write"
-msgstr ""
+msgstr "Звоните, пишите"
 
 #: inc/woocommerce.php:203
 msgid "View your shopping cart"
@@ -137,6 +139,10 @@ msgstr "Номер телефона"
 msgid "E-mail"
 msgstr "E-mail"
 
+#: inc/customizer.php:97
+msgid "Image ID Placeholder"
+msgstr ""
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -158,22 +164,6 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#: template-parts/content-page.php:24 template-parts/content.php:50
-msgid "Pages:"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-page.php:37
-#, php-format
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:39
-#, php-format
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: inc/gutenberg/gutenberg-colors.php:9
@@ -268,11 +258,15 @@ msgstr ""
 msgid "Title"
 msgstr "Заголовок"
 
-#: inc/classes/woocommerce/class_woocomerce_theme.php:71
+#: template-parts/components/filter-posts.php:23
+msgid "All posts"
+msgstr "Все записи"
+
+#: inc/classes/woocommerce/class_woocomerce_theme.php:83
 msgid "not reviews"
 msgstr "отзывов нет"
 
-#: inc/classes/woocommerce/class_woocomerce_theme.php:75
+#: inc/classes/woocommerce/class_woocomerce_theme.php:87
 #, php-format
 msgctxt "reviews product"
 msgid "%s reviews"
@@ -283,20 +277,20 @@ msgstr[2] "отзывов"
 
 #. Theme Name of the theme
 msgid "lustshop"
-msgstr ""
+msgstr "lustshop"
 
 #. Description of the theme
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #. Theme URI of the theme
 msgid "https://github.com/ivannikitin-com/lustshop"
-msgstr ""
+msgstr "https://github.com/ivannikitin-com/lustshop"
 
 #. Author of the theme
 msgid "Иван Никитин и его партнеры"
-msgstr ""
+msgstr "Иван Никитин и его партнеры"
 
 #. Author URI of the theme
 msgid "https://ivannikitin.com"
-msgstr ""
+msgstr "https://ivannikitin.com"

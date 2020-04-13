@@ -27,6 +27,10 @@
     letter-spacing: 0.55px;
     text-transform: uppercase;
 
+    &--pink {
+      background-color: $strong-pink;
+    }
+
     &:hover {
       background-color: $strong-pink;
 

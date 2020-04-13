@@ -10,39 +10,35 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-03-31 05:07+0000\n"
+"POT-Creation-Date: 2020-04-13 05:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: lustshop\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
 
-#: functions.php:72
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:74 functions.php:83 functions.php:92 functions.php:101
-#: functions.php:110 functions.php:119
-msgid "Add widgets here."
-msgstr ""
-
-#: functions.php:81
+#: functions.php:80
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:82 functions.php:91 functions.php:100 functions.php:109
+#: functions.php:118
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:89
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:98
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:107
 msgid "Footer Social"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:116
 msgid "Footer Bottom"
 msgstr ""
 
@@ -66,22 +62,29 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#. translators: 1: title.
-#: comments.php:35
-#, php-format
-msgid "One thought on &ldquo;%1$s&rdquo;"
+#: comments.php:25
+msgid "Name"
 msgstr ""
 
-#. translators: 1: comment count number, 2: title.
-#: comments.php:41
-#, php-format
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+#: comments.php:28
+msgid "Email"
+msgstr ""
 
-#: comments.php:66
+#: comments.php:36
+msgid "Comment"
+msgstr ""
+
+#: comments.php:61
+msgid "Post Comment"
+msgstr ""
+
+#. 1: title.
+#: comments.php:80
+#, php-format
+msgid "Comments %1$s"
+msgstr ""
+
+#: comments.php:105
 msgid "Comments are closed."
 msgstr ""
 
@@ -135,6 +138,10 @@ msgstr ""
 msgid "E-mail"
 msgstr ""
 
+#: inc/customizer.php:97
+msgid "Image ID Placeholder"
+msgstr ""
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -156,22 +163,6 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#: template-parts/content-page.php:24 template-parts/content.php:50
-msgid "Pages:"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-page.php:37
-#, php-format
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:39
-#, php-format
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: inc/gutenberg/gutenberg-colors.php:9
@@ -266,11 +257,15 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: inc/classes/woocommerce/class_woocomerce_theme.php:71
+#: template-parts/components/filter-posts.php:23
+msgid "All posts"
+msgstr ""
+
+#: inc/classes/woocommerce/class_woocomerce_theme.php:83
 msgid "not reviews"
 msgstr ""
 
-#: inc/classes/woocommerce/class_woocomerce_theme.php:75
+#: inc/classes/woocommerce/class_woocomerce_theme.php:87
 #, php-format
 msgctxt "reviews product"
 msgid "%s reviews"

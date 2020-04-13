@@ -26,8 +26,8 @@ $categories = wp_get_post_categories( $post->ID, array('fields' => 'all') );
         <?php echo get_the_excerpt($post); ?>
       </div>
       <div class="post__date">
-					<time datetime="<?php echo esc_attr( get_the_date( 'c', $post ) ) ?>"><?php echo esc_html( get_the_date( '', $post ) ) ?></time>
-				</div>
+        <time datetime="<?php echo esc_attr( get_the_date( 'c', $post ) ) ?>"><?php echo esc_html( get_the_date( '', $post ) ) ?></time>
+      </div>
     </div>
   </div>
 </div>
