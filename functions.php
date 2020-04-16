@@ -146,12 +146,13 @@ class LustShop {
 		require get_template_directory() . '/inc/customizer.php';
 		if ( class_exists( 'WooCommerce' ) ) {
 			require get_template_directory() . '/inc/woocommerce.php';
-			require get_template_directory() . '/inc/classes/woocommerce/class_woocomerce_theme.php';
+			require get_template_directory() . '/inc/classes/woocommerce/class_woocomerce_layout.php';
 		}
 		require get_template_directory() . '/inc/gutenberg/index.php';
 		require get_template_directory() . '/gutenberg/init.php';
 		require get_template_directory() . '/inc/optimize.php';
 		require get_template_directory() . '/inc/remove-plugin-assets.php';
+		require get_template_directory() . '/inc/classes/class_wp_bootstrap_navwalker.php';
 	}
 
 	static function filter_phone( $phone ) {
