@@ -64,7 +64,8 @@ class LustShop {
 	public function nav_menu() {
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', $this->theme_name ),
-			'main' => esc_html__('Main', $this->theme_name)
+			'main' => esc_html__('Main', $this->theme_name),
+			'main-mobile' => esc_html__('Main-mobile', $this->theme_name)
 		) );
 	}
 
@@ -230,20 +231,20 @@ class LustShop {
 
 	static function comment_template($comment, $args, $depth) {
 		?>
-		<li <?php comment_class() ?> id="comment-<?php comment_ID() ?>">
-			<article class="comments__item">
-				<div class="comments__header">
-					<div class="comments__avatar">
-						<?php echo get_avatar( $comment, 73, '', '', array() ); ?>
-					</div>		
-					<div>
-						<span class="comments__author"><?php comment_author() ?></span>
-						<span class="comments__date"><?php comment_date( 'j F Y' ) ?></span>
-						<div class="comments__body d-none d-lg-block">
-							<?php comment_text(); ?>
+<li <?php comment_class() ?> id="comment-<?php comment_ID() ?>">
+	<article class="comments__item">
+		<div class="comments__header">
+			<div class="comments__avatar">
+				<?php echo get_avatar( $comment, 73, '', '', array() ); ?>
+			</div>
+			<div>
+				<span class="comments__author"><?php comment_author() ?></span>
+				<span class="comments__date"><?php comment_date( 'j F Y' ) ?></span>
+				<div class="comments__body d-none d-lg-block">
+					<?php comment_text(); ?>
 
-							<div class="comments__reply">
-								<?php
+					<div class="comments__reply">
+						<?php
 								comment_reply_link(
 									array_merge(
 										$args,
@@ -254,17 +255,17 @@ class LustShop {
 										)
 									)
 								); ?>
-							
-								<?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
-							</div>
-						</div>
+
+						<?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
 					</div>
 				</div>
-				<div class="comments__body d-block d-lg-none">
-					<?php comment_text(); ?>
+			</div>
+		</div>
+		<div class="comments__body d-block d-lg-none">
+			<?php comment_text(); ?>
 
-					<div class="comments__reply">
-						<?php
+			<div class="comments__reply">
+				<?php
 						comment_reply_link(
 							array_merge(
 								$args,
@@ -276,11 +277,11 @@ class LustShop {
 							)
 						); ?>
 
-						<?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
-					</div>
-				</div>				
-			</article>
-		<?php
+				<?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+			</div>
+		</div>
+	</article>
+	<?php
 	}
 }
 

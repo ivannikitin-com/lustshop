@@ -19,6 +19,7 @@ $off-yellow: #f9ed32;
 $cerise: #ee2a7b;
 $purplish-blue: #550dff;
 $dull-blue: #4a76a8;
+$white-three: rgba(237, 237, 237, 0.05);
 $white-10: rgba(255, 255, 255, 0.1);
 $white-12: rgba(255, 255, 255, 0.12);
 $white-20: rgba(255, 255, 255, 0.2);
@@ -98,3 +99,10 @@ $sizes: map-merge(
   ),
   $sizes
 );
+
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
+$border-width: 0;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='20'%3E%3Cpath fill='%23FFF' fill-rule='evenodd' d='M21 10.999H1A1 1 0 1 1 1 9h20a1 1 0 1 1 0 1.999zm0-9H1a1 1 0 1 1 0-2h20a1 1 0 0 1 0 2zM1 18h20a1 1 0 1 1 0 2H1a1.001 1.001 0 0 1 0-2z'/%3E%3C/svg%3E");
+$dropdown-bg: none;
+$dropdown-link-hover-bg: none;
