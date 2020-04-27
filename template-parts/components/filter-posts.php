@@ -31,7 +31,7 @@ $categories = get_categories([
     <?php endif; ?>
   </div>
   <div class="filter-posts__group d-none d-lg-block">
-    <label for="">Сортировка:</label>
+    <label for=""><?php _e('Сортировка:', 'lustshop'); ?></label>
     <select class="lustshop-select filter-posts__select" name="order">
       <option value="" default>по умолчанию</option>
       <option value="ASC" <?php echo selected($_GET['order'], 'ASC'); ?>>по дате (сначала новые)</option>

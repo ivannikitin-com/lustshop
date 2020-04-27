@@ -30,4 +30,14 @@
       font-size: 40px;
     }
   }
+
+  .term-description {
+    margin-top: 22px;
+  }
+
+  .woocommerce & {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 30px;
+    }
+  }
 }

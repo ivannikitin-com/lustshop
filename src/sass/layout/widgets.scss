@@ -1,0 +1,51 @@
+.widgets {
+  padding-top: 25px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    a {
+      display: inline-block;
+      margin-right: -20px;
+      margin-left: -20px;
+      padding: 10px 20px;
+      border-radius: 1000px;
+      font-family: $default-font;
+      font-size: 14px;
+      color: $dark;
+      text-decoration: none;
+
+      &:hover {
+        color: $strong-pink;
+      }
+    }
+
+    &.current-cat {
+      a {
+        background-color: #e4e5eb;
+        color: $strong-pink;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    padding-bottom: 21px;
+    border-bottom: 3px solid $strong-pink;
+    font-family: $default-font;
+    font-size: 20px;
+    font-weight: 600;
+    color: $dark;
+  }
+
+  &__item {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
