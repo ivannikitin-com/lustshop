@@ -33,6 +33,8 @@ header,
 
 body {
   @include base-style;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
