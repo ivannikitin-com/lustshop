@@ -52,7 +52,7 @@ add_filter( 'body_class', 'lustshop_woocommerce_active_body_class' );
  * @return integer number of products.
  */
 function lustshop_woocommerce_products_per_page() {
-	return 12;
+	return 15;
 }
 add_filter( 'loop_shop_per_page', 'lustshop_woocommerce_products_per_page' );
 

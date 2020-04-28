@@ -41,11 +41,19 @@
     background-color: $strong-pink;
     border-color: $strong-pink;
     color: $white;
+
+    &:hover {
+      color: $white;
+    }
   }
 
   &--secondary {
     background-color: transparent;
     border-color: $strong-pink;
+
+    &:hover {
+      color: $white;
+    }
   }
 
   &--grey {
@@ -64,11 +72,15 @@
 
     &:hover {
       background-color: $dark;
-      color: #ffffff;
+      color: $white;
     }
   }
 
   svg {
     margin-left: 9px;
+  }
+
+  .product__buttons & {
+    height: 50px;
   }
 }

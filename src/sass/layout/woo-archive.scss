@@ -1,0 +1,30 @@
+.woo-archive {
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 30px;
+    padding: 5px 17px;
+    background-color: #ffffff;
+  }
+
+  &__filter-button {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &--active,
+    &:hover {
+      color: $strong-pink;
+    }
+  }
+
+  &__filter-ordering {
+    margin-left: auto;
+  }
+}

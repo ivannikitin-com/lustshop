@@ -205,6 +205,12 @@
 
     > a {
       display: block;
+      color: #ffffff;
+
+      &:hover {
+        color: rgba($strong-pink, 0.8);
+        text-decoration: none;
+      }
     }
 
     svg {
