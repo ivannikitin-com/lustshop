@@ -23,8 +23,8 @@ get_header();
 
 
 		</div>
-
-		<?php
+</div>
+<?php
 		while ( have_posts() ) :
 			the_post();
 
@@ -37,8 +37,8 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-		<?php get_template_part( 'category', '' ); ?>
-	</main><!-- #main -->
+<?php get_template_part( 'category', '' ); ?>
+</main><!-- #main -->
 </div><!-- #primary -->
 
 <?php
