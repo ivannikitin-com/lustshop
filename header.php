@@ -191,18 +191,19 @@
           <div class="header__search header__search-mobile w-100">
             <?php get_search_form(); ?>
           </div>
-
-          <?php wp_nav_menu([
-            'theme_location' => 'main-mobile',
-            'depth' => 2, // 1 = no dropdowns, 2 = with dropdowns.
-            'container' => 'div',
-            'container_class' => 'navbar-menu-mobile',
-            'container_id' => '',
-            'menu_class' => 'navbar-nav menu-glavnoe-mobile',
-            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-            'walker' => new WP_Bootstrap_Navwalker(),
-          ]); ?>
-        </nav>
-      </div>
-    </div>
-  </header>
+          
+					<?php wp_nav_menu( array(
+						'theme_location'  => 'main-mobile',
+						'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+						'container'       => 'div',
+						'container_class' => 'navbar-menu-mobile',
+						'container_id'    => '',
+						'menu_class'      => 'navbar-nav menu-glavnoe-mobile',
+						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+						'walker'          => new WP_Bootstrap_Navwalker(),
+				) ); ?>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper">
