@@ -47,7 +47,8 @@ class Lustshop_Woocommerce extends LustShop
         add_filter('woocommerce_loop_add_to_cart_args', [$this, 'loop_add_to_cart_args'], 10, 2);
     }
 
-    public function change_position_compare() {
+    public function change_position_compare()
+    {
         if (class_exists('YITH_Woocompare_Frontend')) {
             global $yith_woocompare;
 
@@ -166,12 +167,9 @@ class Lustshop_Woocommerce extends LustShop
     public function archive_product()
     {
         remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
-        add_action('woocommerce_before_main_content', [$this, 'woocommerce_before_main_content_container'], 15);
 
         remove_action('woocommerce_after_shop_loop', 'woocommerce_pagination', 10);
         add_action('woocommerce_after_shop_loop', [$this, 'woocommerce_pagination'], 10);
-
-        add_action('woocommerce_after_main_content', [$this, 'woocommerce_after_main_contentcontainer'], 5);
 
         remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
         add_action('woocommerce_before_shop_loop', [$this, 'woocommerce_container_filter_before'], 15);
@@ -193,16 +191,6 @@ class Lustshop_Woocommerce extends LustShop
     public function woocommerce_toggle_list_grid()
     {
         get_template_part('template-parts/components/woo-toggle-list');
-    }
-
-    public function woocommerce_before_main_content_container()
-    {
-        echo '<div class="container">';
-    }
-
-    public function woocommerce_after_main_contentcontainer()
-    {
-        echo '</div>';
     }
 
     public function woocommerce_pagination()

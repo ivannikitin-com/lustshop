@@ -24,7 +24,7 @@ get_header( 'shop' );
 		<div class="col-lg-12">
 			<?php get_template_part('template-parts/components/breadcrumb'); ?>
 		</div>
-		<div class="col-lg-3 d-none d-lg-block">
+		<div class="col-xl-3 d-none d-xl-block">
 			<?php
 				/**
 				 * Hook: woocommerce_sidebar.
@@ -34,7 +34,7 @@ get_header( 'shop' );
 				do_action( 'woocommerce_sidebar' );
 			?>
 		</div>
-		<div class="col-lg-9">
+		<div class="col-xl-9 col-lg-12">
 			<?php
 			/**
 			 * Hook: woocommerce_before_main_content.
