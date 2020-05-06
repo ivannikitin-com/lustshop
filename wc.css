@@ -1,0 +1,44 @@
+table.cart .product-quantity .plus,
+table.cart .product-quantity .minus {
+  display: none;
+}
+
+table.cart tr:first-child td.product-remove {
+  border-top-width: 0;
+}
+
+table.cart td.product-quantity .qty {
+  width: 3.706325903em;
+  padding: 0.326em;
+}
+
+table.cart td,
+table.cart th {
+  padding: 0.875em 0.875em 0;
+}
+
+table.cart td.product-subtotal {
+  padding-bottom: 0.875em;
+}
+
+table.cart td.actions {
+  padding: 0;
+  background-color: transparent;
+  border-top: 1em solid;
+}
+
+table.cart td.actions label {
+  display: none;
+}
+
+table.cart td.actions .coupon {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+table.cart td.actions input {
+  display: block;
+  width: 100%;
+  margin: 0.5407911001em 0;
+}

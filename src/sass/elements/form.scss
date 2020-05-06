@@ -1,12 +1,17 @@
 .form-control {
-  padding: 14px 12px;
+  height: 42px;
+  padding: 0 12px;
   background-color: #ffffff;
-  border: solid 1px #c3c8d9;
+  border: solid 1px $cloudy-blue;
   border-radius: 2px;
 
   &::placeholder {
     font-family: $default-font;
     font-size: 14px;
     color: #888888;
+  }
+
+  &--circle {
+    border-radius: 100px;
   }
 }
