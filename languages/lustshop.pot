@@ -10,36 +10,48 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-13 05:06+0000\n"
+"POT-Creation-Date: 2020-05-06 05:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: lustshop\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
 
-#: functions.php:80
-msgid "Footer 1"
+#: functions.php:87
+msgid "Sidebar"
 msgstr ""
 
-#: functions.php:82 functions.php:91 functions.php:100 functions.php:109
-#: functions.php:118
+#: functions.php:89 functions.php:98 functions.php:107 functions.php:116
+#: functions.php:125 functions.php:134
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:89
+#: functions.php:96
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:105
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:114
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:123
 msgid "Footer Social"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:132
 msgid "Footer Bottom"
+msgstr ""
+
+#: functions.php:204
+msgid "Slider Products"
+msgstr ""
+
+#: functions.php:205
+msgid "Question/Answer"
 msgstr ""
 
 #: 404.php:18
@@ -94,19 +106,19 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: header.php:49
+#: header.php:58 header.php:173
 msgid "My account"
 msgstr ""
 
-#: header.php:54
+#: header.php:66 header.php:183
 msgid "Login"
 msgstr ""
 
-#: header.php:56
+#: header.php:68 header.php:185
 msgid "Register"
 msgstr ""
 
-#: footer.php:43
+#: footer.php:44
 msgid "Call, write"
 msgstr ""
 
@@ -163,6 +175,11 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
+msgstr ""
+
+#: woocommerce/loop/orderby.php:25
+#: template-parts/components/filter-posts.php:34
+msgid "Sort:"
 msgstr ""
 
 #: inc/gutenberg/gutenberg-colors.php:9
@@ -249,6 +266,18 @@ msgstr ""
 msgid "Dark Three"
 msgstr ""
 
+#: inc/widgets/post-widget.php:11
+msgid "Posts"
+msgstr ""
+
+#: inc/widgets/post-widget.php:48
+msgid "Open blog"
+msgstr ""
+
+#: inc/widgets/post-widget.php:94
+msgid "Show button more"
+msgstr ""
+
 #: gutenberg/home-banner/index.php:14
 msgid "Naughty <sup>Rabbit</sup>"
 msgstr ""
@@ -257,15 +286,27 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+#: template-parts/blocks/woo-faq.php:13
+msgid "Question"
+msgstr ""
+
+#: template-parts/blocks/woo-faq.php:17
+msgid "Answer"
+msgstr ""
+
+#: template-parts/blocks/woo-faq.php:22
+msgid "Best offers"
+msgstr ""
+
 #: template-parts/components/filter-posts.php:23
 msgid "All posts"
 msgstr ""
 
-#: inc/classes/woocommerce/class_woocomerce_theme.php:83
+#: inc/classes/woocommerce/class_woocomerce_layout.php:151
 msgid "not reviews"
 msgstr ""
 
-#: inc/classes/woocommerce/class_woocomerce_theme.php:87
+#: inc/classes/woocommerce/class_woocomerce_layout.php:155
 #, php-format
 msgctxt "reviews product"
 msgid "%s reviews"

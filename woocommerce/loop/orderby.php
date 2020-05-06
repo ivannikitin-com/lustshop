@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <form class="woocommerce-ordering woo-archive__filter-ordering" method="get">
   <div class="filter-posts__group">
-    <label for=""><?php _e('Сортировка:', 'lustshop'); ?></label>
+    <label for=""><?php _e('Sort:', 'lustshop'); ?></label>
     <select name="orderby" class="orderby lustshop-select" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>

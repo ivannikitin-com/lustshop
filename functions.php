@@ -73,6 +73,7 @@ class LustShop
 
     public function image_size()
     {
+        add_image_size($this->theme_name . '-woo-faq', 104, 104, true);
         add_image_size($this->theme_name . '-slider-product', 279, 279, true);
         add_image_size($this->theme_name . '-widget-post', 219, 145, true);
         add_image_size($this->theme_name . '-blog-thumbnail', 382, 252, true);
@@ -200,7 +201,8 @@ class LustShop
 
     public function register_acf_block_types()
     {
-        $this->register_block_type('woo-slider', __('Slider Products'));
+        $this->register_block_type('woo-slider', __('Slider Products', 'lustshop'));
+        $this->register_block_type('woo-faq', __('Question/Answer', 'lustshop'));
     }
 
     public function register_block_type($name, $title)
