@@ -67,6 +67,21 @@
     }
   }
 
+  &--pale-grey {
+    background-color: $pale-grey;
+    border-color: transparent;
+    color: $dark;
+
+    &:hover {
+      background-color: $strong-pink;
+      color: $white;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
   &--link {
     background-color: transparent;
     color: $brownish-grey;

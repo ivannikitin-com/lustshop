@@ -4,63 +4,77 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2020-04-13 05:06+0000\n"
+"POT-Creation-Date: 2020-05-06 05:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-04-13 05:06+0000\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2020-05-06 05:14+0000\n"
+"Last-Translator: Вадим Мишхожев\n"
 "Language-Team: Русский\n"
 "X-Generator: Loco https://localise.biz/\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
-"X-Loco-Version: 2.3.3; wp-5.4"
+"X-Loco-Version: 2.3.3; wp-5.4.1"
 
-#: functions.php:80
+#: functions.php:87
+msgid "Sidebar"
+msgstr "Сайдбар"
+
+#: functions.php:89 functions.php:98 functions.php:107 functions.php:116
+#: functions.php:125 functions.php:134
+msgid "Add widgets here."
+msgstr "Переместите сюда виджет"
+
+#: functions.php:96
 msgid "Footer 1"
 msgstr "Подвал 1"
 
-#: functions.php:82 functions.php:91 functions.php:100 functions.php:109
-#: functions.php:118
-msgid "Add widgets here."
-msgstr ""
-
-#: functions.php:89
+#: functions.php:105
 msgid "Footer 2"
 msgstr "Подвал 2"
 
-#: functions.php:98
+#: functions.php:114
 msgid "Footer 3"
 msgstr "Подвал 3"
 
-#: functions.php:107
+#: functions.php:123
 msgid "Footer Social"
 msgstr "Социальные кнопки в подвале"
 
-#: functions.php:116
+#: functions.php:132
 msgid "Footer Bottom"
 msgstr "Низ подвал"
 
+#: functions.php:204
+msgid "Slider Products"
+msgstr "Слайдер продуктов"
+
+#: functions.php:205
+msgid "Question/Answer"
+msgstr "Вопрос/Ответ"
+
 #: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "К сожалению! Эта страница не может быть найдена."
 
 #: 404.php:22
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Похоже, что ничего не было найдено в этом месте. Может быть, попробуйте одну "
+"из ссылок ниже или поиск?"
 
 #: 404.php:31
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Самые полярные категории"
 
 #. translators: %1$s: smiley
 #: 404.php:47
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Попробуйте поискать в ежемесячных архивах. %1$s"
 
 #: comments.php:25
 msgid "Name"
@@ -92,27 +106,27 @@ msgstr "Комментарии отключены"
 #: search.php:22
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Результаты поиска по: %s"
 
-#: header.php:49
+#: header.php:58 header.php:173
 msgid "My account"
 msgstr "Аккаунт"
 
-#: header.php:54
+#: header.php:66 header.php:183
 msgid "Login"
 msgstr "Вход"
 
-#: header.php:56
+#: header.php:68 header.php:185
 msgid "Register"
 msgstr "Регистрация"
 
-#: footer.php:43
+#: footer.php:44
 msgid "Call, write"
 msgstr "Звоните, пишите"
 
 #: inc/woocommerce.php:203
 msgid "View your shopping cart"
-msgstr ""
+msgstr "Просмотр вашей корзины"
 
 #. translators: number of items in the mini cart.
 #: inc/woocommerce.php:207
@@ -141,11 +155,11 @@ msgstr "E-mail"
 
 #: inc/customizer.php:97
 msgid "Image ID Placeholder"
-msgstr ""
+msgstr "Идентификатор изображения"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Ничего не найденно"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
@@ -153,18 +167,27 @@ msgstr ""
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Готовы опубликовать свой первый пост? <a href=\"%1$s\"> Начните здесь </a>."
 
 #: template-parts/content-none.php:37
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Извините, но ничего не соответствует вашим условиям поиска. Пожалуйста, "
+"попытайтесь снова с другими ключевыми словами."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
+
+#: woocommerce/loop/orderby.php:25
+#: template-parts/components/filter-posts.php:34
+msgid "Sort:"
+msgstr "Сортировка:"
 
 #: inc/gutenberg/gutenberg-colors.php:9
 msgid "Strong Pink"
@@ -250,6 +273,18 @@ msgstr ""
 msgid "Dark Three"
 msgstr ""
 
+#: inc/widgets/post-widget.php:11
+msgid "Posts"
+msgstr ""
+
+#: inc/widgets/post-widget.php:48
+msgid "Open blog"
+msgstr ""
+
+#: inc/widgets/post-widget.php:94
+msgid "Show button more"
+msgstr ""
+
 #: gutenberg/home-banner/index.php:14
 msgid "Naughty <sup>Rabbit</sup>"
 msgstr ""
@@ -258,15 +293,27 @@ msgstr ""
 msgid "Title"
 msgstr "Заголовок"
 
+#: template-parts/blocks/woo-faq.php:13
+msgid "Question"
+msgstr "Вопрос"
+
+#: template-parts/blocks/woo-faq.php:17
+msgid "Answer"
+msgstr "Ответ"
+
+#: template-parts/blocks/woo-faq.php:22
+msgid "Best offers"
+msgstr "Лучшие предложения"
+
 #: template-parts/components/filter-posts.php:23
 msgid "All posts"
 msgstr "Все записи"
 
-#: inc/classes/woocommerce/class_woocomerce_theme.php:83
+#: inc/classes/woocommerce/class_woocomerce_layout.php:151
 msgid "not reviews"
 msgstr "отзывов нет"
 
-#: inc/classes/woocommerce/class_woocomerce_theme.php:87
+#: inc/classes/woocommerce/class_woocomerce_layout.php:155
 #, php-format
 msgctxt "reviews product"
 msgid "%s reviews"
