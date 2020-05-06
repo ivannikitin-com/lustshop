@@ -173,6 +173,7 @@ class LustShop
         require get_template_directory() . '/inc/remove-plugin-assets.php';
         require get_template_directory() . '/inc/classes/class_wp_bootstrap_navwalker.php';
         require get_template_directory() . '/inc/widgets/post-widget.php';
+        require get_template_directory() . '/inc/acf-blocks.php';
     }
 
     static function filter_phone($phone)
