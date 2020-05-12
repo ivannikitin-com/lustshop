@@ -73,6 +73,7 @@ class LustShop
 
     public function image_size()
     {
+        add_image_size($this->theme_name . '-woo-faq-category', 100, 75, true);
         add_image_size($this->theme_name . '-woo-faq', 104, 104, true);
         add_image_size($this->theme_name . '-slider-product', 279, 279, true);
         add_image_size($this->theme_name . '-widget-post', 219, 145, true);
@@ -204,6 +205,7 @@ class LustShop
     {
         $this->register_block_type('woo-slider', __('Slider Products', 'lustshop'));
         $this->register_block_type('woo-faq', __('Question/Answer', 'lustshop'));
+        $this->register_block_type('woo-faq-category', __('Category products', 'lustshop'));
     }
 
     public function register_block_type($name, $title)

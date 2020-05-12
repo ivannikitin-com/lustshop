@@ -10,48 +10,52 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-05-06 05:13+0000\n"
+"POT-Creation-Date: 2020-05-12 05:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: lustshop\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
 
-#: functions.php:87
+#: functions.php:88
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:89 functions.php:98 functions.php:107 functions.php:116
-#: functions.php:125 functions.php:134
+#: functions.php:90 functions.php:99 functions.php:108 functions.php:117
+#: functions.php:126 functions.php:135
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:96
+#: functions.php:97
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:106
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:115
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:124
 msgid "Footer Social"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:133
 msgid "Footer Bottom"
 msgstr ""
 
-#: functions.php:204
+#: functions.php:206
 msgid "Slider Products"
 msgstr ""
 
-#: functions.php:205
+#: functions.php:207
 msgid "Question/Answer"
+msgstr ""
+
+#: functions.php:208
+msgid "Category products"
 msgstr ""
 
 #: 404.php:18
@@ -296,6 +300,10 @@ msgstr ""
 
 #: template-parts/blocks/woo-faq.php:22
 msgid "Best offers"
+msgstr ""
+
+#: template-parts/blocks/woo-faq-category.php:33
+msgid "Сhoose"
 msgstr ""
 
 #: template-parts/components/filter-posts.php:23
