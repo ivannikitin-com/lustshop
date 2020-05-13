@@ -2,8 +2,15 @@
   $self: &;
 
   &__item {
-    height: 438px;
     list-style: none;
+
+    @media (hover: hover) {
+      height: 438px;
+    }
+
+    @media (hover: none) {
+      height: 568px;
+    }
   }
 
   &__block {
@@ -15,29 +22,31 @@
     background-color: $white;
     border-radius: $border-radius-1;
 
-    @media (hover: hover) {
-      &:hover {
+    .product__list & {
+      @media (hover: hover) {
+        &:hover {
+          position: relative;
+          z-index: 1;
+          height: calc(100% + 70px);
+          border-radius: 3px;
+          box-shadow: 0 0 15px 0 rgba(24, 27, 31, 0.15);
+
+          #{ $self }__buttons {
+            display: flex;
+          }
+        }
+      }
+
+      @media (hover: none) {
         position: relative;
         z-index: 1;
-        height: calc(100% + 70px);
+        height: 100%;
         border-radius: 3px;
         box-shadow: 0 0 15px 0 rgba(24, 27, 31, 0.15);
 
         #{ $self }__buttons {
           display: flex;
         }
-      }
-    }
-
-    @media (hover: none) and (pointer: coarse) {
-      position: relative;
-      z-index: 1;
-      height: 100%;
-      border-radius: 3px;
-      box-shadow: 0 0 15px 0 rgba(24, 27, 31, 0.15);
-
-      #{ $self }__buttons {
-        display: flex;
       }
     }
   }
