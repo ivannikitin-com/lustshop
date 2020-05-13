@@ -1,0 +1,44 @@
+.woocommerce-message {
+  margin-bottom: 2.617924em;
+  margin-left: 0;
+  padding: 1em 1.618em;
+  background-color: $strong-pink;
+  border-left: 0.6180469716em solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  clear: both;
+  color: $white;
+}
+
+.woocommerce {
+  &-info {
+    @extend .woocommerce-message;
+  }
+
+  &-error {
+    @extend .woocommerce-message;
+  }
+
+  &-noreviews {
+    @extend .woocommerce-message;
+  }
+}
+
+a {
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.button {
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+p.no-comments {
+  @extend .woocommerce-message;
+}
