@@ -45,7 +45,7 @@ class PostWidget extends WP_Widget
             }
 
             if ($showButton) {
-                echo "<a class='wp-block-lustshop-button post-widget__button-more' href='". get_category_link($category_id) ."'>" . __('Open blog', 'lustshop') . "</a>";
+                echo "<a class='post-widget__button-more' href='". get_category_link($category_id) ."'>" . __('Open blog', 'lustshop') . "<svg xmlns='http://www.w3.org/2000/svg' width='7' height='12'><path data-name='-e-arrow-pink' d='M6.992 6a.986.986 0 0 1-.292.7l-4.989 5a.991.991 0 0 1-1.413.01 1.007 1.007 0 0 1 0-1.42L4.581 6 .298 1.7A1 1 0 0 1 1.712.29l4.989 5a1.009 1.009 0 0 1 .291.71z' fill='#ff026d' fill-rule='evenodd'/></svg></a>";
             }
         }
 
@@ -64,36 +64,32 @@ class PostWidget extends WP_Widget
         $category = get_categories();
         $showButton = @ $instance['showButton'];
         ?>
-        <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
-                   name="<?php echo $this->get_field_name('title'); ?>" type="text"
-                   value="<?php esc_attr_e($title); ?>">
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('archive'); ?>"><?php _e('Category'); ?>:</label>
-            <select name="<?php echo $this->get_field_name('archive'); ?>"
-                    id="<?php echo $this->get_field_id('archive'); ?>">
-                <?php foreach ($category as $key => $value): ?>
-                    <option value="<?php esc_attr_e($value->term_id); ?>" <?php if ($value->term_id == $instance['archive']) {
+<p>
+	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
+	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
+		name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php esc_attr_e($title); ?>">
+</p>
+<p>
+	<label for="<?php echo $this->get_field_id('archive'); ?>"><?php _e('Category'); ?>:</label>
+	<select name="<?php echo $this->get_field_name('archive'); ?>" id="<?php echo $this->get_field_id('archive'); ?>">
+		<?php foreach ($category as $key => $value): ?>
+		<option value="<?php esc_attr_e($value->term_id); ?>" <?php if ($value->term_id == $instance['archive']) {
                         echo 'selected';
-                    } ?> ><?php esc_attr_e($value->name); ?></option>
-                <?php endforeach; ?>
-            </select>
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('Count'); ?>:</label>
-            <input class="widefat" id="<?php echo $this->get_field_id('count'); ?>"
-                   name="<?php echo $this->get_field_name('count'); ?>" type="number"
-                   value="<?php esc_attr_e($count); ?>">
-        </p>
-        <p>
-            <input class="checkbox" type="checkbox" <?php checked($instance['showButton'], 'on'); ?>
-                   id="<?php echo $this->get_field_id('showButton'); ?>"
-                   name="<?php echo $this->get_field_name('showButton'); ?>"/>
-            <label for="<?php echo $this->get_field_id('showButton'); ?>"><?php _e('Show button more', 'lustshop') ?></label>
-        </p>
-        <?php
+                    } ?>><?php esc_attr_e($value->name); ?></option>
+		<?php endforeach; ?>
+	</select>
+</p>
+<p>
+	<label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('Count'); ?>:</label>
+	<input class="widefat" id="<?php echo $this->get_field_id('count'); ?>"
+		name="<?php echo $this->get_field_name('count'); ?>" type="number" value="<?php esc_attr_e($count); ?>">
+</p>
+<p>
+	<input class="checkbox" type="checkbox" <?php checked($instance['showButton'], 'on'); ?>
+		id="<?php echo $this->get_field_id('showButton'); ?>" name="<?php echo $this->get_field_name('showButton'); ?>" />
+	<label for="<?php echo $this->get_field_id('showButton'); ?>"><?php _e('Show button more', 'lustshop') ?></label>
+</p>
+<?php
     }
 
     /**
