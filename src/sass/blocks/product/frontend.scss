@@ -5,11 +5,11 @@
     list-style: none;
 
     @media (hover: hover) {
-      height: 438px;
+      height: 413px;
     }
 
     @media (hover: none) {
-      height: 568px;
+      height: 518px;
     }
   }
 
@@ -63,6 +63,7 @@
     text-align: left;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    margin-bottom: 16px;
 
     a {
       color: #1d1f26;
@@ -78,15 +79,14 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 24px;
+    padding: 10px 15px 24px;
   }
 
   &__reviews {
     font-size: 13px;
     color: $brownish-grey;
     text-decoration: underline;
+    margin-left: 18px;
 
     &:hover {
       color: $strong-pink;
@@ -148,6 +148,10 @@
 
   .add_to_cart_button {
     white-space: nowrap;
+  }
+
+  .added_to_cart {
+    display: none;
   }
 
   &__buttons {

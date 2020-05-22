@@ -24,3 +24,8 @@
   700,
   italic
 );
+
+@include font-face(
+  'star',
+  '../fonts/star/star',
+);

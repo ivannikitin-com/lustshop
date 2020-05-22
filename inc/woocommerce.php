@@ -19,7 +19,7 @@ function lustshop_woocommerce_setup() {
 	add_theme_support( 'woocommerce' );
 	remove_theme_support( 'wc-product-gallery-zoom' );
 	remove_theme_support( 'wc-product-gallery-lightbox' );
-	remove_theme_support( 'wc-product-gallery-slider' );
+	add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'lustshop_woocommerce_setup' );
 
@@ -84,8 +84,7 @@ add_filter( 'loop_shop_columns', 'lustshop_woocommerce_loop_columns' );
  */
 function lustshop_woocommerce_related_products_args( $args ) {
 	$defaults = array(
-		'posts_per_page' => 3,
-		'columns'        => 3,
+		'posts_per_page' => 10,
 	);
 
 	$args = wp_parse_args( $defaults, $args );
@@ -200,16 +199,13 @@ if ( ! function_exists( 'lustshop_woocommerce_cart_link' ) ) {
 	 */
 	function lustshop_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'lustshop' ); ?>">
-			<?php
-			$item_count_text = sprintf(
-				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'lustshop' ),
-				WC()->cart->get_cart_contents_count()
-			);
-			?>
-			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
-		</a>
+        <a href="#" class="cart-contents">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26.97" height="22" viewBox="0 0 26.97 22">
+                <path data-name="-e-icon-cart"
+                      d="M26.91 5.325l-3 10.049a.987.987 0 0 1-.95.717H9.98a1.006 1.006 0 0 1-.95-.688L4.27 2.017H.99a1.005 1.005 0 0 1 0-2.01h4a1.006 1.006 0 0 1 .95.688l1.43 3.336h18.58a.976.976 0 0 1 .8.4 1.008 1.008 0 0 1 .16.894zm-18.87.717l2.66 8.04h11.52l2.39-8.04H8.04zm3.34 10.463a2.747 2.747 0 1 1-2.73 2.746 2.744 2.744 0 0 1 2.73-2.747zm0 3.483a.737.737 0 1 0-.73-.737.736.736 0 0 0 .73.736zm10.38-3.483a2.747 2.747 0 1 1-2.73 2.746 2.744 2.744 0 0 1 2.73-2.747zm0 3.483a.737.737 0 1 0-.73-.737.736.736 0 0 0 .73.736z"
+                      fill="currentColor" fill-rule="evenodd" /></svg>
+            <span class="header__block-item-count amount"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+        </a>
 		<?php
 	}
 }
@@ -221,26 +217,10 @@ if ( ! function_exists( 'lustshop_woocommerce_header_cart' ) ) {
 	 * @return void
 	 */
 	function lustshop_woocommerce_header_cart() {
-		if ( is_cart() ) {
-			$class = 'current-menu-item';
-		} else {
-			$class = '';
-		}
-		?>
-		<ul id="site-header-cart" class="site-header-cart">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php lustshop_woocommerce_cart_link(); ?>
-			</li>
-			<li>
-				<?php
-				$instance = array(
-					'title' => '',
-				);
-
-				the_widget( 'WC_Widget_Cart', $instance );
-				?>
-			</li>
-		</ul>
+	    ?>
+		<div id="site-header-cart" class="site-header-cart mini-cart header__block-item">
+            <?php lustshop_woocommerce_cart_link(); ?>
+		</div>
 		<?php
 	}
 }

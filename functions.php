@@ -75,10 +75,12 @@ class LustShop
     {
         add_image_size($this->theme_name . '-woo-faq-category', 100, 75, true);
         add_image_size($this->theme_name . '-woo-faq', 104, 104, true);
+        add_image_size($this->theme_name . '-woo-flexslider-thumbnail', 115, 115, true);
         add_image_size($this->theme_name . '-slider-product', 279, 279, true);
         add_image_size($this->theme_name . '-widget-post', 219, 145, true);
         add_image_size($this->theme_name . '-blog-thumbnail', 382, 252, true);
         add_image_size($this->theme_name . '-post-thumbnail', 485, 320, true);
+        add_image_size($this->theme_name . '-woo-flexslider', 573, 573, true);
         add_image_size($this->theme_name . '-single-thumbnail', 1206, 600, true);
     }
 
@@ -167,6 +169,7 @@ class LustShop
         if (class_exists('WooCommerce')) {
             require get_template_directory() . '/inc/woocommerce.php';
             require get_template_directory() . '/inc/classes/woocommerce/class_woocomerce_layout.php';
+            require get_template_directory() . '/inc/classes/woocommerce/class_woocomerce_review.php';
         }
         require get_template_directory() . '/inc/gutenberg/index.php';
         require get_template_directory() . '/gutenberg/init.php';
@@ -320,12 +323,12 @@ class LustShop
 
     static function get_template_part($slug, $name = null, $params = array())
     {
-        if ( ! empty( $params ) ) {
-            foreach ( (array) $params as $key => $param ) {
-                set_query_var( $key, $param );
+        if (!empty($params)) {
+            foreach ((array)$params as $key => $param) {
+                set_query_var($key, $param);
             }
         }
-        get_template_part( $slug, $name );
+        get_template_part($slug, $name);
     }
 }
 

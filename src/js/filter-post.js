@@ -1,8 +1,8 @@
-import $ from "jquery"
+const formID = document.getElementById('filter_posts')
+const button = document.getElementById('post_submit')
 
-const formID = "#filter_posts"
-const button = "#post_submit"
-
-$(formID).on("change", function() {
-  $(button).click()
-})
+if ( formID ) {
+  formID.addEventListener("change", () => {
+    button.click();
+  })
+}

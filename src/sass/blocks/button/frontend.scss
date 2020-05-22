@@ -21,6 +21,7 @@
     cursor: pointer;
   }
 
+  &:disabled,
   &.disabled,
   fieldset:disabled & {
     pointer-events: none;

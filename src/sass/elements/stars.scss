@@ -1,0 +1,100 @@
+.star-rating {
+  position: relative;
+  width: 5.3em;
+  height: 1.618em;
+  overflow: hidden;
+  font-family: "star", sans-serif;
+  font-size: 1em;
+  line-height: 1.618;
+  font-weight: 400;
+}
+
+.star-rating::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.25;
+  content: "\53\53\53\53\53";
+}
+
+.star-rating span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 1.5em;
+  overflow: hidden;
+}
+
+.star-rating span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $yellowish-orange;
+  content: "\53\53\53\53\53";
+}
+
+.star-rating span::before,
+.star-rating::before {
+  color: $yellowish-orange;
+}
+
+p.stars {
+  display: flex;
+}
+
+p.stars a {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 1px;
+  overflow: hidden;
+  font-weight: 400;
+  text-decoration: none;
+  text-indent: -999em;
+}
+
+p.stars a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  opacity: 0.25;
+  font-family: "star", sans-serif;
+  line-height: 1;
+  color: #43454b;
+  text-indent: 0;
+  content: "\53";
+}
+
+p.stars a:hover ~ a::before {
+  opacity: 0.25;
+  color: #43454b;
+  content: "\53";
+}
+
+p.stars:hover a::before {
+  opacity: 1;
+  color: $yellowish-orange;
+  content: "\53";
+}
+
+p.stars.selected a.active::before {
+  opacity: 1;
+  color: $yellowish-orange;
+  content: "\53";
+}
+
+p.stars.selected a.active ~ a::before {
+  opacity: 0.25;
+  color: $yellowish-orange;
+  content: "\53";
+}
+
+p.stars.selected a:not(.active)::before {
+  opacity: 1;
+  color: $yellowish-orange;
+  content: "\53";
+}
