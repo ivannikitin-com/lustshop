@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v1
       
     - name: Get old version
-      uses: git clone -b pre-master https://github.com/ivannikitin-com/lustshop.git old-version
+      run: git clone -b pre-master https://github.com/ivannikitin-com/lustshop.git old-version
 
     - name: Update version
       run: node deploy/update-version.js
