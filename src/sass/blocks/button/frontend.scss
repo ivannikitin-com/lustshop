@@ -35,6 +35,8 @@
 
   &:hover,
   &:focus {
+    background-color: $strong-pink;
+    color: $white;
     text-decoration: none;
   }
 
@@ -44,6 +46,7 @@
     color: $white;
 
     &:hover {
+      background-color: $cerise;
       color: $white;
     }
   }

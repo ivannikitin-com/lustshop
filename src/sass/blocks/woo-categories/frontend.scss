@@ -1,13 +1,10 @@
-@import '../../variables';
-
 .wp-block-lustshop-woo-categories {
-
   &__products {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 -15px;
     padding: 0;
-    display: flex;
     list-style: none;
-    flex-wrap: wrap;
   }
 
   &__link {
