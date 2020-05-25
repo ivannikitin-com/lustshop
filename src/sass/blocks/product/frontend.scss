@@ -57,13 +57,13 @@
 
   &__title {
     display: -webkit-box;
+    margin-bottom: 16px;
     overflow: hidden;
     font-size: 14px;
     font-weight: 600;
     text-align: left;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    margin-bottom: 16px;
 
     a {
       color: #1d1f26;
@@ -86,12 +86,15 @@
     font-size: 13px;
     color: $brownish-grey;
     text-decoration: underline;
-    margin-left: 18px;
 
     &:hover {
       color: $strong-pink;
       text-decoration: none;
     }
+  }
+
+  .star-rating {
+    margin-right: 18px;
   }
 
   &__price {
