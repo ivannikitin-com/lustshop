@@ -1,3 +1,3 @@
-Статус последнейго деплоя
-
-<img src"https://github.com/ivannikitin-com/lustshop/workflows/Deploy_Pre_Master/branch-pre-master.svg" />
+Статус последнейго деплоя:
+<br>
+<img src="https://github.com/ivannikitin-com/lustshop/workflows/Deploy_Pre_Master/badge.svg?branch=pre-master"><br>
