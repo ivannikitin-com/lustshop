@@ -38,4 +38,5 @@ jobs:
         github_token: ${{ secrets.GITHUD_TOKEN }}
         publish_branch: pre-master
         publish_dir: .
+        keep_files: true
       
