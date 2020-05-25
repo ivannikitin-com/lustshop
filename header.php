@@ -119,17 +119,13 @@
                 <div class="col-auto col-xl-3 d-flex justify-content-end ml-lg-auto mb-lg-0 mb-2">
                     <div class="wish header__block-item d-none d-lg-block">
                         <a href="<?php echo YITH_WCWL()->get_wishlist_url(); ?>">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="19.97" height="18" viewBox="0 0 19.97 18">
-                                <path
-                                        d="M9.98 18a1.011 1.011 0 0 1-.57-.174C3.07 13.532-.01 9.483-.01 5.444A5.474 5.474 0 0 1 5.49 0a5.963 5.963 0 0 0 8.98 0 5.48 5.48 0 0 1 5.5 5.444c0 4.039-3.09 8.089-9.42 12.382a1.035 1.035 0 0 1-.57.174zM5.49 2a3.465 3.465 0 0 0-3.48 3.444c0 3.171 2.68 6.647 7.97 10.338 5.28-3.691 7.97-7.167 7.97-10.338A3.472 3.472 0 0 0 14.47 2a3.854 3.854 0 0 0-3.54 2.3 1.02 1.02 0 0 1-.95.659 1 1 0 0 1-.95-.659A3.864 3.864 0 0 0 5.49 2z"
-                                        fill="currentColor" fill-rule="evenodd"/>
-                            </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18"><path fill="currentColor" fill-rule="evenodd" d="M10.916 17.999c-.199 0-.399-.058-.571-.174C4.007 13.531.926 9.482.926 5.443c0-3.002 2.467-5.444 5.5-5.444 1.728 0 3.405.801 4.49 2.039C12 .8 13.677-.001 15.405-.001c3.033 0 5.5 2.442 5.5 5.444 0 4.039-3.08 8.089-9.419 12.382a1.019 1.019 0 0 1-.57.174zm-4.49-16c-1.919 0-3.479 1.545-3.479 3.444 0 3.171 2.68 6.647 7.969 10.338 5.289-3.691 7.969-7.167 7.969-10.338 0-1.899-1.561-3.444-3.48-3.444-1.537 0-3.059.99-3.539 2.304a1.01 1.01 0 0 1-.95.659c-.426 0-.805-.263-.95-.659-.48-1.314-2.002-2.304-3.54-2.304z"/></svg>
                             <span class="header__block-item-count">
                                 <?php
                                 $wishlist_count = YITH_WCWL()->count_products();
                                 echo $wishlist_count;
                                 ?>
-                            <span>
+                            </span>
                         </a>
                     </div>
                     <?php echo do_shortcode('[yith_woocompare_counter]'); ?>

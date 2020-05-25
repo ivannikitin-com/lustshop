@@ -14,7 +14,6 @@ class Lustshop_Woocommerce extends LustShop
 
     public function single_product()
     {
-
         // woocommerce_before_single_product_summary
         remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
         add_action('woocommerce_before_single_product_summary', [$this, 'single_product_open_col_6'], 10);
@@ -85,27 +84,21 @@ class Lustshop_Woocommerce extends LustShop
         }
 
         if ('product' == $_POST['post_type']) {
-            if (!current_user_can('edit_product', $post_id))
+            if (!current_user_can('edit_product', $post_id)) {
                 return $post_id;
+            }
         } else {
-            if (!current_user_can('edit_post', $post_id))
+            if (!current_user_can('edit_post', $post_id)) {
                 return $post_id;
+            }
         }
 
         update_post_meta($post_id, $prefix . 'payment_and_delivery_wysiwyg', wp_kses_post($_POST['payment_and_delivery_wysiwyg']));
-
     }
 
     public function create_payment_and_delivery_meta_box()
     {
-        add_meta_box(
-            'payment_and_delivery_meta_box',
-            __('Payment and delivery', 'lustshop'),
-            [$this, 'add_payment_and_delivery_meta_box'],
-            'product',
-            'normal',
-            'default'
-        );
+        add_meta_box('payment_and_delivery_meta_box', __('Payment and delivery', 'lustshop'), [$this, 'add_payment_and_delivery_meta_box'], 'product', 'normal', 'default');
     }
 
     public function add_payment_and_delivery_meta_box($post)
@@ -131,7 +124,6 @@ class Lustshop_Woocommerce extends LustShop
         $tabs['reviews']['title'] = __('Reviews', 'woocommerce') . ' <span class="tab-count">(' . $product->get_review_count() . ')</span>';
 
         return $tabs;
-
     }
 
     public function woo_reorder_tabs($tabs)
@@ -144,11 +136,11 @@ class Lustshop_Woocommerce extends LustShop
 
     public function add_product_tabs($tabs)
     {
-        $tabs['payment_and_delivery'] = array(
+        $tabs['payment_and_delivery'] = [
             'title' => __('Payment and delivery', 'lustshop'),
             'priority' => 20,
-            'callback' => [$this, 'content_payment_and_delivery']
-        );
+            'callback' => [$this, 'content_payment_and_delivery'],
+        ];
 
         return $tabs;
     }
@@ -196,7 +188,7 @@ class Lustshop_Woocommerce extends LustShop
     {
         global $product;
 
-        if (wc_product_sku_enabled() && ($product->get_sku() || $product->is_type('variable'))) : ?>
+        if (wc_product_sku_enabled() && ($product->get_sku() || $product->is_type('variable'))): ?>
 
             <span class="product__sku"><?php esc_html_e('SKU:', 'woocommerce'); ?>
                 <span class="sku">
@@ -249,30 +241,32 @@ class Lustshop_Woocommerce extends LustShop
 
     public function output_recently_products()
     {
-        $args = array(
+        $args = [
             'posts_per_page' => 10,
-        );
+        ];
 
         $this->recently_products(apply_filters('output_recently_products_args', $args));
     }
 
-    public function recently_products($args = array())
+    public function recently_products($args = [])
     {
         global $product;
 
-        $viewed_products = !empty($_COOKIE['woocommerce_recently_viewed']) ? (array)explode('|', wp_unslash($_COOKIE['woocommerce_recently_viewed'])) : array();
+        $viewed_products = !empty($_COOKIE['woocommerce_recently_viewed']) ? (array) explode('|', wp_unslash($_COOKIE['woocommerce_recently_viewed'])) : [];
         $viewed_products = array_filter(array_map('absint', $viewed_products));
 
-        if (empty($viewed_products)) return;
+        if (empty($viewed_products)) {
+            return;
+        }
 
-        $defaults = array(
+        $defaults = [
             'posts_per_page' => 5,
             'no_found_rows' => 1,
             'post_status' => 'publish',
             'post_type' => 'product',
             'post__in' => $viewed_products,
-            'orderby' => 'rand'
-        );
+            'orderby' => 'rand',
+        ];
 
         $args = wp_parse_args($args, $defaults);
 
@@ -350,10 +344,10 @@ class Lustshop_Woocommerce extends LustShop
         if (class_exists('YITH_Woocompare_Frontend')) {
             global $yith_woocompare;
 
-            remove_action('woocommerce_single_product_summary', array($yith_woocompare->obj, 'add_compare_link'), 35);
-            remove_action('woocommerce_after_shop_loop_item', array($yith_woocompare->obj, 'add_compare_link'), 20);
-            add_action('woocommerce_after_add_to_cart_button', array($yith_woocompare->obj, 'add_compare_link'), 34);
-            add_action('woocommerce_shop_loop_item_title', array($yith_woocompare->obj, 'add_compare_link'), 17);
+            remove_action('woocommerce_single_product_summary', [$yith_woocompare->obj, 'add_compare_link'], 35);
+            remove_action('woocommerce_after_shop_loop_item', [$yith_woocompare->obj, 'add_compare_link'], 20);
+            add_action('woocommerce_after_add_to_cart_button', [$yith_woocompare->obj, 'add_compare_link'], 34);
+            add_action('woocommerce_shop_loop_item_title', [$yith_woocompare->obj, 'add_compare_link'], 17);
         }
     }
 
