@@ -1,7 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Pull Request
-
+name: DeployPreMaster
 on: 
   push:
     branches: develop
