@@ -1,0 +1,78 @@
+.lutshop-home-banner {
+  @include media-breakpoint-up(lg) {
+    padding-top: 200px;
+  }
+
+  &__info {
+    align-self: center;
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 40px;
+    font-weight: 600;
+    color: $dark;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 50px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    align-items: flex-end;
+    font-size: 16px;
+    color: $cloudy-blue;
+  }
+
+  &__text {
+    align-self: flex-end;
+    margin-left: 19px;
+    line-height: 22px;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    span {
+      color: $strong-pink;
+    }
+  }
+
+  &__autor {
+    font-size: 12px;
+    color: $white;
+
+    sup {
+      top: 0;
+      font-size: 100%;
+      color: $strong-pink;
+    }
+  }
+
+  &__picture {
+    align-self: flex-end;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+    margin-top: -72px;
+  }
+
+  &__button {
+    font-size: 16px;
+
+    @include media-breakpoint-up(lg) {
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+}

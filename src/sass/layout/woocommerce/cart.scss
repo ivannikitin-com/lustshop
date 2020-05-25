@@ -1,0 +1,371 @@
+.woocommerce-cart {
+  background-color: $white;
+
+  .wc-backward {
+    @extend .wp-block-lustshop-button;
+  }
+}
+
+table.cart {
+  thead {
+    @include media-breakpoint-up(md) {
+      font-size: 1em;
+      text-indent: 0;
+    }
+  }
+
+  tr {
+    $self: &;
+    & td,
+    & th {
+      @include media-breakpoint-up(md) {
+        padding: 1.618em;
+      }
+      padding: 0.875em 0.875em 0;
+      vertical-align: top;
+    }
+
+    .qty {
+      @extend .form-control;
+      display: inline-block;
+      background-color: $pale-grey;
+      box-shadow: 0 0 10px 0 $dark-15;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        max-width: 3.632em;
+        padding: 0.875em;
+      }
+    }
+
+    .product-thumbnail {
+      img {
+        display: block;
+        max-width: 3.706325903em;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+
+    td.product-price {
+      .amount {
+        white-space: nowrap;
+      }
+    }
+
+    td.product-quantity {
+      @include media-breakpoint-up(md) {
+        &.plus,
+        &.minus {
+          display: inline-block;
+        }
+      }
+
+      .qty {
+        width: 3.706325903em;
+        padding: 0.326em;
+
+        @include media-breakpoint-up(md) {
+          padding: 0.6180469716em;
+        }
+      }
+    }
+
+    td.product-remove {
+      border-top-color: $white;
+
+      #{$self}:first-child & {
+        border-top-width: 0;
+      }
+
+      @include media-breakpoint-up(md) {
+        display: table-cell;
+        padding: 1.618em;
+        border: 0;
+      }
+
+      a.remove {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: inline-block;
+        float: none;
+        width: 12px;
+        height: 12px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23FF026D' fill-rule='evenodd' d='M7.364 6.04l4.219 4.255a.997.997 0 0 1-.702 1.7.986.986 0 0 1-.701-.292L5.963 7.452l-4.216 4.251a.987.987 0 0 1-1.403 0 .997.997 0 0 1 0-1.408L4.563 6.04.344 1.786a.998.998 0 0 1 0-1.409.99.99 0 0 1 1.403 0l4.216 4.251L10.179.377a.99.99 0 0 1 1.403 0 .998.998 0 0 1 0 1.409L7.364 6.04z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        font-size: 0;
+      }
+    }
+
+    td.actions {
+      @include media-breakpoint-up(md) {
+        text-align: right;
+      }
+
+      padding: 0;
+      background-color: transparent;
+      border-top: 1em solid;
+      border-top-color: transparent;
+      border-top-color: $white;
+
+      label {
+        display: none;
+      }
+
+      .coupon {
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid $pale-grey-two;
+
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+          float: left;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+
+      input {
+        @extend .form-control;
+        display: block;
+        width: 100%;
+        margin: 0.5407911001em 0;
+
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+          width: auto;
+          margin: 0;
+          text-align: right;
+        }
+      }
+
+      button[type="submit"] {
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+          width: auto;
+          margin: 0;
+
+          &:focus {
+            outline: 0;
+          }
+        }
+
+        display: block;
+        width: 100%;
+        margin: 0.5407911001em 0;
+      }
+    }
+
+    td.product-subtotal {
+      padding-bottom: 0.875em;
+    }
+  }
+
+  .button {
+    @extend .wp-block-lustshop-button;
+    @extend .wp-block-lustshop-button--primary;
+    background-color: $strong-pink;
+    border-color: $strong-pink;
+    color: $white;
+  }
+}
+
+.shop_table {
+  width: 100%;
+  margin: 0 0 1.41575em;
+  border-spacing: 0;
+  border-collapse: separate;
+
+  th {
+    padding: 1em 1.41575em;
+    background-color: $pale-grey-four;
+    vertical-align: top;
+  }
+
+  td {
+    padding: 1em 1.41575em;
+    background-color: $pale-grey-three;
+    vertical-align: top;
+  }
+
+  &_responsive {
+    thead {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        display: table-header-group;
+      }
+    }
+
+    tbody {
+      th {
+        display: none;
+      }
+
+      tr:nth-child(2n) td {
+        background-color: $pale-grey-five;
+      }
+    }
+
+    tr {
+      $self: &;
+      td {
+        $self: &;
+        display: block;
+        clear: both;
+        text-align: right;
+
+        @include media-breakpoint-up(md) {
+          display: table-cell;
+          text-align: left;
+        }
+
+        &.actions::before {
+          display: none;
+        }
+
+        &.download-actions::before {
+          display: none;
+        }
+
+        &[data-title]::before {
+          float: left;
+          font-weight: 600;
+          content: attr(data-title) ": ";
+        }
+
+        &::after,
+        &::before {
+          display: table;
+          content: "";
+        }
+
+        &::after {
+          clear: both;
+        }
+
+        @include media-breakpoint-up(md) {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      th {
+        @include media-breakpoint-up(md) {
+          display: table-cell;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &.cart {
+    margin-bottom: 3em;
+
+    .product-name {
+      a {
+        color: $strong-pink;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    td.product-thumbnail {
+      &::before {
+        display: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        display: table-cell;
+
+        img {
+          max-width: 3.706325903em;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.wc-proceed-to-checkout {
+  margin-bottom: 1.618em;
+
+  .button {
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+
+    &.checkout-button {
+      @extend .wp-block-lustshop-button;
+      justify-content: center;
+      /* stylelint-disable-next-line declaration-no-important */
+      width: 100% !important;
+      background-color: $dark-three;
+      border-color: $dark-three;
+      font-size: 1.41575em;
+      color: $white;
+    }
+  }
+}
+
+.cart-collaterals {
+  &::before {
+    @include media-breakpoint-up(md) {
+      display: table;
+      content: "";
+    }
+  }
+
+  &::after {
+    @include media-breakpoint-up(md) {
+      display: table;
+      clear: both;
+      content: "";
+    }
+  }
+
+  h2 {
+    @include media-breakpoint-up(md) {
+      font-size: 1.618em;
+    }
+  }
+
+  .cross-sells {
+    @include media-breakpoint-up(md) {
+      float: left;
+      width: 41.1764705882%;
+      margin-right: 5.8823529412%;
+    }
+  }
+
+  .cart_totals {
+    @include media-breakpoint-up(md) {
+      float: right;
+      width: 52.9411764706%;
+      margin: 0;
+      margin-right: 0;
+      clear: right;
+    }
+
+    .small.includes_tax {
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+  }
+
+  .shipping_calculator {
+    @extend .cart_totals;
+
+    @include media-breakpoint-up(md) {
+      clear: right;
+    }
+  }
+}

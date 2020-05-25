@@ -1,0 +1,16 @@
+.breadcrumbs {
+  margin-top: 15px;
+  margin-bottom: 16px;
+  font-family: $default-font;
+  font-size: 13px;
+  color: $warm-grey;
+
+  a {
+    color: $strong-pink;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 22px;
+    margin-bottom: 32px;
+  }
+}

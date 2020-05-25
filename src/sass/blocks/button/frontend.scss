@@ -1,0 +1,105 @@
+.wp-block-lustshop-button {
+  $self: &;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-height: 42px;
+  padding-right: 22px;
+  padding-left: 22px;
+  background-color: $white-two;
+  border: 0;
+  border: 1px solid $white-two;
+  border-radius: 100px;
+  font-family: $default-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: $strong-pink;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    & {
+      transition: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $strong-pink;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &--primary {
+    background-color: $strong-pink;
+    border-color: $strong-pink;
+    color: $white;
+
+    &:hover {
+      background-color: $cerise;
+      color: $white;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border-color: $strong-pink;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &--grey {
+    background-color: $white-12;
+    border-color: transparent;
+
+    &:hover {
+      background-color: $strong-pink;
+      color: $white-two;
+    }
+  }
+
+  &--pale-grey {
+    background-color: $pale-grey;
+    border-color: transparent;
+    color: $dark;
+
+    &:hover {
+      background-color: $strong-pink;
+      color: $white;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &--link {
+    background-color: transparent;
+    color: $brownish-grey;
+
+    &:hover {
+      background-color: $dark;
+      color: $white;
+    }
+  }
+
+  svg {
+    margin-left: 9px;
+  }
+
+  .product__buttons & {
+    height: 50px;
+  }
+}

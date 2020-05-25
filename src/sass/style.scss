@@ -1,0 +1,116 @@
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/bootstrap/scss/utilities/_sizing.scss";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/_transitions";
+@import "../../node_modules/bootstrap/scss/_forms.scss";
+@import "../../node_modules/bootstrap/scss/_custom-forms";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "./fonts";
+@import "./layout/**/*.scss";
+@import "./blocks/**/frontend.scss";
+@import "./elements/**/*.scss";
+
+*,
+::after,
+::before {
+  outline: none;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+header,
+.footer {
+  flex: 0 0 auto;
+}
+
+body {
+  @include base-style;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+a[href^="tel:"],
+a[href^="mailto:"] {
+  white-space: nowrap;
+}
+
+a[href^="tel:"] {
+  text-decoration: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11L1 6l5-5 5 5-5 5z' fill='%23FF026D' stroke='%23FF026D'/%3E%3C/svg%3E");
+}
+
+.dropdown-toggle {
+  &::after {
+    border: 0;
+  }
+}
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  /* stylelint-disable-next-line declaration-no-important */
+  word-wrap: normal !important;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+}
+
+.screen-reader-text:focus {
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 1em 1.618em;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  /* stylelint-disable-next-line declaration-no-important */
+  clip: auto !important;
+  line-height: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.screen-reader-text.skip-link:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+}

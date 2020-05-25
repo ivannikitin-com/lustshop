@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.wp-block-lustshop-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background-position: center center;
+
+  &.has-parallax {
+    background-attachment: fixed;
+
+    @supports (-webkit-overflow-scrolling: touch) {
+      background-attachment: scroll;
+    }
+  }
+
+  &.cover {
+    background-size: cover;
+  }
+
+  &.no-repeat {
+    background-repeat: no-repeat;
+  }
+
+  &.has-background-opacity::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: z-index(".wp-block-lustshop-section.has-background-opacity::before");
+    background-color: inherit;
+    opacity: 0.5;
+    content: "";
+  }
+
+  @each $name, $color in $colors {
+    &.has-#{$name}-background-color {
+      background-color: $color;
+    }
+  }
+
+  @for $i from 1 through 10 {
+    &.has-background-opacity.has-background-opacity-#{ $i * 10 }::before {
+      opacity: $i * 0.1;
+    }
+  }
+}

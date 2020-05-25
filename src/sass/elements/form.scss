@@ -1,0 +1,37 @@
+body {
+  & button.disabled,
+  & button:disabled,
+  & input[type="button"].disabled,
+  & input[type="button"]:disabled,
+  & input[type="reset"].disabled,
+  & input[type="reset"]:disabled,
+  & input[type="submit"].disabled,
+  & input[type="submit"]:disabled,
+  & .button.disabled,
+  & .button:disabled,
+  & .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.disabled,
+  & .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:disabled,
+  & .added_to_cart.disabled,
+  & .added_to_cart:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.form-control {
+  height: 42px;
+  padding: 0 12px;
+  background-color: #ffffff;
+  border: solid 1px $cloudy-blue;
+  border-radius: 2px;
+
+  &::placeholder {
+    font-family: $default-font;
+    font-size: 14px;
+    color: #888888;
+  }
+
+  &--circle {
+    border-radius: 100px;
+  }
+}

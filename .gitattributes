@@ -1,0 +1,5 @@
+#
+# Ignore certain files from the release archives.
+#
+/.travis.yml export-ignore
+/phpcs.xml.dist export-ignore
