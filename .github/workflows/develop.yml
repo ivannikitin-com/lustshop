@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: DeployPreMaster
+name: Deploy_Pre_Master
 on: 
   push:
     branches: develop
