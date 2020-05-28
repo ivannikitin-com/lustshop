@@ -1,0 +1,161 @@
+.woocommerce-checkout {
+  background-color: $white;
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    clear: both;
+  }
+
+  span.woocommerce-input-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .form-row-wide {
+    width: 100%;
+    clear: both;
+  }
+
+  .form-row {
+    display: block;
+    margin-right: 0;
+    margin-left: 0;
+
+    &.woocommerce-invalid {
+      input.input-text {
+        box-shadow: inset 2px 0 0 $lipstick;
+      }
+    }
+
+    label {
+      display: block;
+    }
+  }
+
+  .input-text {
+    @extend .form-control;
+  }
+
+  form.checkout {
+    &::before,
+    &::after {
+      display: table;
+      content: "";
+    }
+
+    &::after {
+      clear: both;
+    }
+
+    button[type="submit"] {
+      @extend .wp-block-lustshop-button;
+      @extend .wp-block-lustshop-button--primary;
+    }
+  }
+
+  &-review-order {
+    background-color: $white;
+
+    @include media-breakpoint-up(lg) {
+      float: right;
+      width: 47.8260869565%;
+      margin-right: 0;
+      clear: right;
+    }
+  }
+
+  table.woocommerce-checkout-review-order-table {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 2.617924em;
+    }
+
+    .product-name {
+      width: 45%;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+  }
+
+  #order_review_heading {
+    @include media-breakpoint-up(lg) {
+      float: right;
+      width: 47.8260869565%;
+      margin-right: 0;
+      margin-bottom: 0;
+      padding-bottom: 0.6180469716em;
+      clear: right;
+    }
+  }
+
+  .form-row-first {
+    @include media-breakpoint-up(lg) {
+      clear: both;
+    }
+  }
+
+  .col2-set {
+    @include media-breakpoint-up(lg) {
+      float: left;
+      width: 47.8260869565%;
+      margin-right: 4.347826087%;
+    }
+
+    .woocommerce-billing-fields {
+      &::before,
+      &::after {
+        display: table;
+        content: "";
+      }
+
+      &::after {
+        clear: both;
+      }
+    }
+
+    .col-1 {
+      display: block;
+      max-width: none;
+      padding-right: 0;
+      padding-left: 0;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 1.618em;
+      }
+    }
+
+    .col-2 {
+      display: block;
+      max-width: none;
+      padding-right: 0;
+      padding-left: 0;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 1.618em;
+      }
+    }
+
+    .form-row-first {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        width: 45.4545454545%;
+        margin-right: 9.0909090909%;
+      }
+    }
+
+    .form-row-last {
+      @include media-breakpoint-up(lg) {
+        float: right;
+        width: 45.4545454545%;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-payment {
+    padding: 1em 1.41575em;
+  }
+}

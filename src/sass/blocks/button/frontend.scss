@@ -36,6 +36,7 @@
   &:hover,
   &:focus {
     background-color: $strong-pink;
+    outline: 0;
     color: $white;
     text-decoration: none;
   }

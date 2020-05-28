@@ -21,17 +21,83 @@ body {
 .form-control {
   height: 42px;
   padding: 0 12px;
-  background-color: #ffffff;
+  background-color: $white;
   border: solid 1px $cloudy-blue;
   border-radius: 2px;
 
+  @include media-breakpoint-up(lg) {
+    font-size: 13px;
+  }
+
   &::placeholder {
     font-family: $default-font;
-    font-size: 14px;
-    color: #888888;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 13px;
+    }
+    font-size: 16px;
+    color: $warm-grey;
   }
 
   &--circle {
     border-radius: 100px;
   }
+}
+
+label {
+  font-weight: bold;
+  color: $dark;
+
+  abbr {
+    text-decoration: none;
+  }
+
+  &.checkbox {
+    position: relative;
+    padding-left: 29px;
+    cursor: pointer;
+    user-select: none;
+
+    .input-checkbox {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      cursor: pointer;
+
+      & + span::before {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        background-color: $white;
+        border: 1px solid $cloudy-blue;
+        content: "";
+      }
+    }
+
+    &:hover .input-checkbox + span::before {
+      background-color: $strong-pink;
+      border-color: $strong-pink;
+    }
+
+    .input-checkbox:checked + span::before {
+      background-color: $strong-pink;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M13.65 1.887L5.983 9.642a1.084 1.084 0 0 1-1.555 0L.316 5.471a1.136 1.136 0 0 1 0-1.584 1.086 1.086 0 0 1 1.556 0l3.335 3.381L12.094.303a1.086 1.086 0 0 1 1.556 0c.43.437.43 1.146 0 1.584z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border-color: $strong-pink;
+    }
+  }
+}
+
+textarea.form-control {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.required {
+  border-bottom: 0;
+  color: $lipstick;
 }

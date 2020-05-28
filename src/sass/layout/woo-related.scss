@@ -6,24 +6,24 @@
   }
 
   &__title {
+    margin-bottom: 10px;
     font-family: $default-font;
     font-size: 20px;
     font-weight: 600;
     color: #1d1f26;
-    margin-bottom: 10px;
 
     @include media-breakpoint-up(lg) {
-      font-size: 30px;
       margin-bottom: 20px;
+      font-size: 30px;
     }
   }
 
   .slick-track {
     display: flex;
     align-items: stretch;
+    min-width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    min-width: 100%;
   }
 
   .slick-slide {
