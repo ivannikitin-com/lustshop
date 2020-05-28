@@ -1,9 +1,9 @@
 @mixin base-style {
-    position: relative;
-    margin: 0;
-    font-family: $default-font;
-    font-size: $default-size;
-    line-height: normal;
-    color: $brownish-grey;
-    background: $white-two;
+  position: relative;
+  margin: 0;
+  background: $white-two;
+  font-family: $default-font;
+  font-size: $default-size;
+  line-height: normal;
+  color: $brownish-grey;
 }
