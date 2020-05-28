@@ -48,13 +48,6 @@ class LustShop
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
         add_theme_support('html5', ['search-form', 'comment-form', 'comment-list', 'gallery', 'caption']);
-        add_theme_support(
-            'custom-background',
-            apply_filters('lustshop_custom_background_args', [
-                'default-color' => 'ffffff',
-                'default-image' => '',
-            ])
-        );
         add_theme_support('customize-selective-refresh-widgets');
         add_theme_support('custom-logo', [
             'height' => 250,
@@ -93,9 +86,9 @@ class LustShop
             'id' => 'sidebar',
             'description' => esc_html__('Add widgets here.', 'lustshop'),
             'before_widget' => '<div class="widgets__item">',
-            'after_widget' => '</div></div>',
+            'after_widget' => '</div>',
             'before_title' => '<h3 class="widgets__title">',
-            'after_title' => '</h3><div class="widgets__content">',
+            'after_title' => '</h3>',
         ]);
         register_sidebar([
             'name' => esc_html__('Footer 1', 'lustshop'),
