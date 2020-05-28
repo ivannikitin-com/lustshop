@@ -1,3 +1,5 @@
+$padding-left-right: 30px;
+
 .widgets {
   padding-top: 25px;
   padding-bottom: 40px;
@@ -45,7 +47,97 @@
   }
 
   &__item {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: $padding-left-right;
+    padding-left: $padding-left-right;
+  }
+
+  .woof_color_term {
+    border: 1px solid #e2e6e7;
+  }
+
+  .woof_container {
+    position: relative;
+
+    &:not(:last-of-type) {
+      padding-bottom: 18px;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: calc(100% + #{$padding-left-right * 2});
+        border-bottom: 1px solid $white-two;
+        content: "";
+        transform: translateX(-$padding-left-right);
+      }
+    }
+
+    &:not(:first-of-type) {
+      padding-top: 30px;
+    }
+  }
+  .woof .widget_price_filter .ui-slider-horizontal {
+    height: 3px;
+  }
+
+  .irs-line-mid,
+  .irs-line-left,
+  .irs-line-right,
+  .irs-bar {
+    background: $cloudy-blue;
+  }
+
+  .woof .widget_price_filter .ui-slider .ui-slider-handle {
+    top: -8px;
+    width: 19px;
+    height: 19px;
+    background: $strong-pink;
+    border: 0;
+    border-radius: 50%;
+  }
+
+  .woof .widget_price_filter .ui-slider .ui-slider-range {
+    background: $dark;
+  }
+
+  .woof_price_search_container .price_slider_amount .price_label {
+    order: 2;
+    font-size: 0;
+
+    &::before {
+      margin-right: 13px;
+      margin-left: 13px;
+      font-size: 16px;
+      line-height: 42px;
+      color: $warm-grey;
+      content: "—";
+    }
+  }
+
+  .woof .widget_price_filter .price_slider_amount {
+    display: flex;
+    align-items: center;
+
+    input {
+      @extend .form-control;
+
+      /* stylelint-disable-next-line declaration-no-important */
+      display: block !important;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    input:nth-child(1) {
+      order: 1;
+    }
+
+    input:nth-child(2) {
+      order: 3;
+    }
+
+    .clear {
+      display: none;
+    }
   }
 }
