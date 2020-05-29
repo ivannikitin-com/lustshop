@@ -1,0 +1,60 @@
+.wishlist-title-with-form,
+.hidden-title-form,
+table.cart .remove_from_wishlist.button {
+  display: none;
+}
+
+.wishlist-items-wrapper {
+  .product-add-to-cart {
+    text-align: center;
+
+    .dateadded {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .product-thumbnail {
+    // padding: 0;
+  }
+}
+
+.wishlist_table {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .item-details-table,
+  .additional-info {
+    width: 100%;
+  }
+
+  .label,
+  .value {
+    width: 50%;
+  }
+
+  .add_to_cart_button {
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .product-thumbnail {
+    margin-bottom: 15px;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-name {
+    margin-bottom: 15px;
+  }
+}

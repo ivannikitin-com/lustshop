@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2020-05-22 03:13+0000\n"
+"POT-Creation-Date: 2020-05-29 04:23+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-05-22 03:17+0000\n"
+"PO-Revision-Date: 2020-05-29 04:23+0000\n"
 "Last-Translator: Вадим Мишхожев\n"
 "Language-Team: Русский\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -17,44 +17,44 @@ msgstr ""
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
 "X-Loco-Version: 2.3.4; wp-5.4.1"
 
-#: functions.php:90
+#: functions.php:85
 msgid "Sidebar"
 msgstr "Сайдбар"
 
-#: functions.php:92 functions.php:101 functions.php:110 functions.php:119
-#: functions.php:128 functions.php:137
+#: functions.php:87 functions.php:96 functions.php:105 functions.php:114
+#: functions.php:123 functions.php:132
 msgid "Add widgets here."
 msgstr "Переместите сюда виджет"
 
-#: functions.php:99
+#: functions.php:94
 msgid "Footer 1"
 msgstr "Подвал 1"
 
-#: functions.php:108
+#: functions.php:103
 msgid "Footer 2"
 msgstr "Подвал 2"
 
-#: functions.php:117
+#: functions.php:112
 msgid "Footer 3"
 msgstr "Подвал 3"
 
-#: functions.php:126
+#: functions.php:121
 msgid "Footer Social"
 msgstr "Социальные кнопки в подвале"
 
-#: functions.php:135
+#: functions.php:130
 msgid "Footer Bottom"
 msgstr "Низ подвал"
 
-#: functions.php:210
+#: functions.php:202
 msgid "Slider Products"
 msgstr "Слайдер продуктов"
 
-#: functions.php:211
+#: functions.php:203
 msgid "Question/Answer"
 msgstr "Вопрос/Ответ"
 
-#: functions.php:212
+#: functions.php:204
 msgid "Category products"
 msgstr "Категории товаров"
 
@@ -79,6 +79,10 @@ msgstr "Самые полярные категории"
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Попробуйте поискать в ежемесячных архивах. %1$s"
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "На всю ширину"
 
 #: comments.php:25
 msgid "Name"
@@ -112,15 +116,15 @@ msgstr "Комментарии отключены"
 msgid "Search Results for: %s"
 msgstr "Результаты поиска по: %s"
 
-#: header.php:62 header.php:173
+#: header.php:62 header.php:167
 msgid "My account"
 msgstr "Аккаунт"
 
-#: header.php:72 header.php:183
+#: header.php:72 header.php:177
 msgid "Login"
 msgstr "Вход"
 
-#: header.php:74 header.php:185
+#: header.php:74 header.php:179
 msgid "Register"
 msgstr "Регистрация"
 
@@ -314,19 +318,21 @@ msgstr "Все записи"
 msgid "Reviews %1$s"
 msgstr "Отзывов %1$s"
 
-#: inc/classes/woocommerce/class_woocomerce_layout.php:91
+#: inc/classes/woocommerce/class_woocomerce_layout.php:101
+#: inc/classes/woocommerce/class_woocomerce_layout.php:111
+#: inc/classes/woocommerce/class_woocomerce_layout.php:140
 msgid "Payment and delivery"
 msgstr "Оплата и доставка"
 
-#: inc/classes/woocommerce/class_woocomerce_layout.php:210
+#: inc/classes/woocommerce/class_woocomerce_layout.php:283
 msgid "You may like"
 msgstr "Вам могут понравиться"
 
-#: inc/classes/woocommerce/class_woocomerce_layout.php:371
+#: inc/classes/woocommerce/class_woocomerce_layout.php:442
 msgid "not reviews"
 msgstr "отзывов нет"
 
-#: inc/classes/woocommerce/class_woocomerce_layout.php:375
+#: inc/classes/woocommerce/class_woocomerce_layout.php:446
 #, php-format
 msgctxt "reviews product"
 msgid "%s reviews"
