@@ -10,51 +10,21 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'lustshop' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'lustshop' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'lustshop' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$lustshop_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'lustshop' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$lustshop_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<div id="primary" class="content-area h-100">
+		<main id="main" class="site-main h-100">
+			<div class="container h-100">
+				<section class="error-404 not-found h-100">
+					<div class="page-content error-404__content h-100">
+						<div class="error-404__title">
+							404
+						</div>
+						<div class="error-404__description"><?php esc_html_e( 'Page not found', 'lustshop' ); ?></div>
+						<a href="<?php echo esc_url(home_url()); ?>" class="wp-block-lustshop-button wp-block-lustshop-button--primary error-404__button"><?php esc_html_e('Return Home', 'lustshop'); ?></a>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
 
 <?php
 get_footer();
