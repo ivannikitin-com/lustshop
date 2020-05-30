@@ -25,7 +25,7 @@ class LustShop
         add_action('after_setup_theme', [$this, 'nav_menu']);
         add_action('after_setup_theme', [$this, 'image_size']);
         add_action('widgets_init', [$this, 'widgets_init']);
-        add_action('wp_enqueue_scripts', [$this, 'assets_include']);
+        add_action('wp_enqueue_scripts', [$this, 'assets_include'], 999);
         add_action('wp_enqueue_scripts', [$this, 'disable_assests_plugins'], 20);
         add_action('acf/init', [$this, 'register_acf_block_types']);
         if (defined('YITH_WCWL') && !function_exists('yith_wcwl_ajax_update_count')) {
