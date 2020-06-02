@@ -7,7 +7,7 @@
     text-decoration: none;
   }
 
-  .attachment-lustshop-widget-post {
+  &__image {
     margin-bottom: 12px;
     border-radius: 6px;
   }
@@ -35,8 +35,16 @@
     justify-content: center;
     width: 100%;
 
+    svg {
+      fill: currentColor;
+
+      path {
+        fill: inherit;
+      }
+    }
+
     &:hover {
-      color: $strong-pink;
+      color: $white;
     }
   }
 }
