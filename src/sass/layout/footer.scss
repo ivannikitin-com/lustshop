@@ -6,6 +6,14 @@
   &__column {
     margin-top: 18px;
     text-align: center;
+
+    #{$self} &--open {
+      border-bottom: 0;
+
+      ul {
+        display: block;
+      }
+    }
   }
 
   &__title {
@@ -16,6 +24,10 @@
     font-weight: 600;
     color: $white;
     text-align: center;
+
+    #{$self}__column--open & {
+      border-bottom: 0;
+    }
   }
 
   &__column-last {
