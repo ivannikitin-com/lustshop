@@ -1,5 +1,4 @@
 .wp-block-lustshop-subscribe {
-
   &__section-title {
     margin: 12px 0 18px;
     color: $white;
@@ -10,8 +9,8 @@
     font-family: $second-font;
     font-size: 26px;
     font-weight: bold;
-    font-style: italic;
     color: $strong-pink;
+    font-style: italic;
   }
 
   &__img_main {
@@ -20,9 +19,9 @@
   }
 
   &__info {
+    align-self: center;
     padding-top: 30px;
     padding-bottom: 45px;
-    align-self: center;
   }
 
   .picture {
@@ -30,17 +29,17 @@
   }
 
   &__descr {
-    margin: 0 0 54px 0;
     display: flex;
+    align-items: flex-end;
+    margin: 0 0 54px 0;
     font-size: 16px;
     color: $cloudy-blue;
-    align-items: flex-end;
   }
 
   &__txt {
+    align-self: flex-end;
     margin-left: 19px;
     line-height: 22px;
-    align-self: flex-end;
 
     p {
       margin-bottom: 10px;
@@ -63,33 +62,33 @@
 
   .wpcf7-form {
     display: flex;
-    overflow: hidden;
     height: 60px;
-    font-size: 16px;
     background: $white;
     border-radius: 30px;
+    overflow: hidden;
+    font-size: 16px;
   }
 
   .wpcf7-form-control-wrap {
-    margin: 0;
     display: flex;
     width: 50%;
+    margin: 0;
   }
 
   .wpcf7-email {
+    width: 100%;
     margin-right: auto;
     padding: 0 20px 0 30px;
-    width: 100%;
+    border: 0;
     font-family: $default-font;
     font-size: 16px;
     font-weight: 600;
-    border: 0;
   }
 
   .wpcf7-submit {
-    padding: 0 30px;
-    width: 50%;
-    border-radius: 30px 0 0 30px;
     justify-content: center;
+    width: 50%;
+    padding: 0 30px;
+    border-radius: 30px;
   }
 }

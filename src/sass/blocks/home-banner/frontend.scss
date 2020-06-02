@@ -4,9 +4,9 @@
   }
 
   &__info {
+    align-self: center;
     padding-top: 30px;
     padding-bottom: 45px;
-    align-self: center;
   }
 
   &__title {
@@ -27,15 +27,15 @@
 
   &__description {
     display: flex;
+    align-items: flex-end;
     font-size: 16px;
     color: $cloudy-blue;
-    align-items: flex-end;
   }
 
   &__text {
+    align-self: flex-end;
     margin-left: 19px;
     line-height: 22px;
-    align-self: flex-end;
 
     p {
       margin-bottom: 10px;

@@ -25,13 +25,15 @@ class LustShop
         add_action('after_setup_theme', [$this, 'nav_menu']);
         add_action('after_setup_theme', [$this, 'image_size']);
         add_action('widgets_init', [$this, 'widgets_init']);
-        add_action('wp_enqueue_scripts', [$this, 'assets_include']);
+        add_action('wp_enqueue_scripts', [$this, 'assets_include'], 999);
         add_action('wp_enqueue_scripts', [$this, 'disable_assests_plugins'], 20);
         add_action('acf/init', [$this, 'register_acf_block_types']);
-        add_filter('wp_nav_menu_objects', [$this, 'change_nav_menu_objects'], 10, 2);
-        add_action('wp_ajax_yith_wcwl_update_wishlist_count', [$this, 'yith_wcwl_ajax_update_count']);
-        add_action('wp_ajax_nopriv_yith_wcwl_update_wishlist_count', [$this, 'yith_wcwl_ajax_update_count']);
+        if (defined('YITH_WCWL') && !function_exists('yith_wcwl_ajax_update_count')) {
+            add_action('wp_ajax_yith_wcwl_update_wishlist_count', [$this, 'yith_wcwl_ajax_update_count']);
+            add_action('wp_ajax_nopriv_yith_wcwl_update_wishlist_count', [$this, 'yith_wcwl_ajax_update_count']);
+        }
 
+        add_filter('wp_nav_menu_objects', [$this, 'change_nav_menu_objects'], 10, 2);
         add_filter('comment_form_fields', [$this, 'reorder_comment_fields']);
         add_filter('wpcf7_autop_or_not', '__return_false');
         add_filter('navigation_markup_template', [$this, 'navigation_template'], 10, 2);
@@ -46,13 +48,6 @@ class LustShop
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
         add_theme_support('html5', ['search-form', 'comment-form', 'comment-list', 'gallery', 'caption']);
-        add_theme_support(
-            'custom-background',
-            apply_filters('lustshop_custom_background_args', [
-                'default-color' => 'ffffff',
-                'default-image' => '',
-            ])
-        );
         add_theme_support('customize-selective-refresh-widgets');
         add_theme_support('custom-logo', [
             'height' => 250,
@@ -75,10 +70,12 @@ class LustShop
     {
         add_image_size($this->theme_name . '-woo-faq-category', 100, 75, true);
         add_image_size($this->theme_name . '-woo-faq', 104, 104, true);
+        add_image_size($this->theme_name . '-woo-flexslider-thumbnail', 115, 115, true);
         add_image_size($this->theme_name . '-slider-product', 279, 279, true);
         add_image_size($this->theme_name . '-widget-post', 219, 145, true);
         add_image_size($this->theme_name . '-blog-thumbnail', 382, 252, true);
         add_image_size($this->theme_name . '-post-thumbnail', 485, 320, true);
+        add_image_size($this->theme_name . '-woo-flexslider', 573, 573, true);
         add_image_size($this->theme_name . '-single-thumbnail', 1206, 600, true);
     }
 
@@ -89,9 +86,9 @@ class LustShop
             'id' => 'sidebar',
             'description' => esc_html__('Add widgets here.', 'lustshop'),
             'before_widget' => '<div class="widgets__item">',
-            'after_widget' => '</div></div>',
+            'after_widget' => '</div>',
             'before_title' => '<h3 class="widgets__title">',
-            'after_title' => '</h3><div class="widgets__content">',
+            'after_title' => '</h3>',
         ]);
         register_sidebar([
             'name' => esc_html__('Footer 1', 'lustshop'),
@@ -154,7 +151,6 @@ class LustShop
     public function disable_assests_plugins()
     {
         wp_deregister_style('yith-wcwl-font-awesome');
-        wp_deregister_style('wc-block-style');
         wp_deregister_style('contact-form-7');
         wp_deregister_style('woocommerce_prettyPhoto_css');
         wp_deregister_script('prettyPhoto');
@@ -167,6 +163,7 @@ class LustShop
         if (class_exists('WooCommerce')) {
             require get_template_directory() . '/inc/woocommerce.php';
             require get_template_directory() . '/inc/classes/woocommerce/class_woocomerce_layout.php';
+            require get_template_directory() . '/inc/classes/woocommerce/class_woocomerce_review.php';
         }
         require get_template_directory() . '/inc/gutenberg/index.php';
         require get_template_directory() . '/gutenberg/init.php';
@@ -195,8 +192,7 @@ class LustShop
     {
         if ($args->theme_location === 'main') {
             $sorted_menu_items[count($sorted_menu_items)]->classes[] = 'last';
-            $sorted_menu_items[count($sorted_menu_items)]->title .=
-                '<svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"><path data-name="-e-arrow-white" d="M6.99 6a1.011 1.011 0 0 1-.29.706l-4.99 5A1 1 0 1 1 .3 10.294L4.58 6 .3 1.706A1 1 0 1 1 1.71.294l4.99 5A1.011 1.011 0 0 1 6.99 6z" fill="#fff" fill-rule="evenodd"/></svg>';
+            $sorted_menu_items[count($sorted_menu_items)]->title .= '<svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"><path data-name="-e-arrow-white" d="M6.99 6a1.011 1.011 0 0 1-.29.706l-4.99 5A1 1 0 1 1 .3 10.294L4.58 6 .3 1.706A1 1 0 1 1 1.71.294l4.99 5A1.011 1.011 0 0 1 6.99 6z" fill="#fff" fill-rule="evenodd"/></svg>';
         }
         return $sorted_menu_items;
     }
@@ -318,14 +314,14 @@ class LustShop
         ]);
     }
 
-    static function get_template_part($slug, $name = null, $params = array())
+    static function get_template_part($slug, $name = null, $params = [])
     {
-        if ( ! empty( $params ) ) {
-            foreach ( (array) $params as $key => $param ) {
-                set_query_var( $key, $param );
+        if (!empty($params)) {
+            foreach ((array) $params as $key => $param) {
+                set_query_var($key, $param);
             }
         }
-        get_template_part( $slug, $name );
+        get_template_part($slug, $name);
     }
 }
 

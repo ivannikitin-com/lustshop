@@ -21,6 +21,7 @@
     cursor: pointer;
   }
 
+  &:disabled,
   &.disabled,
   fieldset:disabled & {
     pointer-events: none;
@@ -34,6 +35,9 @@
 
   &:hover,
   &:focus {
+    background-color: $strong-pink;
+    outline: 0;
+    color: $white;
     text-decoration: none;
   }
 
@@ -43,6 +47,7 @@
     color: $white;
 
     &:hover {
+      background-color: $cerise;
       color: $white;
     }
   }

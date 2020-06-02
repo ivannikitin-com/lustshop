@@ -80,7 +80,15 @@
     "semi": false,
     "singleQuote": false,
     "endOfLine": "auto",
-    "printWidth": 400
+    "printWidth": 400,
+    "overrides": [
+      {
+        "files": "*.php",
+        "options": {
+          "tabWidth": 4
+        }
+      }
+    ]
   },
   "husky": {
     "hooks": {

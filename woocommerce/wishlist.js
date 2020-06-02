@@ -800,13 +800,15 @@ jQuery(document).ready(function($) {
     }
 
     if ($(".yith-wcwl-add-to-wishlist").length && !$("#yith-wcwl-popup-message").length) {
-      var message_div = $("<div>").attr("id", "yith-wcwl-message"),
+      var message_div = $("<div>")
+          .attr("id", "yith-wcwl-message")
+          .attr("class", "woocommerce-message woocommerce-message--info")
+          .hide(),
         popup_div = $("<div>")
           .attr("id", "yith-wcwl-popup-message")
           .html(message_div)
-          .hide()
 
-      $("body").prepend(popup_div)
+      $(".woocommerce-notices-wrapper").prepend(popup_div)
     }
   }
 
@@ -1501,11 +1503,24 @@ jQuery(document).ready(function($) {
       return
     }
 
-    msg.html(response_message)
-    msgPopup.css("margin-left", "-" + $(msgPopup).width() + "px").fadeIn()
-    window.setTimeout(function() {
-      msgPopup.fadeOut()
-    }, timeout)
+    if (!msg) {
+      const message_div = $("<div>")
+        .attr("id", "yith-wcwl-message")
+        .attr("class", "woocommerce-message woocommerce-message--info")
+        .html(response_message)
+
+      msgPopup.prepend(message_div)
+
+      window.setTimeout(function() {
+        message_div.fadeOut()
+      }, timeout)
+    } else {
+      msg.html(response_message)
+      msg.fadeIn()
+      window.setTimeout(function() {
+        msg.fadeOut()
+      }, timeout)
+    }
   }
 
   /**
@@ -1754,7 +1769,7 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
   $(document).on("added_to_wishlist removed_from_wishlist", function() {
-    var counter = $(".wish.header__block-item .header__block-item-count span")
+    const counter = $(".wish.header__block-item .header__block-item-count")
 
     $.ajax({
       url: yith_wcwl_l10n.ajax_url,

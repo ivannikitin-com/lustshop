@@ -56,3 +56,9 @@
 p.no-comments {
   @extend .woocommerce-message;
 }
+
+.woocommerce-notices-wrapper {
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+}
