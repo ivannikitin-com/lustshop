@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy_Test_Server
+name: Deploy_Pre_Master
 on: 
   push:
     branches: develop
@@ -16,23 +16,26 @@ jobs:
 
     - name: Use Node.js
       uses: actions/setup-node@v1
-    
+      
+    - name: Get old version
+      run: |
+        npm i
+        git clone -b pre-master https://github.com/ivannikitin-com/lustshop.git old-version
+
+    - name: Update version
+      run: node deploy/update-version.js
+      
+    - name: Remove folder old-varsion
+      run: rm -rf old-version
+      
     - name: Build
       run: npm run build
       
-  deploy:  
-    runs-on: ubuntu-latest
-    needs: build
-    
-    steps:
     - name: Deploy
-      uses: Pendect/action-rsyncer@v1.1.0
-      env:
-        DEPLOY_KEY: ${{secrets.DEPLOY_TEST_KEY}}
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        flags: '-avzr --delete'
-        options: '--exclude="postcss.config.js" --exclude="webpack.config.js"'
-        ssh_options: '-p 99999'
-        src: '.'
-        dest: 'vadim@wp-server.ru:/www/lustshop/www/wp-content/themes/lustshop'
+        github_token: ${{ secrets.GITHUD_TOKEN }}
+        publish_branch: pre-master
+        publish_dir: ./
+        keep_files: true
       
