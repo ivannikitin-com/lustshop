@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="footer__main">
 			<div class="row">
-				<div class="footer__column col-md-6 col-lg-3">
+				<div class="footer__column footer__column--collapse col-md-6 col-lg-3">
 					<?php
 						if ( is_active_sidebar( 'footer-1' ) ) {
 							dynamic_sidebar( 'footer-1' );
@@ -24,14 +24,14 @@
 						?>
 
 				</div>
-				<div class="footer__column col-md-6 col-lg-3">
+				<div class="footer__column footer__column--collapse col-md-6 col-lg-3">
 					<?php
 						if ( is_active_sidebar( 'footer-2' ) ) {
 							dynamic_sidebar( 'footer-2' );
 						}
 						?>
 				</div>
-				<div class="footer__column col-md-6 col-lg-3">
+				<div class="footer__column footer__column--collapse col-md-6 col-lg-3">
 					<?php
 						if ( is_active_sidebar( 'footer-3' ) ) {
 							dynamic_sidebar( 'footer-3' );
