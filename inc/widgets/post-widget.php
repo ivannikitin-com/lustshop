@@ -45,7 +45,7 @@ class PostWidget extends WP_Widget
             }
 
             if ($showButton) {
-                echo "<a class='post-widget__button-more' href='". get_category_link($category_id) ."'>" . __('Open blog', 'lustshop') . "<svg xmlns='http://www.w3.org/2000/svg' width='7' height='12'><path data-name='-e-arrow-pink' d='M6.992 6a.986.986 0 0 1-.292.7l-4.989 5a.991.991 0 0 1-1.413.01 1.007 1.007 0 0 1 0-1.42L4.581 6 .298 1.7A1 1 0 0 1 1.712.29l4.989 5a1.009 1.009 0 0 1 .291.71z' fill='currentColor' fill-rule='evenodd'/></svg></a>";
+                echo "<a class='post-widget__button-more' href='". get_category_link($category_id) ."'>" . __('Open blog', 'lustshop') . "<svg class='icon' xmlns='http://www.w3.org/2000/svg' width='7' height='12'><path data-name='-e-arrow-pink' d='M6.992 6a.986.986 0 0 1-.292.7l-4.989 5a.991.991 0 0 1-1.413.01 1.007 1.007 0 0 1 0-1.42L4.581 6 .298 1.7A1 1 0 0 1 1.712.29l4.989 5a1.009 1.009 0 0 1 .291.71z' fill='currentColor' fill-rule='evenodd'/></svg></a>";
             }
         }
 
