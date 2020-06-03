@@ -47,12 +47,15 @@ $padding-left-right: 30px;
   }
 
   &__item {
-    margin-bottom: 2.6rem;
     padding-right: $padding-left-right;
     padding-left: $padding-left-right;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2.6rem;
     }
   }
 
