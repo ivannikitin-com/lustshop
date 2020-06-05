@@ -17,6 +17,10 @@
   color: $strong-pink;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 
+  .icon {
+    margin-left: 9px;
+  }
+
   &:not(:disabled):not(.disabled) {
     cursor: pointer;
   }
@@ -80,10 +84,6 @@
       background-color: $strong-pink;
       color: $white;
     }
-
-    svg {
-      fill: currentColor;
-    }
   }
 
   &--link {
@@ -94,10 +94,6 @@
       background-color: $dark;
       color: $white;
     }
-  }
-
-  svg {
-    margin-left: 9px;
   }
 
   .product__buttons & {
