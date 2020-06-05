@@ -1,9 +1,9 @@
 $padding-left-right: 30px;
 
 .widgets {
-  padding-top: 25px;
+  padding-top: 20px;
   padding-bottom: 40px;
-  background-color: #ffffff;
+  background-color: $white;
 
   ul {
     margin-bottom: 0;
@@ -37,8 +37,8 @@ $padding-left-right: 30px;
   }
 
   &__title {
-    margin-bottom: 25px;
-    padding-bottom: 21px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
     border-bottom: 3px solid $strong-pink;
     font-family: $default-font;
     font-size: 20px;
@@ -49,6 +49,14 @@ $padding-left-right: 30px;
   &__item {
     padding-right: $padding-left-right;
     padding-left: $padding-left-right;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2.6rem;
+    }
   }
 
   .woof_color_term {

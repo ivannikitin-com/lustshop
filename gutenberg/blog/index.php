@@ -99,7 +99,7 @@ function render_block_lustshop_blog( $attributes ) {
 			<div class="wp-block-lustshop-blog__button">
 				<a class="wp-block-lustshop-button" href="%1$s">
 				%2$s
-				<svg 
+				<svg class="icon"
 					xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink"
 					width="7px" height="12px">

@@ -192,7 +192,7 @@ class LustShop
     {
         if ($args->theme_location === 'main') {
             $sorted_menu_items[count($sorted_menu_items)]->classes[] = 'last';
-            $sorted_menu_items[count($sorted_menu_items)]->title .= '<svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"><path data-name="-e-arrow-white" d="M6.99 6a1.011 1.011 0 0 1-.29.706l-4.99 5A1 1 0 1 1 .3 10.294L4.58 6 .3 1.706A1 1 0 1 1 1.71.294l4.99 5A1.011 1.011 0 0 1 6.99 6z" fill="#fff" fill-rule="evenodd"/></svg>';
+            $sorted_menu_items[count($sorted_menu_items)]->title .= '<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"><path data-name="-e-arrow-white" d="M6.99 6a1.011 1.011 0 0 1-.29.706l-4.99 5A1 1 0 1 1 .3 10.294L4.58 6 .3 1.706A1 1 0 1 1 1.71.294l4.99 5A1.011 1.011 0 0 1 6.99 6z" fill="#fff" fill-rule="evenodd"/></svg>';
         }
         return $sorted_menu_items;
     }
@@ -262,20 +262,20 @@ class LustShop
     static function comment_template($comment, $args, $depth)
     {
         ?>
-    <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-        <article class="comments__item">
-            <div class="comments__header">
-                <div class="comments__avatar">
-                    <?php echo get_avatar($comment, 73, '', '', []); ?>
-                </div>
-                <div>
-                    <span class="comments__author"><?php comment_author(); ?></span>
-                    <span class="comments__date"><?php comment_date('j F Y'); ?></span>
-                    <div class="comments__body d-none d-lg-block">
-                        <?php comment_text(); ?>
+<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+	<article class="comments__item">
+		<div class="comments__header">
+			<div class="comments__avatar">
+				<?php echo get_avatar($comment, 73, '', '', []); ?>
+			</div>
+			<div>
+				<span class="comments__author"><?php comment_author(); ?></span>
+				<span class="comments__date"><?php comment_date('j F Y'); ?></span>
+				<div class="comments__body d-none d-lg-block">
+					<?php comment_text(); ?>
 
-                        <div class="comments__reply">
-                            <?php comment_reply_link(
+					<div class="comments__reply">
+						<?php comment_reply_link(
                                 array_merge($args, [
                                     'add_below' => $add_below,
                                     'depth' => $depth,
@@ -283,16 +283,16 @@ class LustShop
                                 ])
                             ); ?>
 
-                            <?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="comments__body d-block d-lg-none">
-                <?php comment_text(); ?>
+						<?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="comments__body d-block d-lg-none">
+			<?php comment_text(); ?>
 
-                <div class="comments__reply">
-                    <?php comment_reply_link(
+			<div class="comments__reply">
+				<?php comment_reply_link(
                         array_merge($args, [
                             'add_below' => $add_below,
                             'depth' => $depth,
@@ -300,11 +300,11 @@ class LustShop
                         ])
                     ); ?>
 
-                    <?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
-                </div>
-            </div>
-        </article>
-        <?php
+				<?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
+			</div>
+		</div>
+	</article>
+	<?php
     }
 
     public function yith_wcwl_ajax_update_count()
