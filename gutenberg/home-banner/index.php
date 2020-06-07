@@ -10,14 +10,15 @@ function render_block_lustshop_home_banner ($attributes) {
 				<div class="col-lg-6 lutshop-home-banner__info">
 					<div class="lutshop-home-banner__title" style="color: #fff;"><?php echo $attributes['title']; ?></div>
 					<div class="lutshop-home-banner__description">
-						<img src="<?php echo get_bloginfo('template_directory'); ?>/src/img/home-banner/rabbit.png" width="125"
+						<img class="lutshop-home-banner__description-img"
+							src="<?php echo get_bloginfo('template_directory'); ?>/src/img/home-banner/rabbit.png" width="125"
 							height="124">
 						<div class="lutshop-home-banner__text">
 							<p><?php echo $attributes['description']; ?></p>
 							<div class="lutshop-home-banner__autor"><?php _e('Naughty <sup>Rabbit</sup>', 'lustshop'); ?></div>
 						</div>
 					</div>
-					<div class="mt-5"><a href="<?php echo $attributes['buttonLink']; ?>"
+					<div class="lutshop-home-banner__wrap_button"><a href="<?php echo $attributes['buttonLink']; ?>"
 							class="wp-block-lustshop-button wp-block-lustshop-button--primary lutshop-home-banner__button"><?php echo $attributes['buttonName']; ?>
 							<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12">
 								<path data-name="-e-arrow-white"

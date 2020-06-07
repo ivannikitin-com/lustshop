@@ -1,44 +1,73 @@
 .lutshop-home-banner {
   @include media-breakpoint-up(lg) {
-    padding-top: 200px;
+    padding-top: 180px;
   }
 
   &__info {
     align-self: center;
-    padding-top: 30px;
-    padding-bottom: 45px;
+    padding-top: 60px;
+    padding-bottom: 54px;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 10px;
+    }
   }
 
   &__title {
     margin-bottom: 2rem;
-    font-size: 40px;
+    font-size: 34px;
+    line-height: 1.15;
     font-weight: 600;
     color: $dark;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 34px;
-      line-height: 40px;
-    }
+    text-align: center;
 
     @include media-breakpoint-up(lg) {
+      margin-bottom: 1.5rem;
+      font-size: 44px;
+      text-align: left;
+    }
+
+    @include media-breakpoint-up(xl) {
       font-size: 50px;
     }
   }
 
   &__description {
-    display: flex;
-    align-items: flex-end;
+    margin-bottom: 26px;
     font-size: 16px;
     color: $cloudy-blue;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 58px;
+      text-align: left;
+    }
+
+    &-img {
+      width: 93px;
+      margin-bottom: 0.5rem;
+
+      @include media-breakpoint-up(lg) {
+        width: auto;
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__text {
-    align-self: flex-end;
-    margin-left: 19px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 1.4;
+
+    @include media-breakpoint-up(lg) {
+      align-self: flex-end;
+      margin-left: 19px;
+      font-size: 16px;
+    }
 
     p {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     span {
@@ -47,14 +76,34 @@
   }
 
   &__autor {
-    font-size: 12px;
+    font-size: 10px;
     color: $white;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 12px;
+    }
 
     sup {
       top: 0;
       font-size: 100%;
       color: $strong-pink;
     }
+  }
+
+  &__wrap_button {
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+  }
+
+  &__button {
+    justify-content: center;
+    min-width: 176px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
   }
 
   &__picture {
@@ -65,14 +114,5 @@
     position: relative;
     z-index: 1;
     margin-top: -72px;
-  }
-
-  &__button {
-    font-size: 16px;
-
-    @include media-breakpoint-up(lg) {
-      height: 60px;
-      line-height: 60px;
-    }
   }
 }
