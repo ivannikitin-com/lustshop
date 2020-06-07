@@ -7,7 +7,6 @@
   padding-right: 22px;
   padding-left: 22px;
   background-color: $white-two;
-  border: 0;
   border: 1px solid $white-two;
   border-radius: 100px;
   font-family: $default-font;
@@ -40,6 +39,7 @@
   &:hover,
   &:focus {
     background-color: $strong-pink;
+    border-color: $strong-pink;
     outline: 0;
     color: $white;
     text-decoration: none;
