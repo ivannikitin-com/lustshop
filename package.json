@@ -1,6 +1,6 @@
 {
   "name": "ivannikitin-company",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "Default config IN",
   "author": "",
   "license": "GPL-2.0-or-later",
@@ -63,6 +63,7 @@
   },
   "browserslist": {
     "production": [
+      "iOS >= 7",
       ">0.2%",
       "not dead",
       "not op_mini all"

@@ -107,3 +107,7 @@ textarea.form-control {
     @include checkbox-hover;
   }
 }
+
+legend {
+  @extend h3;
+}
