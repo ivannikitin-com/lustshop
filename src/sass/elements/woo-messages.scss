@@ -9,6 +9,7 @@
   color: $white;
 
   a {
+    line-height: normal;
     color: $white;
     text-decoration: underline;
 
@@ -29,7 +30,7 @@
     border-left-color: $white-30;
     border-radius: 0;
     box-shadow: none;
-    line-height: 1.618;
+    line-height: normal;
     font-weight: 600;
     color: $white;
 
@@ -37,6 +38,28 @@
       color: $white;
     }
   }
+}
+
+.woocommerce-message::before,
+.woocommerce-message::after,
+.woocommerce-info::before,
+.woocommerce-info::after,
+.woocommerce-error::before,
+.woocommerce-error::after,
+.woocommerce-noreviews::before,
+.woocommerce-noreviews::after,
+p.no-comments::before,
+p.no-comments::after {
+  display: table;
+  content: "";
+}
+
+.woocommerce-message::after,
+.woocommerce-info::after,
+.woocommerce-error::after,
+.woocommerce-noreviews::after,
+p.no-comments::after {
+  clear: both;
 }
 
 .woocommerce {
