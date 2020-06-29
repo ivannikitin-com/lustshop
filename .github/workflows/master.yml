@@ -23,6 +23,6 @@ jobs:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
       with:
         flags: '-avzr --delete'
-        options: '--exclude="node_modules" --exclude=".git" --exclude=".github" --exclude=".gitattributes" --exclude=".gitignore" --exclude=".stylelintrc"'
+        options: '--exclude="node_modules" --exclude=".*" --exclude=".github"'
         src: './'
         dest: 'vadim@wp-server.ru:/var/www/lustshop/www/test'
