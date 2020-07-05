@@ -15,14 +15,14 @@ jobs:
       uses: actions/setup-node@v1
 
     - name: Run Build
-      run: npm run build
+      run: npm i && npm run build
       
     - name: Deploy production
       uses: Pendect/action-rsyncer@v1.1.0
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_PRODUCTION_KEY}}
       with:
-        flags: '-avzr --delete'
+        flags: '-rltvz -O --delete'
         options: '--exclude="node_modules" --exclude=".*" --exclude=".github"'
         src: './'
         dest: 'vadim@95.181.226.5:/var/www/lustshop.ru/www/wp-content/themes/lustshop'
