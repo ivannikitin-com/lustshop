@@ -25,4 +25,4 @@ jobs:
         flags: '-avzr --delete'
         options: '--exclude="node_modules" --exclude=".*" --exclude=".github"'
         src: './'
-        dest: 'vadim@lustshop.ru:/var/www/lustshop.ru/www/wp-content/themes/lustshop'
+        dest: 'vadim@95.181.226.5:/var/www/lustshop.ru/www/wp-content/themes/lustshop'
