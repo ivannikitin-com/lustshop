@@ -1,0 +1,61 @@
+#customer_login {
+  @extend .row;
+
+  .col-1,
+  .col-2 {
+    @extend .col-12;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 percentage(1/2);
+      max-width: percentage(1/2);
+    }
+  }
+
+  .woocommerce-Input {
+    @extend .form-control;
+  }
+
+  .password-input {
+    width: 100%;
+  }
+
+  .woocommerce-button {
+    @extend .wp-block-lustshop-button;
+    @extend .wp-block-lustshop-button--primary;
+  }
+
+  .woocommerce-form__input-checkbox {
+    display: none;
+  }
+
+  .woocommerce-form__label-for-checkbox {
+    margin-bottom: 0;
+
+    .woocommerce-form__input-checkbox + span::before {
+      @include checkbox-init;
+      top: 0;
+    }
+
+    .woocommerce-form__input-checkbox:checked + span::before {
+      @include checkbox-checked;
+    }
+
+    span {
+      @include checkbox-label;
+      display: inline-block;
+      margin-right: 10px;
+
+      &:hover::before {
+        @include checkbox-hover;
+      }
+    }
+  }
+
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,56 @@
+.woocommerce-Reviews {
+  &-title {
+    @extend .comments__title;
+  }
+
+  .commentlist {
+    @extend .comments__list;
+  }
+
+  .comment_container {
+    @extend .comments__item;
+  }
+
+  .comment-form {
+    @extend .row;
+  }
+
+  .comment-reply-title {
+    @extend .comments__title;
+
+    display: block;
+    color: $dark;
+  }
+
+  .comment-notes {
+    display: none;
+  }
+
+  .comment-form-author,
+  .comment-form-email {
+    @extend .col-lg-6;
+  }
+
+  .comment-form-comment {
+    @extend .col-lg-12;
+  }
+
+  .comment-form-author input,
+  .comment-form-email input,
+  .comment-form-comment textarea {
+    @extend .form-control;
+  }
+
+  .comment-form-rating {
+    @extend .col-lg-12;
+  }
+
+  .form-submit {
+    @extend .col-lg-12;
+
+    .submit {
+      @extend .wp-block-lustshop-button;
+      @extend .wp-block-lustshop-button--primary;
+    }
+  }
+}

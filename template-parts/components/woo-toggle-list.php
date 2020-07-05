@@ -1,0 +1,4 @@
+<div class="woo-archive__filter-toggler">
+  <button type="button" class="woo-archive__filter-button woo-archive__filter-button--active" id="lustshop-woo-list"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="currentColor" fill-rule="evenodd" d="M6 16v-4h9.999v4H6zM6 6h9.999v3.999H6V6zm0-6h9.999v3.999H6V0zM0 12h4v4H0v-4zm0-6h4v3.999H0V6zM0-.001h3.999v4H0v-4z"/></svg></button>
+  <button type="button" class="woo-archive__filter-button" id="lustshop-woo-grid"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="currentColor" fill-rule="evenodd" d="M12 16v-4h3.999v4H12zm0-10h3.999v3.999H12V6zm0-6h3.999v3.999H12V0zM6 12h3.999v4H6v-4zm0-6h3.999v3.999H6V6zm0-6h3.999v3.999H6V0zM0 12h3.999v4H0v-4zm0-6h3.999v3.999H0V6zM0-.001h3.999v4H0v-4z"/></svg></button>
+</div>

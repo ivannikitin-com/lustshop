@@ -1,0 +1,423 @@
+.header {
+  $self: &;
+  position: relative;
+  z-index: 2;
+  background-color: $dark;
+
+  &--absolute {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+
+  &__top {
+    border-bottom: 1px solid $white-80;
+  }
+
+  &__account {
+    display: flex;
+    padding: 6px 0;
+    font-size: 13px;
+    white-space: nowrap;
+
+    a {
+      border-bottom: 1px dotted $white-40;
+
+      &:hover {
+        border-color: $strong-pink;
+        color: $white;
+        text-decoration: none;
+      }
+
+      &:not(:first-child) {
+        margin-left: 2px;
+      }
+    }
+
+    &-mobile {
+      margin-bottom: 26px;
+      padding: 0;
+      font-size: 16px;
+
+      a {
+        color: $white-40;
+      }
+    }
+  }
+
+  &__login {
+    width: 21px;
+    min-height: 18px;
+    margin-right: 10px;
+    color: $white;
+  }
+
+  &__toggle-button {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__menu-top {
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+      li.menu-item:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    a {
+      font-size: 13px;
+      color: $white-40;
+      white-space: nowrap;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .navbar-collapse {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+      z-index: 1;
+
+      @include media-breakpoint-up(md) {
+        position: static;
+      }
+
+      .navbar-nav {
+        padding: 6px 15px;
+        background: $dark;
+
+        @include media-breakpoint-up(md) {
+          padding: 6px 0;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  &__search {
+    &-mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  .navbar-toggler {
+    &:focus {
+      outline: none;
+    }
+
+    svg {
+      display: none;
+      width: 22px;
+      height: 22px;
+    }
+
+    &[aria-expanded="false"] {
+      svg.gamburger {
+        display: block;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      svg.close {
+        display: block;
+      }
+    }
+  }
+
+  &__main {
+    border-bottom: 1px solid $white-80;
+
+    @include media-breakpoint-up(md) {
+      padding: 0 0 8px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    line-height: 1;
+
+    &:hover {
+      color: $white-30;
+      text-decoration: none;
+    }
+
+    .custom-logo-link {
+      display: inline-block;
+    }
+
+    img {
+      width: 128px;
+      height: auto;
+
+      @include media-breakpoint-up(lg) {
+        width: auto;
+      }
+    }
+  }
+
+  &__name-shop {
+    display: block;
+    margin-top: 1px;
+    font-size: 8px;
+    font-weight: 400;
+    color: $white-40;
+    white-space: nowrap;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 3px;
+      font-size: 11px;
+      font-weight: 300;
+      color: $white-30;
+      letter-spacing: 3.6px;
+    }
+  }
+
+  &__phone a {
+    font-size: 18px;
+    font-weight: 600;
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__block-item {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:first-child) {
+      @include media-breakpoint-up(lg) {
+        margin-left: 18px;
+      }
+    }
+
+    > a {
+      display: block;
+      color: #ffffff;
+
+      &:hover {
+        color: rgba($strong-pink, 0.8);
+        text-decoration: none;
+      }
+    }
+
+    svg {
+      display: inline-block;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    &.mini-cart {
+      #{ $self }__block-item-count {
+        background-color: $strong-pink;
+        color: $white;
+
+        &:hover,
+        &:active {
+          background-color: $vivid-pink;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__block-item-count {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: $white-80;
+    border-radius: 50%;
+    font-size: $default-size;
+    line-height: 22px;
+    font-weight: 600;
+    color: $white-40;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  &__main_menu {
+    ul.navbar-nav {
+      @include media-breakpoint-up(lg) {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      > li {
+        display: flex;
+        flex-direction: column;
+
+        &.current-menu-item a {
+          /* stylelint-disable-next-line declaration-no-important */
+          color: $strong-pink !important;
+        }
+
+        &.last {
+          a {
+            @extend .wp-block-lustshop-button, .wp-block-lustshop-button--grey;
+            padding: 0 23px;
+            /* stylelint-disable-next-line declaration-no-important */
+            color: $white !important;
+          }
+        }
+
+        a {
+          padding-right: 20px;
+          padding-left: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          color: $white;
+          text-align: left;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:not(.last) {
+          a:hover {
+            color: $strong-pink;
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          a {
+            height: 42px;
+            padding: 0 7px;
+            line-height: 42px;
+            white-space: nowrap;
+          }
+
+          &:first-child a {
+            padding-left: 0;
+          }
+
+          &:not(.last) {
+            a::after {
+              position: relative;
+              top: 5px;
+              display: block;
+              height: 3px;
+              margin: 0 -7px;
+              background: transparent;
+              content: "";
+            }
+
+            a:hover::after {
+              background: $strong-pink;
+            }
+          }
+        }
+
+        @include media-breakpoint-up(xl) {
+          &:not(.last) {
+            a {
+              padding-right: 20px;
+              padding-left: 20px;
+            }
+
+            a::after {
+              margin: 0 -20px;
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      li:first-child a {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .navbar-menu-mobile {
+    width: 100%;
+  }
+
+  .menu-glavnoe-mobile {
+    line-height: 22px;
+
+    a {
+      min-height: 53px;
+      border-bottom: 1px solid $white-10;
+    }
+
+    > li:last-child a {
+      border-bottom: 0;
+    }
+
+    > .menu-item {
+      a {
+        display: flex;
+        align-items: center;
+        font-family: $default-font;
+        font-size: 16px;
+        font-weight: 600;
+        color: $white;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      &:first-child {
+        > a {
+          &::after {
+            width: 18px;
+            height: 18px;
+            margin-left: auto;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cpath fill='%23FFF' fill-rule='evenodd' d='M16.828 9.999H10v6.829a1 1 0 0 1-2 0V9.999H1.171a.999.999 0 1 1 0-1.999H8V1.171a1 1 0 0 1 2 0V8h6.828a.999.999 0 1 1 0 1.999z' opacity='.502'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            content: "";
+          }
+        }
+
+        &.show {
+          > a {
+            margin: 0 -15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            background-color: $white-three;
+            border-bottom: 1px solid transparent;
+          }
+        }
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        white-space: normal;
+
+        &:active,
+        &:focus {
+          background-color: transparent;
+        }
+      }
+
+      > .menu-item {
+        list-style: none;
+
+        a {
+          font-weight: normal;
+          color: $warm-grey;
+        }
+      }
+    }
+  }
+}

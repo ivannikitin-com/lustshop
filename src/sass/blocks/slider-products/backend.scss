@@ -1,0 +1,13 @@
+@import "./frontend.scss";
+
+.slider-products {
+  &__carousel {
+    display: flex;
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  .product__item {
+    min-width: 300px;
+  }
+}

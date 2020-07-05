@@ -1,0 +1,155 @@
+.footer {
+  $self: &;
+  padding: 28px 0 0;
+  background-color: $dark;
+
+  &__column {
+    margin-top: 18px;
+    text-align: center;
+
+    #{$self} &--open {
+      border-bottom: 0;
+
+      ul {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $white-10;
+    font-size: 16px;
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+
+    #{$self}__column--open & {
+      border-bottom: 0;
+    }
+  }
+
+  &__column-last {
+    margin-top: 40px;
+
+    #{ $self }__info {
+      margin-bottom: 32px;
+
+      &__title {
+        margin-top: 20px;
+      }
+    }
+
+    #{ $self }__title {
+      border-bottom: 0;
+    }
+  }
+
+  ul {
+    display: none;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        font-size: 13px;
+        color: $warm-grey;
+
+        &:hover,
+        &:focus {
+          color: $warm-grey;
+        }
+      }
+    }
+  }
+
+  &__phone a {
+    font-size: 18px;
+    font-weight: 600;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+
+  &__email {
+    margin-top: 6px;
+
+    a {
+      font-size: 13px;
+      color: $warm-grey;
+    }
+  }
+
+  &__bottom {
+    justify-content: center;
+    padding-bottom: 11px;
+    border-top: 1px solid rgba($white, 0.08);
+  }
+
+  &__share {
+    > a,
+    > img,
+    > picture {
+      display: inline-block;
+      margin: 0 8px 10px 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__main {
+    padding: 0 0 26px;
+  }
+
+  &__payment {
+    justify-content: center;
+
+    img {
+      margin: 11px 0 0 11px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__main {
+      padding: 0 0 36px;
+    }
+
+    &__column {
+      text-align: left;
+    }
+
+    ul {
+      display: block;
+    }
+
+    &__title {
+      border-bottom: 0;
+      text-align: left;
+    }
+
+    &__column-last {
+      margin-top: 18px;
+    }
+  }
+}
+
+body:not(.home) .footer {
+  margin-top: 80px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 140px;
+  }
+}

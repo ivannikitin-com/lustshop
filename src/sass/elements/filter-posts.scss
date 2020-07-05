@@ -1,0 +1,56 @@
+.filter-posts {
+  $self: &;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  @include media-breakpoint-up(lg) {
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-top: 0;
+  }
+
+  label {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: $brownish-grey;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 67px;
+    }
+  }
+
+  &__checkbox {
+    input[type="radio"] {
+      display: none;
+
+      &:checked + label {
+        @extend .wp-block-lustshop-button--link:hover;
+      }
+    }
+
+    label {
+      @extend .wp-block-lustshop-button;
+      @extend .wp-block-lustshop-button--link;
+
+      min-height: 34px;
+      font-size: 13px;
+      white-space: nowrap;
+
+      @include media-breakpoint-up(lg) {
+        min-height: 38px;
+      }
+    }
+  }
+
+  &__select {
+    @include media-breakpoint-up(lg) {
+      margin-left: 12px;
+    }
+  }
+}

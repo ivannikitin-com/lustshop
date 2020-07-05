@@ -1,0 +1,87 @@
+.woocommerce-message {
+  margin-bottom: 2.617924em;
+  margin-left: 0;
+  padding: 1em 1.618em;
+  background-color: $strong-pink;
+  border-left: 0.6180469716em solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  clear: both;
+  color: $white;
+
+  a {
+    line-height: normal;
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .button {
+    float: right;
+    margin-left: 1em;
+    padding: 0;
+    padding-left: 1em;
+    background: 0 0;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: $white-30;
+    border-radius: 0;
+    box-shadow: none;
+    line-height: normal;
+    font-weight: 600;
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.woocommerce-message::before,
+.woocommerce-message::after,
+.woocommerce-info::before,
+.woocommerce-info::after,
+.woocommerce-error::before,
+.woocommerce-error::after,
+.woocommerce-noreviews::before,
+.woocommerce-noreviews::after,
+p.no-comments::before,
+p.no-comments::after {
+  display: table;
+  content: "";
+}
+
+.woocommerce-message::after,
+.woocommerce-info::after,
+.woocommerce-error::after,
+.woocommerce-noreviews::after,
+p.no-comments::after {
+  clear: both;
+}
+
+.woocommerce {
+  &-info:not(.cart-empty) {
+    @extend .woocommerce-message;
+  }
+
+  &-error {
+    @extend .woocommerce-message;
+  }
+
+  &-noreviews {
+    @extend .woocommerce-message;
+  }
+}
+
+p.no-comments {
+  @extend .woocommerce-message;
+}
+
+.woocommerce-notices-wrapper {
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+}

@@ -1,0 +1,1 @@
+<?php echo wp_get_attachment_image(get_theme_mod( 'lustshop_placeholder' ), 'lustshop-post-thumbnail'); ?>

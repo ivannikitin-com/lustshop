@@ -1,0 +1,55 @@
+.pagination {
+  margin-top: 50px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 60px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37px;
+    height: 37px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(24, 27, 31, 0.15);
+    font-family: $default-font;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d1f26;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+    @include media-breakpoint-up(lg) {
+      width: 46px;
+      height: 46px;
+      font-size: 16px;
+    }
+
+    &:hover:not(&.dots),
+    &.current:not(&.dots) {
+      background-color: #ff026d;
+      color: #ffffff;
+    }
+
+    &:not(:last-child) {
+      margin-right: 7px;
+
+      @include media-breakpoint-up(lg) {
+        margin-right: 10px;
+      }
+    }
+
+    &.dots {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}

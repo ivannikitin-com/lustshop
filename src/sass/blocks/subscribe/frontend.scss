@@ -1,0 +1,94 @@
+.wp-block-lustshop-subscribe {
+  &__section-title {
+    margin: 12px 0 18px;
+    color: $white;
+  }
+
+  &__prolog {
+    margin: 30px 0 0;
+    font-family: $second-font;
+    font-size: 26px;
+    font-weight: bold;
+    color: $strong-pink;
+    font-style: italic;
+  }
+
+  &__img_main {
+    margin-top: -46px;
+    vertical-align: bottom;
+  }
+
+  &__info {
+    align-self: center;
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+
+  .picture {
+    align-self: flex-end;
+  }
+
+  &__descr {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 54px 0;
+    font-size: 16px;
+    color: $cloudy-blue;
+  }
+
+  &__txt {
+    align-self: flex-end;
+    margin-left: 19px;
+    line-height: 22px;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    span {
+      color: $strong-pink;
+    }
+  }
+
+  &__autor {
+    font-size: 12px;
+    color: $white;
+
+    span {
+      font-size: 100%;
+      color: $strong-pink;
+    }
+  }
+
+  .wpcf7-form {
+    display: flex;
+    height: 60px;
+    background: $white;
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: 16px;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: flex;
+    width: 50%;
+    margin: 0;
+  }
+
+  .wpcf7-email {
+    width: 100%;
+    margin-right: auto;
+    padding: 0 20px 0 30px;
+    border: 0;
+    font-family: $default-font;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .wpcf7-submit {
+    justify-content: center;
+    width: 50%;
+    padding: 0 30px;
+    border-radius: 30px;
+  }
+}

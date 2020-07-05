@@ -1,0 +1,42 @@
+.post-widget {
+  $self: &;
+  display: block;
+  margin-bottom: 26px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__image {
+    margin-bottom: 12px;
+    border-radius: 6px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 600;
+    color: $dark;
+
+    #{ $self }:hover & {
+      color: $strong-pink;
+    }
+  }
+
+  &__time {
+    font-size: 11px;
+    color: $warm-grey;
+    letter-spacing: 0.55px;
+  }
+
+  &__button-more {
+    @extend .wp-block-lustshop-button;
+    justify-content: center;
+    width: 100%;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

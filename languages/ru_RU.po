@@ -1,0 +1,348 @@
+# Copyright (C) 2017 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2020-05-30 05:17+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-05-30 05:18+0000\n"
+"Last-Translator: Вадим Мишхожев\n"
+"Language-Team: Русский\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Loco-Version: 2.3.4; wp-5.4.1"
+
+#: functions.php:85
+msgid "Sidebar"
+msgstr "Сайдбар"
+
+#: functions.php:87 functions.php:96 functions.php:105 functions.php:114
+#: functions.php:123 functions.php:132
+msgid "Add widgets here."
+msgstr "Переместите сюда виджет"
+
+#: functions.php:94
+msgid "Footer 1"
+msgstr "Подвал 1"
+
+#: functions.php:103
+msgid "Footer 2"
+msgstr "Подвал 2"
+
+#: functions.php:112
+msgid "Footer 3"
+msgstr "Подвал 3"
+
+#: functions.php:121
+msgid "Footer Social"
+msgstr "Социальные кнопки в подвале"
+
+#: functions.php:130
+msgid "Footer Bottom"
+msgstr "Низ подвал"
+
+#: functions.php:202
+msgid "Slider Products"
+msgstr "Слайдер продуктов"
+
+#: functions.php:203
+msgid "Question/Answer"
+msgstr "Вопрос/Ответ"
+
+#: functions.php:204
+msgid "Category products"
+msgstr "Категории товаров"
+
+#: 404.php:21
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: 404.php:22
+msgid "Return Home"
+msgstr "Вернуться на главную"
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "На всю ширину"
+
+#: comments.php:25
+msgid "Name"
+msgstr "Ваше имя"
+
+#: comments.php:28
+msgid "Email"
+msgstr "Ваш e-mail"
+
+#: comments.php:36
+msgid "Comment"
+msgstr "Комментарий"
+
+#: comments.php:61
+msgid "Post Comment"
+msgstr "Добавить комментарий"
+
+#. 1: title.
+#: comments.php:80
+#, php-format
+msgid "Comments %1$s"
+msgstr "Комментарии %1$s"
+
+#: comments.php:105
+msgid "Comments are closed."
+msgstr "Комментарии отключены"
+
+#. translators: %s: search query.
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска по: %s"
+
+#: header.php:62 header.php:167
+msgid "My account"
+msgstr "Аккаунт"
+
+#: header.php:72 header.php:177
+msgid "Login"
+msgstr "Вход"
+
+#: header.php:74 header.php:179
+msgid "Register"
+msgstr "Регистрация"
+
+#: footer.php:44
+msgid "Call, write"
+msgstr "Звоните, пишите"
+
+#: inc/customizer.php:61
+msgid "Settings theme"
+msgstr "Настройки темы"
+
+#: inc/customizer.php:62
+msgid "Contact information on the site"
+msgstr "Контактная информация на сайте"
+
+#: inc/customizer.php:73
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: inc/customizer.php:85
+msgid "E-mail"
+msgstr "E-mail"
+
+#: inc/customizer.php:97
+msgid "Image ID Placeholder"
+msgstr "Идентификатор изображения"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Ничего не найденно"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать свой первый пост? <a href=\"%1$s\"> Начните здесь </a>."
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, но ничего не соответствует вашим условиям поиска. Пожалуйста, "
+"попытайтесь снова с другими ключевыми словами."
+
+#: template-parts/content-none.php:41
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
+
+#: woocommerce/single-product/recently.php:12
+msgid "You watch"
+msgstr "Вы смотрели"
+
+#: woocommerce/loop/orderby.php:25
+#: template-parts/components/filter-posts.php:34
+msgid "Sort:"
+msgstr "Сортировка:"
+
+#: inc/gutenberg/gutenberg-colors.php:9
+msgid "Strong Pink"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:14
+msgid "Vivid Pink"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:19
+msgid "Darkish Purple"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:24
+msgid "White"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:29
+msgid "Dark"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:34
+msgid "White Two"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:39
+msgid "Warm Grey"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:44
+msgid "Brownish Grey"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:49
+msgid "Cloudy Blue"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:54
+msgid "Dark Two"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:59
+msgid "French Blue"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:64
+msgid "Lipstick"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:69
+msgid "Azure"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:74
+msgid "Pale Red"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:79
+msgid "Off Yellow"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:84
+msgid "Cerise"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:89
+msgid "Purplish Blue"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:94
+msgid "Dull Blue"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:99
+msgid "Pinkish Grey"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:104
+msgid "Yellowish Orange"
+msgstr ""
+
+#: inc/gutenberg/gutenberg-colors.php:109
+msgid "Dark Three"
+msgstr ""
+
+#: inc/widgets/post-widget.php:11
+msgid "Posts"
+msgstr "Записи"
+
+#: inc/widgets/post-widget.php:48
+msgid "Open blog"
+msgstr "Перейти в блог"
+
+#: inc/widgets/post-widget.php:94
+msgid "Show button more"
+msgstr "Показывать кнопку"
+
+#: gutenberg/home-banner/index.php:14
+msgid "Naughty <sup>Rabbit</sup>"
+msgstr ""
+
+#: gutenberg/blog/index.php:176
+msgid "Title"
+msgstr "Заголовок"
+
+#: template-parts/blocks/woo-faq.php:13
+msgid "Question"
+msgstr "Вопрос"
+
+#: template-parts/blocks/woo-faq.php:17
+msgid "Answer"
+msgstr "Ответ"
+
+#: template-parts/blocks/woo-faq.php:22
+msgid "Best offers"
+msgstr "Лучшие предложения"
+
+#: template-parts/blocks/woo-faq-category.php:33
+msgid "Сhoose"
+msgstr "Выбрать"
+
+#: template-parts/components/filter-posts.php:23
+msgid "All posts"
+msgstr "Все записи"
+
+#. 1: title.
+#: inc/classes/woocommerce/class_woocomerce_review.php:42
+#, php-format
+msgid "Reviews %1$s"
+msgstr "Отзывов %1$s"
+
+#: inc/classes/woocommerce/class_woocomerce_layout.php:101
+#: inc/classes/woocommerce/class_woocomerce_layout.php:111
+#: inc/classes/woocommerce/class_woocomerce_layout.php:140
+msgid "Payment and delivery"
+msgstr "Оплата и доставка"
+
+#: inc/classes/woocommerce/class_woocomerce_layout.php:283
+msgid "You may like"
+msgstr "Вам могут понравиться"
+
+#: inc/classes/woocommerce/class_woocomerce_layout.php:442
+msgid "not reviews"
+msgstr "отзывов нет"
+
+#: inc/classes/woocommerce/class_woocomerce_layout.php:446
+#, php-format
+msgctxt "reviews product"
+msgid "%s reviews"
+msgid_plural "%s reviews"
+msgstr[0] "%s отзыв"
+msgstr[1] "%s отзыва"
+msgstr[2] "%s отзывов"
+
+#. Theme Name of the theme
+msgid "lustshop"
+msgstr "lustshop"
+
+#. Description of the theme
+msgid "Description"
+msgstr "Описание"
+
+#. Theme URI of the theme
+msgid "https://github.com/ivannikitin-com/lustshop"
+msgstr "https://github.com/ivannikitin-com/lustshop"
+
+#. Author of the theme
+msgid "Иван Никитин и его партнеры"
+msgstr "Иван Никитин и его партнеры"
+
+#. Author URI of the theme
+msgid "https://ivannikitin.com"
+msgstr "https://ivannikitin.com"

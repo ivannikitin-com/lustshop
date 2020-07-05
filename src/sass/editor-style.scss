@@ -1,0 +1,46 @@
+@import "./fonts";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "./blocks/**/backend.scss";
+@import "./elements/headers";
+
+/* Post title width */
+
+.editor-post-title__block.wp-block {
+  max-width: $content-width;
+
+  .editor-post-title__input {
+    font-family: $default-font;
+  }
+}
+
+/* Main column width */
+
+.wp-block {
+  max-width: $content-width;
+}
+
+/* Width of "wide" blocks */
+
+.wp-block[data-align="wide"] {
+  max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.wp-block-image-selector-example-image {
+  .components-spinner {
+    float: none;
+    margin: 0;
+  }
+
+  // Space consecutive buttons evenly.
+
+  .components-button + .components-button {
+    margin-top: 1em;
+    margin-right: 8px;
+  }
+}

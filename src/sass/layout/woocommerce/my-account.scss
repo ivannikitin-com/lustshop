@@ -1,0 +1,75 @@
+.woocommerce-account {
+  .woocommerce-MyAccount-navigation {
+    li {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .form-row {
+    display: block;
+    margin-right: 0;
+    margin-left: 0;
+
+    &-first {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        width: 47.0588235294%;
+        margin-right: 5.8823529412%;
+        clear: both;
+      }
+    }
+
+    &-last {
+      @include media-breakpoint-up(lg) {
+        float: right;
+        width: 45.4545454545%;
+        margin-right: 0;
+      }
+    }
+
+    &-wide {
+      width: 100%;
+      clear: both;
+    }
+  }
+
+  .woocommerce-ResetPassword {
+    .clear::before,
+    .clear::after {
+      display: table;
+      content: "";
+    }
+
+    .clear::after {
+      clear: both;
+    }
+  }
+
+  label {
+    display: block;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  .input-text {
+    @extend .form-control;
+  }
+
+  .button[type="submit"] {
+    @extend .wp-block-lustshop-button;
+    @extend .wp-block-lustshop-button--primary;
+    width: auto;
+  }
+
+  .woocommerce-Addresses {
+    & .col-1,
+    & .col-2 {
+      display: block;
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
