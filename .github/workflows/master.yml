@@ -22,7 +22,7 @@ jobs:
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_PRODUCTION_KEY}}
       with:
-        flags: '-avzr --delete'
+        flags: '-rltgoDv --delete'
         options: '--exclude="node_modules" --exclude=".*" --exclude=".github"'
         src: './'
         dest: 'vadim@95.181.226.5:/var/www/lustshop.ru/www/wp-content/themes/lustshop'
