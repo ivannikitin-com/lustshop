@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-node@v1
 
     - name: Run Build
-      run: npm run build
+      run: npm i && npm run build
       
     - name: Deploy production
       uses: Pendect/action-rsyncer@v1.1.0
