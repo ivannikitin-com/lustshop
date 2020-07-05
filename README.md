@@ -1,3 +1,3 @@
-Статус последнейго деплоя:
+Статус последнейго деплоя на Prod:
 <br>
-<img src="https://github.com/ivannikitin-com/lustshop/workflows/Deploy_Pre_Master/badge.svg?branch=develop"><br>
+<img src="https://github.com/ivannikitin-com/lustshop/workflows/Deploy/badge.svg?branch=master"><br>
